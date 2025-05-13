@@ -19,6 +19,48 @@ Oleh karena itu, sebelum masuk ke tahap analisis, kita perlu terlebih dahulu men
 
 # Instalasi R dan tools pendukung
 
+R ada bahasa pemrograman yang didesain khusus untuk analisis data. Untuk menginstalnya, kita bisa merujuk pada halaman instalasi dari [CRAN](https://cloud.r-project.org/). Di Ubuntu, kita bisa mengikuti langkah-langkah berikut.
+
+1.  Buka terminal Ubuntu anda (wsl dengan cara: `wsl -d Ubuntu`), pastikan anda berada di direktori `/home` dan lakukan update sistem dengan menjalankan perintah:
+
+    ```bash
+    sudo apt update && sudo apt upgrade
+    ```
+
+2.  Install paket pembatu:
+
+    ```bash
+    sudo apt install --no-install-recommends software-properties-common dirmngr
+    ```
+
+3.  Download repositori resmi dari CRAN untuk memastikan bahwa kita akan terus mendapatkan update terbaru
+
+    ```bash
+    wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+    ```
+
+    Perintah ini akan mendownload *public key repository* CRAN untuk Ubuntu (khusus dari maintainer Michael Rutter) menggunakan `wget`, lalu langsung meneruskannya (`|` - *pipe*) ke perintah `tee` untuk disimpan sebagai file kunci baru di sistem, yaitu: `/etc/apt/trusted.gpg.d/cran_ubuntu_key.asc`
+
+    Langkah ini penting supaya sistem mempercayai paket-paket yang diunduh dari CRAN, sehingga proses instalasi software R dari repository tersebut tidak diblokir karena alasan keamanan.
+
+4.  Tambahkan repositori dari CRAN ke `/etc/apt` dengan perintah berikut:
+
+    ```bash
+    sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+    ```
+
+    Ini menggunakan akses *superuser* (`sudo`) untuk menambahkan repositori "https://cloud.r-project.org/bin/linux/ubuntu" dan secara otomatis menggunakan versi rilis "*noble*" karena kita menggunakan Ubuntu versi 24. 
+
+5.  Terakhir, install R dengan perintah `sudo`:
+
+    ```bash
+    sudo apt install --no-install-recommends r-base
+    ```
+
+    Hingga tahap ini, anda sudah berhasil install R di dalam Linux. Untuk cek instalasinya cukup ketikkan `R` pada terminal, maka akan muncul detail versi R yang digunakan.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f8TM83h4DbA" 
+frameborder="0" allowfullscreen></iframe>
 
 # Instalasi Anaconda dan tools pendukung
 

@@ -19,7 +19,7 @@ Oleh karena itu, sebelum masuk ke tahap analisis, kita perlu terlebih dahulu men
 
 # Instalasi R dan tools pendukung
 
-R ada bahasa pemrograman yang didesain khusus untuk analisis data. Untuk menginstalnya, kita bisa merujuk pada halaman instalasi dari [CRAN](https://cloud.r-project.org/). Di Ubuntu, kita bisa mengikuti langkah-langkah berikut.
+R ada bahasa pemrograman yang didesain khusus untuk analisis data. Untuk menginstalnya, kita bisa merujuk pada halaman instalasi dari [CRAN](https://cloud.r-project.org/). Di Ubuntu atau UNIX lainnya (kali ini saya menggunakan Ubuntu via WSL), kita bisa mengikuti langkah-langkah berikut.
 
 1.  Buka terminal Ubuntu anda (wsl dengan cara: `wsl -d Ubuntu`), pastikan anda berada di direktori `/home` dan lakukan update sistem dengan menjalankan perintah:
 

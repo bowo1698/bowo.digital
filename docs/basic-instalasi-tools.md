@@ -17,7 +17,7 @@ Dalam hal penyejajaran sekuen RNA (RNA-seq alignment) misalnya, tool seperti `ST
 
 Oleh karena itu, sebelum masuk ke tahap analisis, kita perlu terlebih dahulu menyiapkan lingkungan kerja, mulai dari instalasi R, Anaconda, hingga IDE (*integrated development environemnt*) seperti RStudio atau VS Code, yang akan digunakan sebagai "kotak alat" dalam menjalankan berbagai tahap bioinformatika selain menggunakan Terminal bash.
 
-# Instalasi R dan tools pendukung
+# Instalasi R
 
 R ada bahasa pemrograman yang didesain khusus untuk analisis data. Untuk menginstalnya, kita bisa merujuk pada halaman instalasi dari [CRAN](https://cloud.r-project.org/). Di Ubuntu atau UNIX lainnya (kali ini saya menggunakan Ubuntu via WSL), kita bisa mengikuti langkah-langkah berikut.
 
@@ -66,7 +66,36 @@ R ada bahasa pemrograman yang didesain khusus untuk analisis data. Untuk mengins
           allowfullscreen></iframe>
 </div>
 
-# Instalasi Anaconda dan tools pendukung
+# Instalasi Anaconda
+
+Anaconda (bukan ular) merupakan distribusi *open-source* dari bahasa pemrograman Python yang dirancang khusus untuk *data science*, *machine learning*, dan *scientific computing*. Ditrubusi ini mencakup: Python interpreter, Conda manager, dan ribuan paket populer seperti Numpy, scikit-learn, hingga paket-paket bioinformatika seperti samtools, RSEM, STAR, HISAT, dan masih banyak lagi. Untuk instalasinya di Linux, kita bisa mengikuti tutorial berikut.
+
+1.  Unduh installer Anaconda
+
+    Kunjungi situs resmi Anaconda di sini dan salin tautan unduhan untuk Linux dengan cara memilih distribusi `Linux - <arsitektur> Installer` yang sesuai dengan arsitektur komputer anda. Misal karena saya menggunakan ARM64, maka saya pilih ARM64. Kemudian, klik kanan dan pilih "*Copy Link Address*" untuk mendapatkan tautan unduhan. Buka terminal bash dan gunakan `wget`
+
+    ```bash
+    wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-aarch64.sh
+    ```
+
+    File hasil download akan disimpan pada direktori dimana Anda menjalankan Bash, misalnya Anda menjalankan Bash dari direktori `/home/bowo/Downloads`, maka file `Anaconda3-2024.10-1-Linux-aarch64.sh` akan disimpan di direktori ini.
+
+2.  Jalankan installer
+
+    Karena file installer yang kita unduh ber-ekstensi `.bash`, maka ini bisa diinstal dengan menggunakan Bash secara langsung.
+
+    ```bash
+    bash Anaconda3-2024.10-1-Linux-aarch64.sh
+    ```
+
+    Ikuti semua petunjuk yang muncul. Anda hanya perlu tekan tombol `ENTER + SPACE` untuk langsung menuju bagian akhir dimana anda harus ketik "yes" untuk menerima *license terms*. Di akhir, tekan ENTER untuk menginstall `base` PREFIX secara default di terminal, sehingga Anacona dapat dipanggil hanya dengan mengetikkan `conda`. 
+
+<div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
+  <iframe src="https://youtu.be/LzuMruPOT9c"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen></iframe>
+</div>
 
 # Instalasi IDE (Integrated development environment)
 

@@ -37,7 +37,7 @@ Berikut ini adalah spesifikasi minimal yang disarankan:
 |----------------------|-----------------------|-----------------------|
 | RAM                  | 4 GB                  | \> 8 GB               |
 | Processor            | Dual-core (Intel/AMD) | Quad-core (Intel/AMD) |
-| Arsitektur           | x64 (64-bit)          | x64 (64-bit)          |
+| Arsitektur           | x64 (64-bit) / ARM64  | x64 (64-bit) / ARM64  |
 | Penyimpanan          | 128 GB (HDD)          | 256 GB - 1 TB (SSD)   |
 | Sistem operasi       | Windows 10            | Windows 11            |
 

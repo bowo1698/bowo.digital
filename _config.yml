@@ -1,0 +1,11 @@
+remote_theme: pmarsceill/just-the-docs
+baseurl: "/bowo.digital" # the subpath of your site, e.g. /blog
+url: "https://bowo1698.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+title: Bowo's Bioinformatic Notes
+logo: assets/bioinfo-notebook_logo.svg
+search_enabled: true
+search_tokenizer_separator: /[\s/]+/
+aux_links:
+  "Bioinformatics Notes on GitHub":
+    - "//github.com/bowo1698/bowo.digital"
+heading_anchors: true

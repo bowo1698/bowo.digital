@@ -68,7 +68,7 @@ Untuk mulai belajar, silahkan pilih tutorial mana yang anda inginkan.
 
 -   [Linux di dalam Windows](docs/basic-linux-in-win.md)
 -   [Memahami hierarki Linux](docs/basic-hierarki-linux.md)
-<!--   [Instalasi tools bioinformatika](docs/basic-instalasi-tools.md) --->
+-   [Instalasi tools bioinformatika](docs/basic-instalasi-tools.md)
 <!--   [Pengenalan dasar-dasar Bash](docs/basic-bash.md) --->
 <!--   [Pengenalan dasar-dasar R](docs/basic-R.md) --->
 <!--   [Pengenalan dasar-dasar python](docs/basic-python.md) --->

@@ -9,4 +9,4 @@ has_toc: True
 
 # 3. Materi lanjutan 2
 
-Bagian ini berisi tentang studi bioinformatika lanjutan dalam konteks peningkatan produktivitas akuakultur.
+Bagian ini memuat tentang studi bioinformatika lanjutan dalam konteks peningkatan produktivitas akuakultur.

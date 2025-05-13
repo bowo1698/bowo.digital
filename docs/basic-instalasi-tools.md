@@ -59,8 +59,12 @@ R ada bahasa pemrograman yang didesain khusus untuk analisis data. Untuk mengins
 
     Hingga tahap ini, anda sudah berhasil install R di dalam Linux. Untuk cek instalasinya cukup ketikkan `R` pada terminal, maka akan muncul detail versi R yang digunakan.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f8TM83h4DbA" 
-frameborder="0" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/f8TM83h4DbA"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen></iframe>
+</div>
 
 # Instalasi Anaconda dan tools pendukung
 

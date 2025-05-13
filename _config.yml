@@ -1,6 +1,6 @@
 remote_theme: pmarsceill/just-the-docs
-baseurl: "/bowo.digital" # the subpath of your site, e.g. /blog
-url: "https://bowo1698.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.bowo.digital/" # the base hostname & protocol for your site, e.g. http://example.com
 title: Bowo's Bioinformatic Notes
 logo: assets/bioinfo-notebook_logo.svg
 search_enabled: true

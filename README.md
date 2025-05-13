@@ -6,7 +6,7 @@ description: "Panduan belajar bioinformatika dengan fokus kajian pada akuakultur
 permalink: /
 ---
 
-# [Bioinformatic Notes](http://bowo1698.github.io/bowo.digital)
+# [Bioinformatic Notes](https://www.bowo.digital/)
 
 Oleh [Agus Wibowo](https://www.bowo-aq.cc/)
 

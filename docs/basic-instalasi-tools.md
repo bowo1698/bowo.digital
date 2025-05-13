@@ -91,7 +91,7 @@ Anaconda (bukan ular) merupakan distribusi *open-source* dari bahasa pemrograman
     Ikuti semua petunjuk yang muncul. Anda hanya perlu tekan tombol `ENTER + SPACE` untuk langsung menuju bagian akhir dimana anda harus ketik "yes" untuk menerima *license terms*. Di akhir, tekan ENTER untuk menginstall `base` PREFIX secara default di terminal, sehingga Anacona dapat dipanggil hanya dengan mengetikkan `conda`. 
 
 <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
-  <iframe src="https://youtu.be/LzuMruPOT9c"
+  <iframe src="https://www.youtube.com/embed/LzuMruPOT9c"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen></iframe>

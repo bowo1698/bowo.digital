@@ -44,19 +44,21 @@ Data yang digunakan dalam setiap tutorial bersifat *open access*, dengan fokus p
 
 ## 💻 Catatan teknis
 
-Karena sebagian besar tools bioinformatika dikembangkan dan dioptimalkan untuk berjalan di lingkungan UNIX terutama [LINUX](https://en.wikipedia.org/wiki/Linux) dan MACOS, saya sangat menyarankan rekan-rekan pengguna Windows untuk mempertimbangkan "bermigrasi" ke sistem operasi berbasis Linux, seperti [Ubuntu](https://ubuntu.com/), [Debian](https://www.debian.org/), atau [Fedora](https://fedoraproject.org/).
+Karena sebagian besar tools bioinformatika dikembangkan dan dioptimalkan untuk berjalan di lingkungan UNIX terutama [LINUX](https://en.wikipedia.org/wiki/Linux) dan MACOS, saya sangat menyarankan rekan-rekan pengguna Windows untuk mempertimbangkan "bermigrasi" ke sistem operasi berbasis Linux ini, seperti [Ubuntu](https://ubuntu.com/), [Debian](https://www.debian.org/), atau [Fedora](https://fedoraproject.org/).
 
 Mengapa demikian?
 
-1.  **Kompatibilitas maksimal** – Tools seperti HISAT2, STAR, Salmon, dan RSEM berjalan lebih stabil dan langsung didukung di lingkungan UNIX. "Sangat mudah" dalam hal instalasi dan eksekusinya
+1.  **Kompatibilitas** – Tools seperti HISAT2, STAR, Salmon, dan RSEM berjalan lebih stabil dan langsung didukung di lingkungan UNIX. "Sangat mudah" dalam hal instalasi dan eksekusinya
 
-2.  **Performa maksimal** – Linux cenderung menggunakan sumber daya sistem lebih efisien dibandingkan Windows, terutama dengan adanya sistem *swap* membuatnya ideal untuk komputasi bioinformatika, bahkan di perangkat berspesifikasi rendah.
+2.  **Performa** – Linux cenderung menggunakan sumber daya sistem lebih efisien dibandingkan Windows, terutama dengan adanya sistem *swap* membuatnya ideal untuk komputasi bioinformatika, bahkan di perangkat berspesifikasi rendah.
 
 3.  **Minim gangguan** – Sistem Linux jauh lebih tahan (bahkan hampir mustahil) terhadap malware, dan mendukung scripting otomatis yang efisien (Bash/Shell).
 
 4.  **Ekosistem terbuka** – Hampir semua perangkat lunak bioinformatika bersifat *open-source* (gratis) dan dikembangkan di lingkungan Linux, membuat dokumentasi dan komunitas dukungannya jauh lebih luas.
 
 <img src="assets/linux-win-mac.jpeg" alt="Windows Linux Mac" style="width: 100%;">
+
+> Seluruh materi dalam website ini disusun dengan asumsi bahwa Anda menjalankan Linux secara langsung (*full system install*), bukan melalui Windows. Panduan penggunaan *Windows Subsystem for Linux* (WSL) hanya disediakan sebagai opsi tambahan untuk keperluan eksplorasi atau pembelajaran awal. Namun, dalam praktiknya, WSL memiliki banyak keterbatasan dalam hal kompatibilitas dan kinerja, sehingga tidak direkomendasikan untuk analisis bioinformatika yang sesungguhnya.
 
 Untuk perangkat keras, saya merancang semua tutorial agar dapat dijalankan pada komputer/laptop dengan spesifikasi medium (*laptop dana pelajar* 😁), selama menggunakan sistem operasi berbasis Linux [cek disini](docs/basic-linux-in-win.md). Hal ini memungkinkan siapapun tetap dapat mengikuti alur tutorial ini, mulai dari unduhan data, pra-pemrosesan, analisis, hingga visualisasi, tanpa memerlukan perangkat mahal!!! (meskipun lebih baik jika setiap kampus punya *High Performance Computing* - HPC, yuk bikin!)
 

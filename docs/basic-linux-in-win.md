@@ -66,6 +66,7 @@ Untuk kebutuhan analisis bioinformatika, distro turunan Debian seperti Ubuntu ad
 2.  Untuk melihat distro Linux yang tersedia, cukup jalankan perintah
 
     ``` powershell
+    # powershell
     wsl --list --online
     ```
 
@@ -78,12 +79,14 @@ Untuk kebutuhan analisis bioinformatika, distro turunan Debian seperti Ubuntu ad
 4.  Setelah restart kita bisa menjalankan proses instalasi Linux dengan perintah dasar `wsl --install <nama distro>`. Misalnya kita memilih distro `Ubuntu`, maka jalankan perintah berikut untuk mendownload dan menginstalnya.
 
     ``` powershell
+    # powershell
     wsl --install Ubuntu
     ```
 
 5.  Setelah sukses akan muncul pesan "*Distribution successfully installed*...". Maka anda bisa menggunakan Linux dengan menjalankan perintah:
 
     ``` powershell
+    # powershell
     wsl -d Ubuntu
     ```
 
@@ -110,6 +113,7 @@ Untuk banyak kasus, drive C biasanya tersisa sedikit ruang, sementara bioinforma
 1.  Buka powershell dan jalankan perintah berikut:
 
     ``` powershell
+    # powershell
     mkdir D:/wsl | wsl --export Ubuntu D:/wsl/ubuntu.tar
     ```
 
@@ -118,6 +122,7 @@ Untuk banyak kasus, drive C biasanya tersisa sedikit ruang, sementara bioinforma
 2.  Hapus distro Linux dari WSL dengan cara menjalankan perintah:
 
     ``` powershell
+    # powershell
     wsl --unregister Ubuntu
     ```
 
@@ -126,6 +131,7 @@ Untuk banyak kasus, drive C biasanya tersisa sedikit ruang, sementara bioinforma
 3.  Import file distro yang sudah dicadangkan sebelumnya (`ubuntu.tar`) dengan perintah berikut:
 
     ``` powershell
+    # powershell
     mkdir D:/Ubuntu | wsl --import Ubuntu D:/Ubuntu D:/wsl/ubuntu.tar --version 2
     ```
 
@@ -136,6 +142,7 @@ Untuk banyak kasus, drive C biasanya tersisa sedikit ruang, sementara bioinforma
 4.  Atur *mounting* Linux dengan cara menjalankan perintah berikut:
 
     ```powershell
+    # powershell
     [ "$PWD" = "/mnt/c/Users/$USER" ] && cd ~
     ```
 
@@ -144,6 +151,7 @@ Untuk banyak kasus, drive C biasanya tersisa sedikit ruang, sementara bioinforma
 5.  Nonaktifkan otomatis mount Linux ke drive `C:/` dengan cara menjalankan perintah berikut:
 
     ```powershell
+    # bash
     sudo nano /etc/wsl.conf
     ```
 

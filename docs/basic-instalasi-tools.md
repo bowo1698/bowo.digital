@@ -7,11 +7,11 @@ nav_order: 3
 
 # Daftar isi
 
-[Pendahuluan](#pendahuluan)
-[Instalasi R](#instalasi-r)
-[Instalasi Anaconda](#instalasi-anaconda)
-[Instalasi IDE](#instalasi-ide-integrated-development-environment)
-[Basic instalasi tools R dan Conda](#basic-instalasi-tools-r-dan-conda)
+-   [Pendahuluan](#pendahuluan)
+-   [Instalasi R](#instalasi-r)
+-   [Instalasi Anaconda](#instalasi-anaconda)
+-   [Instalasi IDE](#instalasi-ide-integrated-development-environment)
+-   [Basic instalasi tools R dan Conda](#basic-instalasi-tools-r-dan-conda)
 
 # Pendahuluan 
 

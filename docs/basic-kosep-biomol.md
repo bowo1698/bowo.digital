@@ -5,7 +5,15 @@ parent: 1. Materi dasar
 nav_order: 4
 ---
 
-<h1 style="text-align: center;">Konsep-konsep dasar biologi molekuler</h1>
+<h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+  <a href="https://www.bowo.digital/docs/basic-konsep-biomol.html" style="text-decoration: none; color: inherit;">
+    Konsep-konsep dasar biologi molekuler
+  </a>
+</h1>
+
+<p style="text-align: center; font-size: 1.2rem;">
+  Oleh <a href="https://bowo1698.github.io/bowo-aq.cc/" target="_blank">Agus Wibowo</a>
+</p>
 
 #### [Beranda](https://www.bowo.digital/)
 

@@ -6,9 +6,15 @@ description: "Panduan belajar bioinformatika dengan fokus kajian pada akuakultur
 permalink: /
 ---
 
-# [Bioinformatic Notes](https://www.bowo.digital/)
+<h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+  <a href="https://www.bowo.digital/" style="text-decoration: none; color: inherit;">
+    Bioinformatic Notes
+  </a>
+</h1>
 
-Oleh [Agus Wibowo](https://bowo1698.github.io/bowo-aq.cc/)
+<p style="text-align: center; font-size: 1.2rem;">
+  Oleh <a href="https://bowo1698.github.io/bowo-aq.cc/" target="_blank">Agus Wibowo</a>
+</p>
 
 [![Build Status](https://travis-ci.com/bowo1698/bowo.digital.svg?branch=master)](https://travis-ci.com/bowo1698/bowo.digital) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub issues](https://img.shields.io/github/issues/bowo1698/bowo.digital) ![GitHub repo size](https://img.shields.io/github/repo-size/bowo1698/bowo.digital) ![Website](https://img.shields.io/website?url=https%3A%2F%2Frnnh.github.io%2Fbowo.digital) [![DOI](https://zenodo.org/badge/243280413.svg)](https://zenodo.org/badge/latestdoi/243280413)
 

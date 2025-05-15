@@ -20,7 +20,7 @@ nav_order: 4
 </p>
 
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <img src="docs/images/bag-biomol.jpg" alt="Logo Genomik" style="max-width: 100%; height: auto;">
+  <img src="https://png.pngtree.com/background/20250115/original/pngtree-a-close-up-of-dna-strand-in-pink-and-blue-capturing-picture-image_16103219.jpg" alt="Logo Genomik" style="max-width: 100%; height: auto;">
 </div>
 
 # Daftar isi

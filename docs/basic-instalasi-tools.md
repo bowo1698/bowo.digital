@@ -18,7 +18,7 @@ nav_order: 3
 </h1>
 
 <p style="text-align: center; font-size: 1.2rem;">
-  Oleh <a href="https://bowo1698.github.io/bowo-aq.cc/" target="_blank">Agus Wibowo</a>
+  Oleh <a href="https://www.bowo.digital/docs/bio.html" target="_blank">Agus Wibowo</a>
 </p>
 
 <div style="text-align: center; margin-bottom: 1.5rem;">

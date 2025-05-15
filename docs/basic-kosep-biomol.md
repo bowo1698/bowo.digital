@@ -34,7 +34,7 @@ Gen dapat diumpamakan sebagai resep dalam buku masak. Setiap resep (gen) berisi 
 
 <figure style="text-align: center;">
   <img src="images/Gene-DNA.jpg" alt="DNA dan gen" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Struktur DNA dalam sel.</strong> DNA berada di dalam inti sel dan terorganisasi membentuk kromosom. DNA melilit protein histon membentuk nukleosom, yang kemudian berkontribusi pada struktur kromatin. Bagian spesifik dari DNA disebut gen, yang terdiri atas pasangan basa nukleotida: Adenin (A) berpasangan dengan Timin (T), dan Guanin (G) berpasangan dengan Sitosin (C). Struktur ini merupakan dasar penyimpanan informasi genetik dalam makhluk hidup.
     <br><em>Sumber gambar:</em> <a href="https://www.cancer.gov/publications/dictionaries/genetics-dictionary/def/dna" target="_blank">National Cancer Institute</a>
   </figcaption>
@@ -70,7 +70,7 @@ Dogma sentral menyederhanakan proses yang sebenarnya sangat kompleks. Menariknya
 
 <figure style="text-align: center;">
   <img src="images/Central-dogma.png" alt="Central dogma" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Dogma sentral.</strong> DNA mengalami replikasi untuk menggandakan dirinya, kemudian ditranskripsi menjadi RNA. RNA selanjutnya diterjemahkan (translasi) menjadi protein. Dalam kasus tertentu, RNA juga dapat ditranskripsi balik (reverse transcription) menjadi DNA, seperti yang terjadi pada virus retro.
     <br><em>Sumber gambar:</em> <a href="https://www.scienceholic.org/post/the-exception-to-the-central-dogma" target="_blank">scienceholic</a>
   </figcaption>
@@ -150,7 +150,7 @@ Saat ini, studi tentang epigenetik menjadi topik yang sangat menarik, karena mem
 
 <figure style="text-align: center;">
   <img src="images/epigenetic.png" alt="Epigenetics" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Mekanisme epigenetik.</strong> Mekanisme ini meliputi metilasi DNA (penambahan gugus metil yang dapat menonaktifkan gen) dan modifikasi histon (pengikatan faktor epigenetik pada ekor histon yang mempengaruhi keterbukaan DNA). 
     <br><em>Sumber gambar:</em> <a href="https://en.wikipedia.org/wiki/Epigenetics" target="_blank">Wikipedia</a>
   </figcaption>
@@ -188,7 +188,7 @@ Salah satu aspek paling menarik dari splicing adalah *alternative splicing*, yai
 
 <figure style="text-align: center;">
   <img src="images/al-splicing.png" alt="Alternative splicing" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Mekanisme alternative splicing pada eukariota.</strong> Perbedaan ekspresi gen antara prokariota dan eukariota, di mana eukariota membentuk pre-mRNA yang mengandung intron dan ekson (a). Proses pemotongan intron dari pre-mRNA melalui situs donor (5'), situs akseptor (3'), dan branch site, menghasilkan ekson yang tersambung dan intron lariat (b). Regulasi splicing dipengaruhi oleh elemen penguat dan penghambat seperti ESE (Exonic Splicing Enhancer), ESS (Exonic Splicing Silencer), ISE (Intronic Splicing Enhancer), dan ISS (Intronic Splicing Silencer) (c). Berbagai jenis splicing alternatif menghasilkan variasi isoform mRNA, termasuk cassette exon, alternative splice site (5'/3'), intron retention, dan mutually exclusive exons, yang berkontribusi terhadap keberagaman protein dari satu gen (d).
     <br><em>Sumber gambar:</em> <a href="https://doi.org/10.1038/s41580-022-00545-z" target="_blank">Marasco & Kornblihtt 2022</a>
   </figcaption>
@@ -270,7 +270,7 @@ Migrasi genetik atau *gene flow* terjadi ketika individu berpindah dari satu pop
 
 <figure style="text-align: center;">
   <img src="images/koala.png" alt="Analisis filogenomik" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Analisis filogenomik Koala dari beberapa populasi berbeda di Australia.</strong> Analisis filogenomik menunjukkan dua klade utama yang memisahkan populasi koala utara dan selatan. Sebagian besar populasi mengelompok sesuai wilayah, kecuali individu dari Campbelltown dan Kangaroo Island yang tergabung dalam klade utara. Cabang yang lebih pendek di wilayah selatan mengindikasikan keragaman genetik yang lebih rendah. Dukungan bootstrap kuat terlihat pada klade utama, meskipun simpul antar kelompok menunjukkan adanya percampuran populasi, terutama di wilayah selatan.
     <br><em>Sumber gambar:</em> <a href="" target="_blank">Penelitian penulis</a>
   </figcaption>

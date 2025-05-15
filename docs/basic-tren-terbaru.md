@@ -23,7 +23,7 @@ Seiring dengan meningkatnya permintaan protein hewani dari sumber perairan dan t
 
 <figure style="text-align: center;">
   <img src="images/genomic-application.png" alt="Genomic application" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Aplikasi genomik dalam akuakultur.</strong> Penerapan teknologi genomik dalam akuakultur mencakup identifikasi spesies, studi perilaku, deteksi penyakit, analisis filogenetik, studi asosiasi genom menyeluruh (GWAS), seleksi berbasis penanda (MAS), dan modifikasi epigenetik. Pendekatan ini mendukung pemahaman mendalam tentang genetika ikan dan peningkatan program pemuliaan.
     <br><em>Sumber gambar:</em> <a href="https://link.springer.com/chapter/10.1007/978-981-97-8553-7_11" target="_blank">Khatei et al. 2025</a>
   </figcaption>
@@ -53,7 +53,7 @@ Metode perhitungan nilai pemuliaan genomik (*genomic estimated breeding values* 
 
 <figure style="text-align: center;">
   <img src="images/gs.png" alt="Genomic selection" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Alur genomic selection.</strong> Genomic selection dimulai dari genotyping dan phenotyping populasi referensi, dilanjutkan dengan pemodelan prediksi nilai pemuliaan genomik (GEBV) yang digunakan untuk menyeleksi induk unggul dari populasi kandidat yang belum diketahui fenotipenya.
     <br><em>Sumber gambar:</em> <a href="https://doi.org/10.1111/raq.12716" target="_blank">Song et al. 2022</a>
   </figcaption>
@@ -69,7 +69,7 @@ Keunikan teknologi ini adalah bahwa sel induk spermatogonia dari testis donor da
 
 <figure style="text-align: center;">
   <img src="images/sb.png" alt="surrogate broodstock" style="width: 85%;">
-  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Produksi induk pengganti salmon masu dan generasi berikutnya dari trout pelangi melalui transplantasi sel punca germinal.</strong> Sel punca spermatogonia dari trout pelangi jantan ditransplantasikan ke dalam rongga peritoneum larva salmon masu triploid mandul yang baru menetas. Sel spermatogonia trout tersebut kemudian berhasil berkolonisasi di gonad ikan penerima, yang selanjutnya mampu menghasilkan sel telur atau sperma yang berasal dari donor, tergantung pada jenis kelamin ikan penerima.
     <br><em>Sumber gambar:</em> <a href="https://doi.org/10.1007/s12562-019-01299-y" target="_blank">Yoshizaki & Yazawa. 2019</a>
   </figcaption>

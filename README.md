@@ -71,11 +71,16 @@ Untuk mulai belajar, silahkan pilih tutorial mana yang anda inginkan.
 -   [Linux di dalam Windows](docs/basic-linux-in-win.md)
 -   [Memahami hierarki Linux](docs/basic-hierarki-linux.md)
 -   [Instalasi tools bioinformatika](docs/basic-instalasi-tools.md)
+-   [Konsep-konsep dasar biologi molekuler](docs/basic-kosep-biomol.md)
+-   [Teknik dasar biologi molekuler](docs/basic-teknik-biomol.md)
+-   [Aplikasi biologi molekuler](docs/basic-aplikasi-biomol.md)
+-   [Studi Omics](docs/basic-studi-omics.md)
+-   [Tren dan perkembangan terbaru](docs/basic-tren-terbaru.md)
+-   [Marker-marker genetik](docs/basic-marker-genetik.md)
 <!--   [Pengenalan dasar-dasar Bash](docs/basic-bash.md) --->
 <!--   [Pengenalan dasar-dasar R](docs/basic-R.md) --->
 <!--   [Pengenalan dasar-dasar python](docs/basic-python.md) --->
 <!--   [Dokumentasi melalui Markdown](docs/basic-markdown.md) --->
-<!--   [Konsep<!--konsep dasar biologi molekuler](docs/basic-kosep-biomol.md) --->
 <!--   [Eksplorasi database genomic](docs/basic-eksplorasi-database.md) --->
 <!--   [Cara download file *sequencing*](docs/basic-curl-wget.md) --->
 <!--   [Format file yang digunakan dalam bioinformatika](docs/basic-file_format.md) --->

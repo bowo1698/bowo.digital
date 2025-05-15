@@ -5,6 +5,8 @@ parent: 1. Materi dasar
 nav_order: 3
 ---
 
+# [Beranda](https://www.bowo.digital/)
+
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)

@@ -22,7 +22,7 @@ nav_order: 3
 </p>
 
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <img src="https://as1.ftcdn.net/v2/jpg/08/72/37/70/1000_F_872377090_BrMO8U2hmdav73tik4Ybkyo4xM9fOqTI.jpg" alt="Tools instalation" style="max-width: 100%; height: auto;">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/055/370/498/small_2x/scientist-analyzing-dna-strands-on-a-digital-screen-with-glowing-data-in-a-lab-environment-photo.jpg" alt="Tools instalation" style="max-width: 100%; height: auto;">
 </div>
 
 # Daftar isi

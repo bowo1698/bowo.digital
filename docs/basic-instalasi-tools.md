@@ -5,6 +5,10 @@ parent: 1. Materi dasar
 nav_order: 3
 ---
 
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+</p>
+
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
   <a href="https://www.bowo.digital/docs/basic-instalasi-tools.html" style="text-decoration: none; color: inherit;">
     Instalasi Tools Bioinformatika
@@ -15,7 +19,9 @@ nav_order: 3
   Oleh <a href="https://bowo1698.github.io/bowo-aq.cc/" target="_blank">Agus Wibowo</a>
 </p>
 
-#### [Beranda](https://www.bowo.digital/)
+<div style="text-align: center; margin-bottom: 1.5rem;">
+  <img src="https://www.scilifelab.se/wp-content/uploads/2020/06/AdobeStock_245562438_WP2.jpg" alt="Tools instalation" style="max-width: 100%; height: auto;">
+</div>
 
 # Daftar isi
 

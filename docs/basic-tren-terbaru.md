@@ -5,6 +5,10 @@ parent: 1. Materi dasar
 nav_order: 5
 ---
 
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+</p>
+
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
   <a href="https://www.bowo.digital/docs/basic-tren-terbaru.html" style="text-decoration: none; color: inherit;">
     Tren dan perkembangan aplikasi biologi molekuler dan bioinformatika untuk akuakultur
@@ -15,7 +19,9 @@ nav_order: 5
   Oleh <a href="https://bowo1698.github.io/bowo-aq.cc/" target="_blank">Agus Wibowo</a>
 </p>
 
-#### [Beranda](https://www.bowo.digital/)
+<div style="text-align: center; margin-bottom: 1.5rem;">
+  <img src="https://neurosys.com/wp-content/webp-express/webp-images/uploads/2023/05/aquaculture-header.png.webp" alt="Tools instalation" style="max-width: 100%; height: auto;">
+</div>
 
 # Daftar isi
 

@@ -20,7 +20,7 @@ permalink: /
   <img src="https://www.genomicsengland.co.uk/assets/imager/images/Technology/315155/Bioinformatics-and-data-hands_6c0c164bd2b597ee32b68b8b5755bd2e.jpg" alt="Tools instalation" style="max-width: 100%; height: auto;">
 </div>
 
-[![Build Status](https://travis-ci.com/bowo1698/bowo.digital.svg?branch=master)](https://travis-ci.com/bowo1698/bowo.digital) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub issues](https://img.shields.io/github/issues/bowo1698/bowo.digital) ![GitHub repo size](https://img.shields.io/github/repo-size/bowo1698/bowo.digital) ![Website](https://img.shields.io/website?url=https%3A%2F%2Frnnh.github.io%2Fbowo.digital) [![DOI](https://zenodo.org/badge/243280413.svg)](https://zenodo.org/badge/latestdoi/243280413)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub issues](https://img.shields.io/github/issues/bowo1698/bowo.digital) ![GitHub repo size](https://img.shields.io/github/repo-size/bowo1698/bowo.digital) [![DOI](https://zenodo.org/badge/243280413.svg)](https://zenodo.org/badge/latestdoi/243280413)
 
 ## Selamat datang 👋
 

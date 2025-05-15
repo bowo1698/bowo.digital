@@ -272,7 +272,7 @@ Migrasi genetik atau *gene flow* terjadi ketika individu berpindah dari satu pop
   <img src="images/koala.png" alt="Analisis filogenomik" style="width: 85%;">
   <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Analisis filogenomik Koala dari beberapa populasi berbeda di Australia.</strong> Analisis filogenomik menunjukkan dua klade utama yang memisahkan populasi koala utara dan selatan. Sebagian besar populasi mengelompok sesuai wilayah, kecuali individu dari Campbelltown dan Kangaroo Island yang tergabung dalam klade utara. Cabang yang lebih pendek di wilayah selatan mengindikasikan keragaman genetik yang lebih rendah. Dukungan bootstrap kuat terlihat pada klade utama, meskipun simpul antar kelompok menunjukkan adanya percampuran populasi, terutama di wilayah selatan.
-    <br><em>Sumber gambar:</em> <a href="" target="_blank">Penelitian penulis</a>
+    <br><em>Sumber gambar:</em> <a>Penelitian penulis</a>
   </figcaption>
 </figure>
 

@@ -27,17 +27,17 @@ nav_order: 5
 
 # Daftar isi
 
--   [Pendahuluan](#)
--   [Teknologi sekuensing dalam konteks akuakultur](#)
--   [Seleksi genomik: Revolusi dalam pemuliaan](#)
--   [Teknologi induk pengganti (*surrogate broodstock*)](#memilih-distro-linux)
--   [Aplikasi multi-omics dalam analisis sifat produksi](#)
--   [Deteksi dan monitoring patogen melalui *Metatranscriptomics*](#)
--   [Tantangan dan arah masa depan](#)
+-   [Pendahuluan](#pendahuluan)
+-   [Aplikasi teknologi *sequencing* dalam akuakultur](#aplikasi-teknologi-sequencing-dalam-akuakultur)
+-   [Seleksi genomik: Revolusi dalam pemuliaan](#seleksi-genomik-revolusi-dalam-pemuliaan)
+-   [Teknologi induk pengganti (*surrogate broodstock*)](#teknologi-induk-pengganti-surrogate-broodstock)
+-   [Aplikasi *multi-omics*](#aplikasi-multi-omics)
+-   [Deteksi dan monitoring patogen melalui *Metatranscriptomics*](#deteksi-dan-monitoring-patogen-melalui-metatranscriptomics)
+-   [Tantangan dan arah masa depan](#tantangan-dan-arah-masa-depan)
 
 # Pendahuluan
 
-Seiring dengan meningkatnya permintaan protein hewani dari sumber perairan dan tantangan dalam industri akuakultur, aplikasi biologi molekuler dan bioinformatika telah menjadi komponen penting dalam pengembangan dan keberlanjutan sektor ini. Teknologi-teknologi mutakhir terbaru memungkinkan pemahaman yang lebih mendalam tentang genetika spesies akuakultur, mengoptimalkan *breeding program*, dan meningkatkan resistensi terhadap penyakit. Pada tulisan ini, kita akan mengeksplorasi berbagai aspek aplikasi biologi molekuler dan bioinformatika dalam akuakultur modern.
+Seiring dengan meningkatnya permintaan protein hewani, terutama yang berasal dari akuakultur, aplikasi biologi molekuler dan bioinformatika telah menjadi salah satu komponen penting dalam pengembangan dan keberlanjutan sektor ini. Teknologi-teknologi mutakhir terbaru memungkinkan pemahaman yang lebih mendalam tentang genetika berbagai spesies akuakultur, terutama dalam hal optimalisasi program pemijahan (*breeding program*) untuk peningkatan efisiensi produksi misalnya komoditas dengan performa pertumbuhan dan daya tahan penyakit yang tinggi. Sehingga pada tulisan ini, kita akan mengeksplorasi berbagai aspek aplikasi biologi molekuler dan bioinformatika dalam akuakultur modern.
 
 <figure style="text-align: center;">
   <img src="images/genomic-application.png" alt="Genomic application" style="width: 85%;">
@@ -47,27 +47,41 @@ Seiring dengan meningkatnya permintaan protein hewani dari sumber perairan dan t
   </figcaption>
 </figure>
 
-# Teknologi sekuensing dalam konteks akuakultur
+# Aplikasi teknologi *sequencing* dalam akuakultur
 
-Kemajuan teknologi sekuensing telah mendorong perkembangan pesat dalam pemetaan genom spesies akuakultur. Saat ini, banyak spesies budidaya penting telah memiliki genom referensi berkualitas tinggi, seperti Atlantic salmon, ikan mas, tilapia, dan udang vaname. Genom referensi ini menjadi fondasi penting untuk berbagai aplikasi biologi molekuler lebih lanjut.
+Kemajuan teknologi sequencing telah mendorong percepatan pemetaan genom berbagai spesies akuakultur. Saat ini, sejumlah spesies budidaya utama seperti Atlantic salmon, ikan mas, tilapia, dan udang vaname telah memiliki genom referensi berkualitas tinggi. Genom referensi ini menjadi fondasi penting dalam berbagai aplikasi biologi molekuler, termasuk seleksi berbasis genom, analisis ekspresi gen, studi ketahanan terhadap penyakit, dan pemetaan sifat kuantitatif (QTL mapping).
 
-Kualitas sekuensing genom juga terus meningkat. Yang mana saat ini definisi genom berkualitas tinggi kini mencakup beberapa kriteria: (1) kelengkapan tinggi, (2) akurasi tinggi, (3) kontinuitas tinggi, (4) sekuens yang terhubung ke kromosom, (5) sekuens kromosom seks (jika ada), dan (6) haplotype yang terselesaikan. Bahkan saat ini, banyak proyek yang mengarah pada inisiatif "telomere-to-telomere" (T2T) untuk menghasilkan genom diploid yang lengkap dan bebas gap.
+Kualitas data genom juga terus mengalami peningkatan. Definisi genom berkualitas tinggi kini mencakup sejumlah kriteria penting, seperti kelengkapan sekuens yang tinggi, akurasi tinggi dalam pemetaan basa, kontinuitas sekuens yang panjang, penyusunan sekuens hingga tingkat kromosom, identifikasi kromosom seks (bila ada), serta penyelesaian haplotype-spesifik.
 
-Teknologi-teknologi baru berperan penting dalam kemajuan ini. Sequencing generasi ketiga (*long-read sequencing*) seperti PacBio dan Oxford Nanopore memungkinkan pembacaan fragmen DNA yang lebih panjang dan cepat sehingga mempermudah perakitan genom kompleks (*genom assembly*). Menariknya, dengan perkembangan teknologi saat ini, beberapa genom referensi bahkan langsung mencapai kriteria "berkualitas tinggi" saat pertama kali dirakit, seperti pada ikan sablefish (*Anoplopoma fimbria*).
+Bahkan, beberapa proyek genomik terkini telah mengarah ke inisiatif "*telomere-to-telomere*" (T2T), yaitu penyusunan genom diploid secara utuh dari ujung telomer satu ke telomer lainnya tanpa celah (*gap-free*). Contoh yang menarik adalah genom ikan sablefish (*Anoplopoma fimbria*), yang langsung memenuhi kriteria "*high-quality reference genome*" pada perakitan awalnya berkat penggunaan teknologi mutakhir.
 
-Selain teknologi sekuensing, pengembangan *single nucleotide polymorphism* (SNP) chip juga menjadi komponen penting dalam kemajuan genomik akuakultur. Contohnya seperti *low-density* Pacific Oyster Illumina GoldenGate 1K chip, *medium-density* Atlantic salmon Affymetrix Axiom 50K chip, dan *high-density* catfish Affymetrix Axiom 690K chip. Alat-alat ini memudahkan karakterisasi genetik populasi budidaya dengan biaya yang lebih rendah dibandingkan dengan sekuensing penuh.
+Salah satu faktor kunci di balik kemajuan ini adalah adopsi teknologi *long-read sequencing* generasi ketiga, seperti [PacBio HiFi](https://www.pacb.com/technology/hifi-sequencing/how-it-works/) dan [Oxford Nanopore](https://nanoporetech.com/platform/technology). Teknologi ini memungkinkan pembacaan fragmen DNA dengan panjang >10 kb secara langsung, sehingga sangat membantu dalam merakit genom dengan kompleksitas tinggi, termasuk yang memiliki banyak elemen repetitif atau duplikasi gen.
+
+Selain itu, pengembangan *single nucleotide polymorphism* (SNP) chip telah menjadi komponen penting dalam akselerasi studi genetik di akuakultur. Beberapa contoh platform SNP chip yang banyak digunakan misalnya:
+
+- Low-density chip seperti Pacific oyster Illumina GoldenGate 1K, <br>
+- Medium-density chip seperti Atlantic salmon Affymetrix Axiom 50K, dan <br>
+- High-density chip seperti catfish Affymetrix Axiom 690K. <br>
+
+SNP chips ini memberikan solusi *genotyping* yang efisien dan lebih ekonomis dibandingkan dengan sekuensing seluruh genom (*whole genome sequencing*), khususnya dalam studi genetika populasi berskala besar dan program seleksi genetik berskala industri.
+
+Kemajuan teknologi sekuensing juga didukung oleh perkembangan perangkat lunak (*software*) dan alat bioinformatika. Berbagai *pipeline* dan *tools* telah dikembangkan untuk mengotomatisasi proses seperti perakitan genom (*genome assembly*), anotasi gen, identifikasi varian, hingga analisis ekspresi gen. Contohnya, Flye dan Canu untuk *de novo assembly*, MAKER dan BRAKER untuk anotasi gen, serta Snippy, GATK, dan FreeBayes untuk deteksi varian.
+
+Salah satu platform yang semakin populer dan banyak digunakan oleh komunitas akuakultur adalah [Galaxy](https://usegalaxy.org.au/), sebuah sistem bioinformatika berbasis web yang menyediakan antarmuka grafis untuk menjalankan analisis genomik secara *reproducible* tanpa memerlukan kemampuan pemrograman tingkat lanjut. Galaxy mempermudah integrasi berbagai tool seperti FastQC, BWA, Salmon, hingga DESeq2, sehingga sangat ideal untuk pelatihan, kolaborasi, maupun penelitian berskala besar, meskipun Galaxy memiliki keterbatasan dalam hal performa saat menangani dataset besar, serta fleksibilitas yang lebih rendah dibandingkan analisis berbasis *command-line*, terutama pada server publik dengan sumber daya terbatas.
+
+Inovasi-inovasi ini membuka peluang besar untuk mempercepat riset genomik di sektor akuakultur, serta mendukung penerapan *precision breeding* yang lebih efisien dan berkelanjutan.
 
 # Seleksi genomik: Revolusi dalam pemuliaan
 
-Seleksi genomik (*genomic selection* - GS) merupakan pendekatan pemuliaan revolusioner yang diperkenalkan oleh Meuwissen pada tahun 2001. Berbeda dengan seleksi konvensional yang mengandalkan silsilah dan data fenotip, atau *marker-assisted selection* (MAS) yang berfokus pada QTL (*Quantitative Trait Loci*) dengan efek besar, seleksi genomik menggunakan marker yang tersebar di seluruh genom untuk memprediksi nilai pemuliaan.
+Seleksi genomik atau *genomic selection* (GS) merupakan pendekatan pemuliaan revolusioner yang diperkenalkan oleh Meuwissen pada tahun 2001. Berbeda dengan seleksi konvensional yang mengandalkan silsilah dan data fenotip, atau *marker-assisted selection* (MAS) yang berfokus pada QTL (*Quantitative Trait Loci*) atau gen-gen dengan efek besar (*monogenic* atau *oligogenic*), seleksi genomik menggunakan marker yang tersebar di seluruh genom untuk memprediksi nilai pemuliaan dengan asumsi bahwa suatu sifat (*trait*) dipengaruhi oleh banyak gen (*polygenic*).
 
-Prinsip dasar GS adalah mengasumsikan bahwa setiap QTL atau gen yang mempengaruhi sifat kuantitatif berada dalam *linkage disequilibrium* (LD), yang merupakan kondisi di mana alel pada dua lokus berbeda cenderung muncul bersama lebih sering (atau lebih jarang) dari yang diharapkan secara acak dengan setidaknya satu marker molekuler di seluruh genom. Proses GS melibatkan pembentukan populasi referensi dengan informasi genotip dan fenotip, pengembangan model prediksi, dan penerapan model tersebut pada kandidat seleksi yang hanya memiliki data genotip, misalnya microsatelit atau SNP.
+Prinsip dasar GS adalah mengasumsikan bahwa setiap QTL atau gen yang mempengaruhi trait kuantitatif berada dalam *linkage disequilibrium* (LD), yang merupakan kondisi di mana alel pada dua lokus berbeda cenderung muncul bersama lebih sering (atau lebih jarang) dari yang diharapkan secara acak dengan setidaknya satu marker molekuler di seluruh genom. Proses GS melibatkan pembentukan populasi referensi dengan informasi genotip dan fenotip, pengembangan model prediksi, dan penerapan model tersebut pada kandidat seleksi yang hanya memiliki data genotip, misalnya microsatelit atau SNP.
 
-Keunggulan GS dibandingkan metode konvensional diantaranya: (1) tidak bergantung pada informasi fenotip untuk individu kandidat, (2) dapat menjelaskan semua variasi genetik dalam genom, (3) dapat menetralisir efek interaksi genotipe dengan lingkungan, dan (4) dapat mengurangi inbreeding. Metode ini juga mempersingkat interval generasi, meningkatkan intensitas seleksi, dan sangat cocok untuk sifat yang sulit diukur seperti resistensi penyakit dan kualitas daging.
+Keunggulan GS dibandingkan metode konvensional diantaranya: (1) tidak bergantung pada informasi fenotip untuk individu kandidat, (2) dapat menjelaskan semua variasi genetik dalam genom, (3) dapat menetralisir efek interaksi genotipe dengan lingkungan, dan (4) dapat mengurangi inbreeding. Metode ini juga mempersingkat interval generasi, meningkatkan intensitas seleksi, dan sangat cocok untuk trait dengan heritabilitas rendah (< 0.1) seperti resistensi penyakit dan kualitas daging.
 
-Dalam akuakultur, GS telah diterapkan pada berbagai spesies dan sifat. Contohnya termasuk resistensi terhadap kutu laut (*sea lice*) pada salmon, resistensi terhadap *bacterial cold water disease* pada rainbow trout, dan pertumbuhan pada tilapia. Studi menunjukkan bahwa akurasi GS biasanya lebih tinggi dibandingkan dengan metode berbasis silsilah konvensional (*pedigree-based selection*), dengan peningkatan rata-rata sebesar 22% untuk sifat resistensi penyakit dan 24% untuk sifat pertumbuhan.
+Dalam akuakultur, GS telah diterapkan pada berbagai spesies dan trait. Resistensi terhadap kutu laut (*sea lice*) pada salmon, resistensi terhadap *bacterial cold water disease* pada rainbow trout, dan optimasi pertumbuhan pada tilapia merupakan contoh-contoh aplikasi GS yang saat ini telah berhasil diserap hingga ke level industri. Selain itu, studi menunjukkan bahwa akurasi GS biasanya lebih tinggi dibandingkan dengan metode berbasis silsilah konvensional (*pedigree-based selection*), dengan peningkatan rata-rata sebesar 22% untuk trait resistensi penyakit dan 24% untuk trait pertumbuhan.
 
-Metode perhitungan nilai pemuliaan genomik (*genomic estimated breeding values* - GEBV) dalam GS dapat dibagi menjadi tiga kategori: (1) berdasarkan teori BLUP (*best linear unbiased prediction*), seperti GBLUP, ssGBLUP, dan variasinya; (2) berdasarkan teori Bayesian, seperti BayesA, BayesB, BayesC, dan BayesR; dan (3) berdasarkan algoritma machine learning, seperti SVM, random forest, dan deep learning (masih tahap pengembangan). Masing-masing metode memiliki kelebihan dan kelemahan, dan pemilihan metode tergantung pada karakteristik sifat dan struktur populasi.
+Salah satu penentu keberhasilan GS adalah penggunaan metode untuk meningkatkan akurasi prediksi nilai pemuliaan. Saat ini, metode prediksi nilai pemuliaan genomik (*genomic estimated breeding values* - GEBV) dalam GS dapat dibagi menjadi tiga kategori: (1) berdasarkan teori BLUP (*best linear unbiased prediction*), seperti GBLUP, ssGBLUP, dan variasinya; (2) berdasarkan teori Bayesian, seperti BayesA, BayesB, BayesC, dan BayesR; dan (3) yang terbaru adalah berdasarkan algoritma machine learning, seperti SVM, random forest, dan deep learning. Masing-masing metode memiliki kelebihan dan kelemahan, yang mana pemilihannya tergantung pada spesies, heritabilitas, karakteristik trait dan struktur populasi.
 
 <figure style="text-align: center;">
   <img src="images/gs.png" alt="Genomic selection" style="width: 85%;">
@@ -77,7 +91,7 @@ Metode perhitungan nilai pemuliaan genomik (*genomic estimated breeding values* 
   </figcaption>
 </figure>
 
-Secara umum, akurasi prediksi nilai GEBV ini dipengaruhi oleh beberapa faktor, seperti ukuran populasi referensi, densitas marker, metode estimasi GEBV, dan hubungan antara populasi referensi dan populasi kandidat. Sehingga riset-riset GS saat ini berfokus pada penentuan strategi untuk meningkatkan akurasi dan mengurangi biaya *genotyping*, seperti pengembangan panel SNP berdensitas rendah dikombinasikan dengan imputasi genotip, *low-coverage sequencing*, dan pencarian alternative marker informatif selain SNPs.
+Selain itu, akurasi prediksi nilai GEBV ini dipengaruhi oleh beberapa faktor, seperti ukuran populasi referensi, densitas marker, metode estimasi GEBV, dan hubungan antara populasi referensi dan populasi kandidat. Sehingga riset-riset GS saat ini berfokus pada penentuan strategi untuk meningkatkan akurasi dan mengurangi biaya *genotyping*, seperti pengembangan panel SNP berdensitas rendah dikombinasikan dengan imputasi genotip, *low-coverage sequencing*, dan pencarian alternative marker informatif selain SNPs.
 
 # Teknologi induk pengganti (*surrogate broodstock*)
 
@@ -102,9 +116,9 @@ Saat ini aplikasi *surrogate broodstock* dalam akuakultur masih dalam tahap awal
 
 Meskipun menjanjikan, teknologi ini masih menghadapi tantangan, terutama dalam hal konsentrasi sel germline yang rendah pada beberapa spesies ikan dan efisiensi transplantasi yang bervariasi berdasarkan musim. Namun, dengan pengembangan metode untuk memperkaya sel induk germline dan optimalisasi waktu transplantasi, teknologi SB berpotensi memberikan dampak signifikan pada industri akuakultur.
 
-# Aplikasi multi-omics dalam analisis sifat produksi
+# Aplikasi *multi-omics*
 
-Pendekatan multi-omics merujuk pada pengintegrasian berbagai lapisan data "omics untuk memberikan pemahaman yang lebih komprehensif tentang mekanisme molekuler yang mendasari sifat-sifat penting dalam akuakultur. Lapisan-lapisan ini meliputi genomik, epigenomik, transkriptomik, proteomik, metabolomik, microbiomik, dan metagenomik.
+Pendekatan multi-omics merujuk pada pengintegrasian berbagai lapisan data "omics untuk memberikan pemahaman yang lebih komprehensif tentang mekanisme molekuler yang mendasari sifat-sifat penting dalam akuakultur (*traits*). Lapisan-lapisan ini meliputi genomik, epigenomik, transkriptomik, proteomik, metabolomik, microbiomik, dan metagenomik.
 
 1.  Transkriptomik.
 
@@ -142,7 +156,7 @@ Meskipun kemajuan signifikan telah dicapai dalam aplikasi biologi molekuler dan 
 
 1.  Pengembangan teknik fenotipe akurat
 
-    Memperoleh fenotipe yang akurat sangat penting dalam program pemuliaan karena akurasi pengukuran sifat langsung mempengaruhi akurasi seleksi genomik. Teknologi kamera dengan pengolahan gambar berbasis *machine learning* dengan akurasi tinggi (>97%) untuk analisis gambar dan pengukuran fenotipik masih perlu dikembangkan, bersama dengan teknologi seperti pencitraan hyperspectral dan spektroskopi inframerah untuk mengukur atribut fisik dan kimia hewan budidaya.
+    Memperoleh fenotipe yang akurat sangat penting dalam program pemuliaan karena akurasi pengukuran *trait* langsung mempengaruhi akurasi seleksi genomik. Teknologi kamera dengan pengolahan gambar berbasis *machine learning* dengan akurasi tinggi (>97%) untuk analisis gambar dan pengukuran fenotipik masih perlu dikembangkan, bersama dengan teknologi seperti pencitraan hyperspectral dan spektroskopi inframerah untuk mengukur atribut fisik dan kimia hewan budidaya.
 
 2.  Pengembangan strategi untuk mengurangi biaya seleksi genomik
 
@@ -150,7 +164,7 @@ Meskipun kemajuan signifikan telah dicapai dalam aplikasi biologi molekuler dan 
 
 3.  Pertimbangan interaksi genotipe dengan lingkungan (G×E)
     
-    Sifat ekonomis penting biasanya dipengaruhi oleh gen, lingkungan, dan interaksi diantaranya (GxE). Mengabaikan interaksi G×E dapat mengurangi kemajuan genetik. Sehingga pengembangan dan inovasi motode terbaik untuk mempertimbangkan GxE sangatlah penting. Sampai saat ini, *model multi-trait* dan *reaction norm* merupakan dua metode umum untuk menangani interaksi G×E dalam evaluasi genetik.
+    *Trait* berinilai ekonomi tinggi biasanya dipengaruhi oleh gen, lingkungan, dan interaksi diantaranya (GxE). Mengabaikan interaksi G×E dapat mengurangi kemajuan genetik. Sehingga pengembangan dan inovasi motode terbaik untuk mempertimbangkan GxE sangatlah penting. Sampai saat ini, *model multi-trait* dan *reaction norm* merupakan dua metode umum untuk menangani interaksi G×E dalam evaluasi genetik.
 
 4.  Pertimbangan dosis alel dalam prediksi genomik untuk ikan poliploid
 

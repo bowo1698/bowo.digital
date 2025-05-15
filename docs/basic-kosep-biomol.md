@@ -34,6 +34,8 @@ Gen dapat diumpamakan sebagai resep dalam buku masak. Setiap resep (gen) berisi 
 
 <img src="images/Gene-DNA.jpg" alt="DNA" style="width: 85%;">
 
+DNA dan Gen
+
 Bayangkan jika tubuh kita adalah sebuah orkestra besar, maka gen-gen adalah partitur musiknya. Setiap gen memberi petunjuk kapan, di mana, dan bagaimana menghasilkan nada (protein) tertentu. Kombinasi dari ribuan "nada" inilah yang menciptakan "simfoni kehidupan" yang unik pada setiap individu.
 
 Gen tidak bekerja sendirian. Mereka saling berinteraksi dalam jaringan kompleks, saling mengatur dan memengaruhi. Beberapa gen aktif sejak awal perkembangan embrio, sementara yang lain hanya aktif pada tahap tertentu atau di jaringan spesifik. Misalnya, gen yang bertanggung jawab untuk membentuk hemoglobin (protein pembawa oksigen dalam darah) sangat aktif di sel-sel darah merah, tetapi tidak aktif di sel kulit.
@@ -63,6 +65,8 @@ Dogma sentral biologi molekuler (*central dogma*) menjelaskan bagaimana informas
 Dogma sentral menyederhanakan proses yang sebenarnya sangat kompleks. Menariknya, dalam beberapa dekade terakhir, para ilmuwan telah menemukan beberapa "pengecualian" terhadap aliran informasi ini. Misalnya, beberapa virus (seperti HIV) memiliki enzim *reverse transcriptase* yang dapat mengubah RNA menjadi DNA, membalik arah normal aliran informasi. Penemuan non-coding RNA (ncRNA) yang memiliki fungsi regulasi juga telah memperluas pemahaman kita tentang peran RNA di luar sekadar perantara.
 
 <img src="images/Central-dogma.png" alt="Central dogma" style="width: 85%;">
+
+Dogma sentral
 
 Sumber gambar: [scienceholic](https://www.scienceholic.org/post/the-exception-to-the-central-dogma)
 
@@ -140,6 +144,8 @@ Saat ini, studi tentang epigenetik menjadi topik yang sangat menarik, karena mem
 
 <img src="images/epigenetic.png" alt="Epigenetic" style="width: 85%;">
 
+Mekanisme epigenetik
+
 Sumber gambar: [Wikipedia](https://en.wikipedia.org/wiki/Epigenetics)
 
 ## Regulasi pasca transkripsi
@@ -173,6 +179,8 @@ RNA Splicing adalah proses penting dalam pemrosesan transkrip RNA, di mana intro
 Salah satu aspek paling menarik dari splicing adalah *alternative splicing*, yaitu mekanisme di mana satu gen dapat menghasilkan beberapa varian mRNA dan, pada akhirnya, berbagai isoform protein. Hal ini memungkinkan diversifikasi produk protein tanpa harus menambah jumlah gen.
 
 <img src="images/al-splicing.png" alt="Alternative splicing" style="width: 85%;">
+
+*Alternative splicing*
 
 Sumber gambar: [Nature reviews](https://doi.org/10.1038/s41580-022-00545-z)
 
@@ -251,6 +259,8 @@ Seleksi alam bekerja pada variasi genetik di mana memfavoritkan mutasi yang meng
 Migrasi genetik atau *gene flow* terjadi ketika individu berpindah dari satu populasi ke populasi lain dan berkontribusi pada kumpulan gen yang baru. Proses ini meningkatkan variasi genetik dalam populasi penerima dan bisa mengurangi perbedaan genetik antar populasi yang sering bertukar materi genetik. Jika kita kembali ke analogi buku resep, ini seperti keluarga dari daerah berbeda yang bertemu dan berbagi resep, menciptakan fusi kuliner baru yang menggabungkan ciri khas berbagai daerah. Koala di Australia misalnya, menunjukkan bagaimana *gene flow* membantu mereka beradaptasi di berbagai lingkungan berbeda meskipun memiliki spesialisasi makanan. Adanya *gene flow* yang alami memungkinkan populasi koala untuk mempertahankan tingkat keanekaragaman genetik yang sehat, meningkatkan potensi evolusi adaptif, dan mengurangi risiko akibat inbreeding (perkawinan sesama keluarga). Hal ini juga memungkinkan penyebaran adaptasi lokal yang menguntungkan antar populasi, membantu spesies secara keseluruhan untuk merespon perubahan lingkungan, termasuk akibat aktivitas manusia.
 
 <img src="images/koala.png" alt="Phylogenetic Koala" style="width: 85%;">
+
+Pohon filogenetik populasi Koala di Australia menggunakan marker SNP
 
 Sumber gambar: Laporan penelitian penulis
 

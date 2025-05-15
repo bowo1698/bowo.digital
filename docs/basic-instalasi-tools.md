@@ -20,7 +20,7 @@ nav_order: 3
 </p>
 
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <img src="https://www.scilifelab.se/wp-content/uploads/2020/06/AdobeStock_245562438_WP2.jpg" alt="Tools instalation" style="max-width: 100%; height: auto;">
+  <img src="docs/images/bg-bioinfo.jpg" alt="Tools instalation" style="max-width: 100%; height: auto;">
 </div>
 
 # Daftar isi

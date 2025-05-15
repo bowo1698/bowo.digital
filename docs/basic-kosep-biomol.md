@@ -260,8 +260,8 @@ Melalui kombinasi mutasi, rekombinasi, seleksi alam, *genetic drift*, dan *gene 
 
 -   Lodish, H. F. (2008). Molecular cell biology. Macmillan.
 -   Stearns, S. C., & Hoekstra, R. F. (2000). Evolution, an introduction. Oxford University Press.
--   Bartel. (2004). “MicroRNAs: Genomics, Biogenesis, Mechanism, and Function.” Cell 116 (2): 281–97.
--   Strahl, and Allis. (2000). “The Language of Covalent Histone Modifications.” Nature 403 (6765): 41–45.
--   Veltman, J., Brunner, H. (2012) De novo mutations in human genetic disease. Nat Rev Genet 13, 565–575.
--   Marasco, L.E., Kornblihtt, A.R. (2023). The physiology of alternative splicing. Nat Rev Mol Cell Biol 24, 242–254.
--   Kjeldsen, S.R., Raadsma, H.W., Leigh, K.A. et al. (2019). Genomic comparisons reveal biogeographic and anthropogenic impacts in the koala (Phascolarctos cinereus): a dietary-specialist species distributed across heterogeneous environments. Heredity 122, 525–544.
+-   [Bartel. (2004). “MicroRNAs: Genomics, Biogenesis, Mechanism, and Function.” Cell 116 (2): 281–97.](https://doi.org/10.1016/s0092-8674(04)00045-5)
+-   [Strahl, and Allis. (2000). “The Language of Covalent Histone Modifications.” Nature 403 (6765): 41–45.](https://www.nature.com/articles/47412)
+-   [Veltman, J., Brunner, H. (2012) De novo mutations in human genetic disease. Nat Rev Genet 13, 565–575.](https://www.nature.com/articles/nrg3241)
+-   [Marasco, L.E., Kornblihtt, A.R. (2023). The physiology of alternative splicing. Nat Rev Mol Cell Biol 24, 242–254.](https://www.nature.com/articles/s41580-022-00545-z)
+-   [Kjeldsen, S.R., Raadsma, H.W., Leigh, K.A. et al. (2019). Genomic comparisons reveal biogeographic and anthropogenic impacts in the koala (Phascolarctos cinereus): a dietary-specialist species distributed across heterogeneous environments. Heredity 122, 525–544.](https://www.nature.com/articles/s41437-018-0144-4)

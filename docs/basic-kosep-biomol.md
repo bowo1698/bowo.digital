@@ -32,9 +32,13 @@ Keberhasilan biologi molekuler tidak lepas dari pendekatannya yang interdisiplin
 
 Gen dapat diumpamakan sebagai resep dalam buku masak. Setiap resep (gen) berisi instruksi spesifik untuk membuat satu jenis hidangan, dalam hal ini adalah protein. Gen adalah unit fungsional terkecil dari materi genetik yang mengkode informasi untuk membentuk protein tertentu atau mengatur ekspresi gen lainnya.
 
-<img src="images/Gene-DNA.jpg" alt="DNA" style="width: 85%;">
-
-DNA dan Gen
+<figure style="text-align: center;">
+  <img src="images/Gene-DNA.jpg" alt="DNA dan gen" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+    <strong>Struktur DNA dalam sel.</strong> DNA berada di dalam inti sel dan terorganisasi membentuk kromosom. DNA melilit protein histon membentuk nukleosom, yang kemudian berkontribusi pada struktur kromatin. Bagian spesifik dari DNA disebut gen, yang terdiri atas pasangan basa nukleotida: Adenin (A) berpasangan dengan Timin (T), dan Guanin (G) berpasangan dengan Sitosin (C). Struktur ini merupakan dasar penyimpanan informasi genetik dalam makhluk hidup.
+    <br><em>Sumber gambar:</em> <a href="https://www.cancer.gov/publications/dictionaries/genetics-dictionary/def/dna" target="_blank">National Cancer Institute</a>
+  </figcaption>
+</figure>
 
 Bayangkan jika tubuh kita adalah sebuah orkestra besar, maka gen-gen adalah partitur musiknya. Setiap gen memberi petunjuk kapan, di mana, dan bagaimana menghasilkan nada (protein) tertentu. Kombinasi dari ribuan "nada" inilah yang menciptakan "simfoni kehidupan" yang unik pada setiap individu.
 
@@ -64,11 +68,13 @@ Dogma sentral biologi molekuler (*central dogma*) menjelaskan bagaimana informas
 
 Dogma sentral menyederhanakan proses yang sebenarnya sangat kompleks. Menariknya, dalam beberapa dekade terakhir, para ilmuwan telah menemukan beberapa "pengecualian" terhadap aliran informasi ini. Misalnya, beberapa virus (seperti HIV) memiliki enzim *reverse transcriptase* yang dapat mengubah RNA menjadi DNA, membalik arah normal aliran informasi. Penemuan non-coding RNA (ncRNA) yang memiliki fungsi regulasi juga telah memperluas pemahaman kita tentang peran RNA di luar sekadar perantara.
 
-<img src="images/Central-dogma.png" alt="Central dogma" style="width: 85%;">
-
-Dogma sentral
-
-Sumber gambar: [scienceholic](https://www.scienceholic.org/post/the-exception-to-the-central-dogma)
+<figure style="text-align: center;">
+  <img src="images/Central-dogma.png" alt="Central dogma" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+    <strong>Dogma sentral.</strong> DNA mengalami replikasi untuk menggandakan dirinya, kemudian ditranskripsi menjadi RNA. RNA selanjutnya diterjemahkan (translasi) menjadi protein. Dalam kasus tertentu, RNA juga dapat ditranskripsi balik (reverse transcription) menjadi DNA, seperti yang terjadi pada virus retro.
+    <br><em>Sumber gambar:</em> <a href="https://www.scienceholic.org/post/the-exception-to-the-central-dogma" target="_blank">scienceholic</a>
+  </figcaption>
+</figure>
 
 # Regulasi ekspresi gen
 
@@ -142,11 +148,13 @@ Epigenetik merujuk pada berbagai faktor selain urutan DNA, seperti struktur krom
 
 Saat ini, studi tentang epigenetik menjadi topik yang sangat menarik, karena membuka pemahaman baru tentang bagaimana ekspresi gen dapat diatur tanpa mengubah urutan DNA itu sendiri. Penelitian di bidang ini memiliki implikasi luas, mulai dari pemahaman mekanisme dasar perkembangan embrionik hingga peran epigenetik dalam berbagai penyakit, termasuk kanker, gangguan neurodegeneratif, dan penyakit autoimun. Selain itu, epigenetik juga menjanjikan pendekatan terapeutik baru, seperti terapi epigenetik yang menargetkan enzim pengubah kromatin untuk memodulasi ekspresi gen secara spesifik. Pemahaman yang lebih mendalam tentang epigenetik berpotensi merevolusi pengobatan presisi dan membuka peluang besar dalam bioteknologi dan rekayasa genetik.
 
-<img src="images/epigenetic.png" alt="Epigenetic" style="width: 85%;">
-
-Mekanisme epigenetik
-
-Sumber gambar: [Wikipedia](https://en.wikipedia.org/wiki/Epigenetics)
+<figure style="text-align: center;">
+  <img src="images/epigenetic.png" alt="Epigenetics" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+    <strong>Mekanisme epigenetik.</strong> Mekanisme ini meliputi metilasi DNA (penambahan gugus metil yang dapat menonaktifkan gen) dan modifikasi histon (pengikatan faktor epigenetik pada ekor histon yang mempengaruhi keterbukaan DNA). 
+    <br><em>Sumber gambar:</em> <a href="https://en.wikipedia.org/wiki/Epigenetics" target="_blank">Wikipedia</a>
+  </figcaption>
+</figure>
 
 ## Regulasi pasca transkripsi
 
@@ -178,11 +186,13 @@ RNA Splicing adalah proses penting dalam pemrosesan transkrip RNA, di mana intro
 
 Salah satu aspek paling menarik dari splicing adalah *alternative splicing*, yaitu mekanisme di mana satu gen dapat menghasilkan beberapa varian mRNA dan, pada akhirnya, berbagai isoform protein. Hal ini memungkinkan diversifikasi produk protein tanpa harus menambah jumlah gen.
 
-<img src="images/al-splicing.png" alt="Alternative splicing" style="width: 85%;">
-
-*Alternative splicing*
-
-Sumber gambar: [Nature reviews](https://doi.org/10.1038/s41580-022-00545-z)
+<figure style="text-align: center;">
+  <img src="images/al-splicing.png" alt="Alternative splicing" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+    <strong>Mekanisme alternative splicing pada eukariota.</strong> Perbedaan ekspresi gen antara prokariota dan eukariota, di mana eukariota membentuk pre-mRNA yang mengandung intron dan ekson (a). Proses pemotongan intron dari pre-mRNA melalui situs donor (5'), situs akseptor (3'), dan branch site, menghasilkan ekson yang tersambung dan intron lariat (b). Regulasi splicing dipengaruhi oleh elemen penguat dan penghambat seperti ESE (Exonic Splicing Enhancer), ESS (Exonic Splicing Silencer), ISE (Intronic Splicing Enhancer), dan ISS (Intronic Splicing Silencer) (c). Berbagai jenis splicing alternatif menghasilkan variasi isoform mRNA, termasuk cassette exon, alternative splice site (5'/3'), intron retention, dan mutually exclusive exons, yang berkontribusi terhadap keberagaman protein dari satu gen (d).
+    <br><em>Sumber gambar:</em> <a href="https://doi.org/10.1038/s41580-022-00545-z" target="_blank">Marasco & Kornblihtt 2022</a>
+  </figcaption>
+</figure>
 
 Ada beberapa jenis *alternative splicing*, seperti:
 
@@ -258,11 +268,13 @@ Seleksi alam bekerja pada variasi genetik di mana memfavoritkan mutasi yang meng
 
 Migrasi genetik atau *gene flow* terjadi ketika individu berpindah dari satu populasi ke populasi lain dan berkontribusi pada kumpulan gen yang baru. Proses ini meningkatkan variasi genetik dalam populasi penerima dan bisa mengurangi perbedaan genetik antar populasi yang sering bertukar materi genetik. Jika kita kembali ke analogi buku resep, ini seperti keluarga dari daerah berbeda yang bertemu dan berbagi resep, menciptakan fusi kuliner baru yang menggabungkan ciri khas berbagai daerah. Koala di Australia misalnya, menunjukkan bagaimana *gene flow* membantu mereka beradaptasi di berbagai lingkungan berbeda meskipun memiliki spesialisasi makanan. Adanya *gene flow* yang alami memungkinkan populasi koala untuk mempertahankan tingkat keanekaragaman genetik yang sehat, meningkatkan potensi evolusi adaptif, dan mengurangi risiko akibat inbreeding (perkawinan sesama keluarga). Hal ini juga memungkinkan penyebaran adaptasi lokal yang menguntungkan antar populasi, membantu spesies secara keseluruhan untuk merespon perubahan lingkungan, termasuk akibat aktivitas manusia.
 
-<img src="images/koala.png" alt="Phylogenetic Koala" style="width: 85%;">
-
-Pohon filogenetik populasi Koala di Australia menggunakan marker SNP
-
-Sumber gambar: Laporan penelitian penulis
+<figure style="text-align: center;">
+  <img src="images/koala.png" alt="Analisis filogenomik" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: right;">
+    <strong>Analisis filogenomik Koala dari beberapa populasi berbeda di Australia.</strong> Analisis filogenomik menunjukkan dua klade utama yang memisahkan populasi koala utara dan selatan. Sebagian besar populasi mengelompok sesuai wilayah, kecuali individu dari Campbelltown dan Kangaroo Island yang tergabung dalam klade utara. Cabang yang lebih pendek di wilayah selatan mengindikasikan keragaman genetik yang lebih rendah. Dukungan bootstrap kuat terlihat pada klade utama, meskipun simpul antar kelompok menunjukkan adanya percampuran populasi, terutama di wilayah selatan.
+    <br><em>Sumber gambar:</em> <a href="" target="_blank">Penelitian penulis</a>
+  </figcaption>
+</figure>
 
 Melalui kombinasi mutasi, rekombinasi, seleksi alam, *genetic drift*, dan *gene flow*, variasi DNA terus terbentuk dan berubah sepanjang waktu. Semua proses ini bersama-sama membentuk cetak biru kehidupan yang terus berkembang, menciptakan keragaman luar biasa yang kita lihat pada seluruh bentuk kehidupan di planet ini.
 

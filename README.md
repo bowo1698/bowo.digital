@@ -24,15 +24,13 @@ permalink: /
 
 ## Selamat datang 👋
 
-### 🔬 Latar belakang akademis dan perjalanan ke Bioinformatika
-
-Hai, perkenalkan, saya **Agus Wibowo**, saat ini sedang melaksanakan studi pasca sarjana di James Cook University, Australia.
-
-Sedikit tentang saya. Sejak SMA saya memang suka "ngoprek", mulai dari mempelajari berbagai bahasa pemrograman seperti C++, Ruby, Python, Bash, dan R (mungkin saya adalah pengguna R pertama di Jurusan Perikanan dan Kelautan, UNILA), otak-atik program komputer hingga bongkar-pasang laptop/komputer, termasuk ngoprek Arduino dan raspberry pi. Dalam hal teknologi, saya berkiblat pada 2 tokoh Indonesia: [pak Budi Rahardjo](https://github.com/rahard) (sekarang dosen STEI ITB) yang mengajari saya berbagai bahasa pemrograman lewat buku-buku nya, dan [pak Onno Widodo Purbo](https://onnocenter.or.id/) yang menginspirasi saya untuk menggunakan Linux dan belajar tentang sistem keamanan komputer dan jaringan. Tetapi takdir Allah membenamkan saya untuk terjun di bidang akuakultur dan akhirnya menemukan *passion* di persimpangan antara ilmu akuakultur dan komputer: **Bioinformatika**.
-
-<img src="assets/fish-with-com.jpg" alt="Fish With Code" style="width: 90%;">
+### 🔬 Sekilas tentang bioinformatika
 
 Bioinformatika adalah ilmu interdisipliner yang mengintegrasikan prinsip biologi, statistika, matematika, dan komputasi untuk menjawab tantangan biologi modern. Ketertarikan saya bermula dari perkembangan ilmu akuakultur yang kini tak lagi terbatas pada pemeliharaan ikan di kolam-kolam ataupun analisis di laboratorium basah (*wet lab*), tetapi merambah ke analisis data molekuler berskala besar. Di sinilah peran krusial bioinformatika, mengolah, menganalisis, dan memodelkan data biologis untuk mengungkap mekanisme kehidupan di tingkat molekuler. Ini seperti mempelajari suatu materi fisik, tetapi di level kuantum!
+
+<div style="text-align: center;">
+  <img src="assets/fish-with-com.jpg" alt="Fish With Code" style="width: 90%; height: auto;">
+</div>
 
 Yang menarik adalah, karena kita bermain dengan "ikan", eksplorasi biologi menjadi lebih *flexible* dan membuka banyak ruang inovasi. Misalnya, kita bisa menelusuri gen-gen yang terkait dengan pertumbuhan cepat, ketahanan terhadap penyakit, atau efisiensi pakan, semuanya hanya melalui data DNA. Bioinformatika memberi kita kacamata baru untuk melihat ikan bukan sekadar objek konsumsi, tetapi sebagai kumpulan informasi genetik yang bisa kita manfaatkan untuk perbaikan populasi secara presisi dan berkelanjutan, hingga akhirnya bisa menjadi model atau landasan penerapan untuk level yang lebih tinggi, seperti manusia.
 
@@ -66,7 +64,9 @@ Mengapa demikian?
 
 4.  **Ekosistem terbuka** – Hampir semua perangkat lunak bioinformatika bersifat *open-source* (gratis) dan dikembangkan di lingkungan Linux, membuat dokumentasi dan komunitas dukungannya jauh lebih luas.
 
-<img src="assets/linux-win-mac.jpeg" alt="Windows Linux Mac" style="width: 100%;">
+<div style="text-align: center;">
+  <img src="assets/linux-win-mac.jpeg" alt="Fish With Code" style="width: 90%; height: auto;">
+</div>
 
 > Seluruh materi dalam website ini disusun dengan asumsi bahwa Anda menjalankan Linux secara langsung (*full system install*), bukan melalui Windows. Panduan penggunaan *Windows Subsystem for Linux* (WSL) hanya disediakan sebagai opsi tambahan untuk keperluan eksplorasi atau pembelajaran awal. Namun, dalam praktiknya, WSL memiliki banyak keterbatasan dalam hal kompatibilitas dan kinerja, sehingga tidak direkomendasikan untuk analisis bioinformatika yang sesungguhnya.
 

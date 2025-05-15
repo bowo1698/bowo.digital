@@ -22,92 +22,63 @@ permalink: /
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub issues](https://img.shields.io/github/issues/bowo1698/bowo.digital) ![GitHub repo size](https://img.shields.io/github/repo-size/bowo1698/bowo.digital) [![DOI](https://zenodo.org/badge/243280413.svg)](https://zenodo.org/badge/latestdoi/243280413)
 
+## Selamat datang 👋
+
+### 🔬 Sekilas tentang bioinformatika
+
+Bioinformatika adalah ilmu interdisipliner yang mengintegrasikan prinsip biologi, statistika, matematika, dan komputasi untuk menjawab tantangan biologi modern. Ketertarikan saya bermula dari perkembangan ilmu akuakultur yang kini tak lagi terbatas pada pemeliharaan ikan di kolam-kolam ataupun analisis di laboratorium basah (*wet lab*), tetapi merambah ke analisis data molekuler berskala besar. Di sinilah peran krusial bioinformatika, mengolah, menganalisis, dan memodelkan data biologis untuk mengungkap mekanisme kehidupan di tingkat molekuler. Ini seperti mempelajari suatu materi fisik, tetapi di level kuantum!
 
 <div style="text-align: center;">
-  <h2 style="font-size: 2rem;">Selamat datang 👋</h2>
+  <img src="assets/fish-with-com.jpg" alt="Fish With Code" style="width: 90%; height: auto;">
 </div>
 
-<div style="text-align: justify;">
-  <h3>🔬 Sekilas tentang bioinformatika</h3>
-  <p>
-    Bioinformatika adalah ilmu interdisipliner yang mengintegrasikan prinsip biologi, statistika, matematika, dan komputasi untuk menjawab tantangan biologi modern. Ketertarikan saya bermula dari perkembangan ilmu akuakultur yang kini tak lagi terbatas pada pemeliharaan ikan di kolam-kolam ataupun analisis di laboratorium basah (<em>wet lab</em>), tetapi merambah ke analisis data molekuler berskala besar. Di sinilah peran krusial bioinformatika, mengolah, menganalisis, dan memodelkan data biologis untuk mengungkap mekanisme kehidupan di tingkat molekuler. Ini seperti mempelajari suatu materi fisik, tetapi di level kuantum!
-  </p>
+Yang menarik adalah, karena kita bermain dengan "ikan", eksplorasi biologi menjadi lebih *flexible* dan membuka banyak ruang inovasi. Misalnya, kita bisa menelusuri gen-gen yang terkait dengan pertumbuhan cepat, ketahanan terhadap penyakit, atau efisiensi pakan, semuanya hanya melalui data DNA. Bioinformatika memberi kita kacamata baru untuk melihat ikan bukan sekadar objek konsumsi, tetapi sebagai kumpulan informasi genetik yang bisa kita manfaatkan untuk perbaikan populasi secara presisi dan berkelanjutan, hingga akhirnya bisa menjadi model atau landasan penerapan untuk level yang lebih tinggi, seperti manusia.
 
-  <div style="text-align: center;">
-    <img src="assets/fish-with-com.jpg" alt="Fish With Code" style="width: 90%; height: auto;">
-  </div>
+Perkembangan mesin sekuensing generasi mutakhir seperti [Illumina](https://en.wikipedia.org/wiki/Illumina,_Inc.) (*short-read*) dan [PacBio](https://en.wikipedia.org/wiki/Pacific_Biosciences) (*long-read*) telah menghasilkan data biologis dalam volume yang luar biasa besar. Bioinformatika menjadi kunci untuk mengekstrak wawasan dari kompleksitas ini, terutama dalam [tiga bidang utama terkait dengan akuakultur](https://doi.org/10.1007/978-981-97-8553-7_11):
 
-  <p>
-    Yang menarik adalah, karena kita bermain dengan "ikan", eksplorasi biologi menjadi lebih <em>flexible</em> dan membuka banyak ruang inovasi. Misalnya, kita bisa menelusuri gen-gen yang terkait dengan pertumbuhan cepat, ketahanan terhadap penyakit, atau efisiensi pakan, semuanya hanya melalui data DNA. Bioinformatika memberi kita kacamata baru untuk melihat ikan bukan sekadar objek konsumsi, tetapi sebagai kumpulan informasi genetik yang bisa kita manfaatkan untuk perbaikan populasi secara presisi dan berkelanjutan, hingga akhirnya bisa menjadi model atau landasan penerapan untuk level yang lebih tinggi, seperti manusia.
-  </p>
+-   ***Genomics***: Bioinformatika digunakan untuk mempercepat program pemuliaan berbasis genom melalui identifikasi variasi berbagai marker polimorfik seperti [mikrosatelit](https://en.wikipedia.org/wiki/Microsatellite), [SNP](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism), atau bahkan yang terbaru, [mikrohaplotipe](https://pubmed.ncbi.nlm.nih.gov/30347322/). Yang paling dikejar adalah merancang *guide RNA* pada teknologi **CRISPR/Cas9** guna mengedit gen target (jika suatu sifat dikendalikan oleh sedikit gen, *non-polygenic*), seperti meningkatkan toleransi oksigen rendah pada udang atau ketahanan terhadap virus di ikan kerapu.
 
-  <p>
-    Perkembangan mesin sekuensing generasi mutakhir seperti <a href="https://en.wikipedia.org/wiki/Illumina,_Inc.">Illumina</a> (<em>short-read</em>) dan <a href="https://en.wikipedia.org/wiki/Pacific_Biosciences">PacBio</a> (<em>long-read</em>) telah menghasilkan data biologis dalam volume yang luar biasa besar. Bioinformatika menjadi kunci untuk mengekstrak wawasan dari kompleksitas ini, terutama dalam <a href="https://doi.org/10.1007/978-981-97-8553-7_11">tiga bidang utama terkait dengan akuakultur</a>:
-  </p>
+-   ***Metagenomics***: Bioinformatika dapat membantu menganalisis keragaman mikroba dalam ekosistem akuatik (misalnya, air tambak atau saluran pencernaan ikan) untuk mengidentifikasi komunitas bakteri menguntungkan. Dari data ini, kita dapat mendesain probiotik spesifik yang dapat meningkatkan kesehatan ikan, mengurangi ketergantungan pada antibiotik, dan mengoptimalkan kualitas air.
 
-  <ul>
-    <li>
-      <strong><em>Genomics</em></strong>: digunakan untuk mempercepat program pemuliaan berbasis genom melalui identifikasi marker seperti <a href="https://en.wikipedia.org/wiki/Microsatellite">mikrosatelit</a>, <a href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">SNP</a>, atau <a href="https://pubmed.ncbi.nlm.nih.gov/30347322/">mikrohaplotipe</a>. Bioinformatika juga membantu merancang <em>guide RNA</em> untuk teknologi <strong>CRISPR/Cas9</strong> dalam mengedit gen target.
-    </li>
-    <li>
-      <strong><em>Metagenomics</em></strong>: untuk menganalisis komunitas mikroba dalam ekosistem akuatik dan merancang probiotik yang meningkatkan kesehatan ikan dan kualitas air.
-    </li>
-    <li>
-      <strong><em>Transcriptomics</em></strong>: memetakan ekspresi gen dalam kondisi tertentu untuk mendukung pemuliaan berbasis marker genetik, seperti ketahanan terhadap patogen.
-    </li>
-  </ul>
+-   ***Transcriptomics***: Bioinformatika dapat memetakan ekspresi gen organisme akuatik di bawah kondisi tertentu (stres, penyakit, infeksi, perlakuan khusus, dll) untuk merancang program pemuliaan berbasis marker genetik. Contohnya, mengembangkan strain ikan dengan pertumbuhan cepat atau ketahanan terhadap patogen seperti *Vibrio*.
 
-  <h3>🎓 Tujuan website</h3>
-  <p>
-    Website ini dirancang sebagai wadah kolaborasi untuk berbagi pengetahuan seputar bioinformatika dan akuakultur. Tujuannya adalah membangun sumber belajar yang terbuka, mudah diakses, dan relevan secara praktis, khususnya untuk konteks akuakultur Indonesia.
-  </p>
-  <p>
-    Seluruh konten disajikan dalam bahasa Indonesia dengan penyampaian yang sederhana agar dapat dipahami oleh berbagai kalangan. Semua materi gratis, menggunakan data <em>open access</em> dan perangkat lunak <em>open source</em>, tanpa hambatan biaya atau teknis.
-  </p>
-  <p>
-    Dengan semangat kolaboratif, platform ini mengajak semua pihak untuk saling berbagi dan belajar demi mewujudkan akuakultur yang berkelanjutan dan berbasis sains di Indonesia.
-  </p>
+### 🎓 Tujuan website
 
-  <blockquote>
-    <em>"We are a great nation - what we need are people willing to make a difference, even from behind a screen full of code."</em>
-  </blockquote>
+Website ini dirancang sebagai wadah kolaborasi, di mana siapa pun dapat berkontribusi dalam berbagi pengetahuan seputar bioinformatika dan akuakultur. Tujuannya sederhana, membangun sumber belajar yang terbuka, mudah diakses, dan relevan dengan kebutuhan praktis, khususnya dalam konteks akuakultur di Indonesia yang memiliki potensi luar biasa.
 
-  <h2>💻 Catatan teknis</h2>
-  <p>
-    Karena sebagian besar tools bioinformatika dikembangkan untuk lingkungan UNIX, terutama <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> dan macOS, saya menyarankan pengguna Windows mempertimbangkan sistem operasi Linux seperti <a href="https://ubuntu.com/">Ubuntu</a>, <a href="https://www.debian.org/">Debian</a>, atau <a href="https://fedoraproject.org/">Fedora</a>.
-  </p>
-  <ol>
-    <li><strong>Kompatibilitas</strong> – tools seperti HISAT2, STAR, Salmon, dan RSEM lebih stabil di UNIX.</li>
-    <li><strong>Performa</strong> – Linux efisien dalam penggunaan sumber daya sistem.</li>
-    <li><strong>Minim gangguan</strong> – aman dari malware dan mendukung scripting otomatis.</li>
-    <li><strong>Ekosistem terbuka</strong> – dokumentasi dan dukungan komunitas luas.</li>
-  </ol>
+Seluruh konten, termasuk tutorial dan panduan, disajikan dalam bahasa Indonesia dengan gaya penyampaian yang sederhana agar mudah dipahami oleh berbagai kalangan. Semua materi dapat dipelajari secara gratis, menggunakan data *open access* dan perangkat lunak *open source*, sehingga tidak ada hambatan biaya maupun teknis untuk ikut serta.
 
-  <div style="text-align: center;">
-    <img src="assets/linux-win-mac.jpeg" alt="Linux vs Windows vs Mac" style="width: 90%; height: auto;">
-  </div>
+Dengan semangat kolaboratif, platform ini mengajak semua pihak untuk saling berbagi dan belajar, demi mewujudkan akuakultur yang berkelanjutan dan berbasis ilmu pengetahuan di Indonesia.
 
-  <blockquote>
-    Seluruh materi di website ini diasumsikan dijalankan di sistem Linux penuh, bukan WSL. Panduan WSL hanya untuk eksplorasi, dan tidak direkomendasikan untuk analisis nyata karena keterbatasan kompatibilitas dan performa.
-  </blockquote>
+> "*We are a great nation - what we need are people willing to make a difference, even from behind a screen full of code.*"
 
-  <p>
-    Tutorial ini dirancang agar dapat dijalankan di laptop spesifikasi menengah selama menggunakan Linux. Lihat <a href="docs/basic-linux-in-win.md">di sini</a> untuk panduan sistem.
-  </p>
+## 💻 Catatan teknis
 
-  <h2>🚀 Materi</h2>
-  <p>
-    Untuk mulai belajar, silakan pilih tutorial mana yang Anda inginkan:
-  </p>
-  <h3><a href="docs/part1.md">1. Materi dasar</a></h3>
+Karena sebagian besar tools bioinformatika dikembangkan dan dioptimalkan untuk berjalan di lingkungan UNIX terutama [LINUX](https://en.wikipedia.org/wiki/Linux) dan MACOS, saya sangat menyarankan rekan-rekan pengguna Windows untuk mempertimbangkan "bermigrasi" ke sistem operasi berbasis Linux ini, seperti [Ubuntu](https://ubuntu.com/), [Debian](https://www.debian.org/), atau [Fedora](https://fedoraproject.org/).
 
-  <hr style="margin: 2rem 0;">
-  <p style="text-align: center; font-size: 0.95rem;">
-    <a href="/" style="font-weight: bold;">← Beranda</a>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="docs/part2.md" style="font-weight: bold;">Lanjut ke Materi Berikutnya →</a>
-  </p>
+Mengapa demikian?
+
+1.  **Kompatibilitas** – Tools seperti HISAT2, STAR, Salmon, dan RSEM berjalan lebih stabil dan langsung didukung di lingkungan UNIX. "Sangat mudah" dalam hal instalasi dan eksekusinya
+
+2.  **Performa** – Linux cenderung menggunakan sumber daya sistem lebih efisien dibandingkan Windows, terutama dengan adanya sistem *swap* membuatnya ideal untuk komputasi bioinformatika, bahkan di perangkat berspesifikasi rendah.
+
+3.  **Minim gangguan** – Sistem Linux jauh lebih tahan (bahkan hampir mustahil) terhadap malware, dan mendukung scripting otomatis yang efisien (Bash/Shell).
+
+4.  **Ekosistem terbuka** – Hampir semua perangkat lunak bioinformatika bersifat *open-source* (gratis) dan dikembangkan di lingkungan Linux, membuat dokumentasi dan komunitas dukungannya jauh lebih luas.
+
+<div style="text-align: center;">
+  <img src="assets/linux-win-mac.jpeg" alt="Fish With Code" style="width: 90%; height: auto;">
 </div>
+
+> Seluruh materi dalam website ini disusun dengan asumsi bahwa Anda menjalankan Linux secara langsung (*full system install*), bukan melalui Windows. Panduan penggunaan *Windows Subsystem for Linux* (WSL) hanya disediakan sebagai opsi tambahan untuk keperluan eksplorasi atau pembelajaran awal. Namun, dalam praktiknya, WSL memiliki banyak keterbatasan dalam hal kompatibilitas dan kinerja, sehingga tidak direkomendasikan untuk analisis bioinformatika yang sesungguhnya.
+
+Untuk perangkat keras, saya merancang semua tutorial agar dapat dijalankan pada komputer/laptop dengan spesifikasi medium (*laptop dana pelajar* 😁), selama menggunakan sistem operasi berbasis Linux [cek disini](docs/basic-linux-in-win.md). Hal ini memungkinkan siapapun tetap dapat mengikuti alur tutorial ini, mulai dari unduhan data, pra-pemrosesan, analisis, hingga visualisasi, tanpa memerlukan perangkat mahal!!! (meskipun lebih baik jika setiap kampus punya *High Performance Computing* - HPC, yuk bikin!)
+
+## 🚀 Materi
+
+Untuk mulai belajar, silahkan pilih tutorial mana yang anda inginkan.
+
+### [1. Materi dasar](docs/part1.md)
 
 -   [Linux di dalam Windows](docs/basic-linux-in-win.md)
 -   [Memahami hierarki Linux](docs/basic-hierarki-linux.md)
@@ -145,5 +116,9 @@ permalink: /
 <!--   [Pemuliaan berbasis genomic - estimasi nilai breeding](docs/adv-EBV.md) --->
 
 <!-- komentar -->
-
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/basic-tren-terbaru.html" style="font-weight: bold;">Konten berikutnya →</a>
+</p>
 

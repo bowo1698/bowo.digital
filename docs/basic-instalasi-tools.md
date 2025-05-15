@@ -5,6 +5,8 @@ parent: 1. Materi dasar
 nav_order: 3
 ---
 
+<h1 style="text-align: center;">Instalasi Tools Bioinformatika</h1>
+
 #### [Beranda](https://www.bowo.digital/)
 
 # Daftar isi

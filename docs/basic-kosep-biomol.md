@@ -5,6 +5,8 @@ parent: 1. Materi dasar
 nav_order: 4
 ---
 
+<h1 style="text-align: center;">Konsep-konsep dasar biologi molekuler</h1>
+
 #### [Beranda](https://www.bowo.digital/)
 
 # Daftar isi

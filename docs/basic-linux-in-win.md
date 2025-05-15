@@ -5,6 +5,8 @@ parent: 1. Materi dasar
 nav_order: 1
 ---
 
+<h1 style="text-align: center;">Linux di dalam Windows</h1>
+
 #### [Beranda](https://www.bowo.digital/)
 
 # Daftar isi

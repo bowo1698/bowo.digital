@@ -5,6 +5,8 @@ parent: 1. Materi dasar
 nav_order: 2
 ---
 
+<h1 style="text-align: center;">Memahami hierarki Linux</h1>
+
 #### [Beranda](https://www.bowo.digital/)
 
 # Daftar isi

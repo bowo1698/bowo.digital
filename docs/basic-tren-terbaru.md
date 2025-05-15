@@ -5,6 +5,8 @@ parent: 1. Materi dasar
 nav_order: 5
 ---
 
+<h1 style="text-align: center;">Tren dan perkembangan aplikasi biologi molekuler dan bioinformatika untuk akuakultur</h1>
+
 #### [Beranda](https://www.bowo.digital/)
 
 # Daftar isi

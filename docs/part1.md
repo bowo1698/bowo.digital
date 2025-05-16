@@ -1,8 +1,9 @@
 ---
 layout: default
 title: 1. Materi dasar
-nav_order: 2
+nav_order: 3
 description: "Bagian ini berisi tentang teori-teori dasar"
+parent: Materi
 has_children: true
 has_toc: True
 ---

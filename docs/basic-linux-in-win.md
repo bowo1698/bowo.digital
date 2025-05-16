@@ -8,7 +8,7 @@ nav_order: 3
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/basic-hierarki-linux.html" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -193,3 +193,9 @@ Sekarang semua file Linux sudah berpindah ke direktori yang baru dan dapat dijal
 > "*Knowledge thrives when shared, not stored - and in open source, we build not just code, but a collective future"*
 >
 > **Agus Wibowo**
+
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

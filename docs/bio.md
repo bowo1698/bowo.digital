@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Biografi Penulis
-nav_order: 5
+nav_order: 6
 description: "Biografi Penulis "
+parent: Materi
 has_children: true
 has_toc: True
 ---

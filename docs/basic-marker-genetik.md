@@ -8,7 +8,7 @@ nav_order: 6
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/part1.html" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -192,3 +192,9 @@ Tantangan-tantangan dalam pemanfaatan marker genetik di akuakultur tidak hanya b
 > "*Precision breeding in aquaculture requires more than just markers, it demands data, infrastructure, and a shared vision for sustainable innovation*"
 >
 > **Agus Wibowo**
+
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

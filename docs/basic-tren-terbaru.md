@@ -8,7 +8,7 @@ nav_order: 2
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/basic-linux-in-win" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -196,3 +196,9 @@ Dengan mengatasi tantangan ini dan memanfaatkan peluang yang ada, aplikasi biolo
 -   [Gavery, M. R., & Roberts, S. B. (2017). Epigenetic considerations in aquaculture. PeerJ, 5, e4147.](https://doi.org/10.7717/peerj.4147)
 -   [Andersen, L. K., Thompson, N. F., Abernathy, J. W., et al. (2025). Advancing genetic improvement in the omics era: status and priorities for United States aquaculture. BMC Genomics, 26, 155.](https://doi.org/10.1186/s12864-025-11247-z)
 -   [Tai, Y., Liu, L., Zeng, Y., et al. (2025). Integrated GWAS and transcriptome analysis reveals regulatory networks underlying growth in improved grass carp. Aquaculture, 603, 742393.](https://doi.org/10.1016/j.aquaculture.2025.742393)
+
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

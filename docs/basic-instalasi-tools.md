@@ -8,7 +8,7 @@ nav_order: 5
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/basic-marker-genetik.html" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -298,3 +298,8 @@ conda env export > alignment_tools.yml
           allowfullscreen></iframe>
 </div>
 ```
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

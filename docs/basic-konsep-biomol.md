@@ -8,7 +8,7 @@ nav_order: 1
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/basic-tren-terbaru.html" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -305,3 +305,9 @@ Melalui kombinasi mutasi, rekombinasi, seleksi alam, *genetic drift*, dan *gene 
 -   [Veltman, J., Brunner, H. (2012) De novo mutations in human genetic disease. Nat Rev Genet 13, 565–575.](https://www.nature.com/articles/nrg3241)
 -   [Marasco, L.E., Kornblihtt, A.R. (2023). The physiology of alternative splicing. Nat Rev Mol Cell Biol 24, 242–254.](https://www.nature.com/articles/s41580-022-00545-z)
 -   [Kjeldsen, S.R., Raadsma, H.W., Leigh, K.A. et al. (2019). Genomic comparisons reveal biogeographic and anthropogenic impacts in the koala (Phascolarctos cinereus): a dietary-specialist species distributed across heterogeneous environments. Heredity 122, 525–544.](https://www.nature.com/articles/s41437-018-0144-4)
+
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

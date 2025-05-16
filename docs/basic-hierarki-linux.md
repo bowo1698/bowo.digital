@@ -8,7 +8,7 @@ nav_order: 4
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/basic-instalasi-tools.html" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -197,3 +197,9 @@ Bayangkan Anda masuk ke sebuah rumah besar yang tertata rapi dan canggih, ada ru
     Jangan sembarangan menggunakan `sudo` jika tidak tahu resikonya apa. Misal jangan jalankan `sudo rm /boot`, kecuali menginginkan sistem Linux Anda mati selamanya. 
 
 Dengan memahami hierarki *file system* Linux ini, kita jadi tahu harus menyimpan atau mencari file di mana. Kita tahu di mana bisa mendapatkan sendok di rumah orang lain, karena biasanya ada di laci dapur, kita tau di mana seseorang menyimpan uang, karena biasanya di taruh di bawah kasur (oops). Jadi, meskipun awalnya seperti rumah yang sangat asing, lama kelamaan Anda akan familiar dan bisa dengan mudah bernavigasi di "rumahnya Linux" ini!
+
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

@@ -1,8 +1,8 @@
 ---
 title: "Marker-marker genetik: Kunci revolusi genomik dalam akuakultur"
 layout: default
-parent: 1. Materi dasar
-nav_order: 6
+parent: Materi dasar
+nav_order: 3
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">

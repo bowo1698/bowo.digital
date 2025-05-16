@@ -7,4 +7,6 @@ has_toc: True
 nav_order: 2
 ---
 
-Test
+## 🚀 Materi
+
+Untuk mulai belajar, silahkan pilih tutorial mana yang anda inginkan.

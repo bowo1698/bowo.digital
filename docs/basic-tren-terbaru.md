@@ -1,7 +1,7 @@
 ---
 title: "Tren dan perkembangan aplikasi biologi molekuler dan bioinformatika untuk akuakultur"
 layout: default
-parent: 1. Materi dasar
+parent: Materi dasar
 nav_order: 2
 ---
 

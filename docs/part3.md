@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 3. Materi lanjutan 2
-nav_order: 5
+title: Materi lanjutan 2
+nav_order: 3
 description: "Bagian ini berisi tentang studi bioinformatika lanjutan dalam konteks peningkatan produktivitas akuakultur."
 parent: Materi Website
 has_children: true

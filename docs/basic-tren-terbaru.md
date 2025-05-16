@@ -180,7 +180,7 @@ Meskipun kemajuan signifikan telah dicapai dalam aplikasi biologi molekuler dan 
 
 Dengan mengatasi tantangan ini dan memanfaatkan peluang yang ada, aplikasi biologi molekuler dan bioinformatika diharapkan dapat berkontribusi secara signifikan terhadap keberlanjutan dan produktivitas industri akuakultur di masa depan.
 
-> "*Aquaculture is no longer just about water and fish, it’s about data, genes, and the future of food supply and sustainability*"
+> "***Aquaculture is no longer just about water and fish, it’s about data, genes, and the future of food supply and sustainability***"
 >
 > **Agus Wibowo**
 

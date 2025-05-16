@@ -29,6 +29,6 @@ has_toc: True
 
 Terima kasih telah mengunjungi halaman ini. Semoga konten di sini bermanfaat untuk pembelajaran dan eksplorasi Anda dalam bioinformatika!
 
-> "*Science is the engine, and code is the fuel* !!"
+> "***Science is the engine, and code is the fuel !!***"
 >
 > Agus Wibowo

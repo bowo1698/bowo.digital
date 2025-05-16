@@ -86,7 +86,7 @@ Silakan hubungi saya melalui:
 
 [Linkedln](https://www.linkedin.com/in/agus-wibowo-1608/) atau via [Email](mailto:agus.wibowo@my.jcu.edu.au)
 
-> *Open science, open data, open collaboration — that’s how we make aquaculture smarter, together*
+> ***Open science, open data, open collaboration — that’s how we make aquaculture smarter, together***
 > Agus wibowo
 
 <p style="text-align: right; font-size: 0.9rem;">

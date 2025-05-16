@@ -189,7 +189,7 @@ Meskipun penggunaan marker genetik telah merevolusi strategi pemuliaan dan manaj
 
 Tantangan-tantangan dalam pemanfaatan marker genetik di akuakultur tidak hanya bersifat biologis, tetapi juga menyangkut akses terhadap teknologi, ketersediaan data genom, dan kesiapan bioinformatika. Untuk itu, dibutuhkan pendekatan terintegrasi: pembangunan infrastruktur data yang terbuka, pengembangan perangkat lunak yang adaptif, serta pelatihan teknis bagi pelaku industri dan peneliti. Dengan dukungan kebijakan dan kolaborasi lintas disiplin, seleksi genomik berbasis marker dapat berkembang menjadi fondasi utama dalam mewujudkan akuakultur presisi yang efisien dan berkelanjutan.
 
-> "*Precision breeding in aquaculture requires more than just markers, it demands data, infrastructure, and a shared vision for sustainable innovation*"
+> "***Precision breeding in aquaculture requires more than just markers, it demands data, infrastructure, and a shared vision for sustainable innovation***"
 >
 > **Agus Wibowo**
 

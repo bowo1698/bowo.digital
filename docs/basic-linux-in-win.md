@@ -190,7 +190,7 @@ Untuk banyak kasus, drive C biasanya tersisa sedikit ruang, sementara bioinforma
 
 Sekarang semua file Linux sudah berpindah ke direktori yang baru dan dapat dijalankan seperti biasa tanpa harus mengatur dan menginstall semua file dari awal.
 
-> "*Knowledge thrives when shared, not stored - and in open source, we build not just code, but a collective future"*
+> "***Knowledge thrives when shared, not stored - and in open source, we build not just code, but a collective future***"
 >
 > **Agus Wibowo**
 

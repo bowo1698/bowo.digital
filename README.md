@@ -82,7 +82,7 @@ Untuk perangkat keras, saya merancang semua tutorial agar dapat dijalankan pada 
 
 Saya terbuka untuk kolaborasi dan diskusi, terutama dalam proyek penelitian bioinformatika di bidang akuakultur atau genomik fungsional.
 
-Silakan hubungi saya melalui:
+Jika anda berminat untuk mengirimkan artikel, silakan hubungi saya melalui:
 
 [Linkedln](https://www.linkedin.com/in/agus-wibowo-1608/) atau via [Email](mailto:agus.wibowo@my.jcu.edu.au)
 

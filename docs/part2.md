@@ -3,7 +3,7 @@ layout: default
 title: 2. Materi lanjutan 1
 nav_order: 4
 description: "Bagian ini berisi sesi praktik langsung (hands-on)"
-parent: Materi
+parent: Materi Website
 has_children: true
 has_toc: True
 ---

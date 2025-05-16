@@ -74,46 +74,6 @@ Mengapa demikian?
 
 Untuk perangkat keras, saya merancang semua tutorial agar dapat dijalankan pada komputer/laptop dengan spesifikasi medium (*laptop dana pelajar* 😁), selama menggunakan sistem operasi berbasis Linux [cek disini](docs/basic-linux-in-win.md). Hal ini memungkinkan siapapun tetap dapat mengikuti alur tutorial ini, mulai dari unduhan data, pra-pemrosesan, analisis, hingga visualisasi, tanpa memerlukan perangkat mahal!!! (meskipun lebih baik jika setiap kampus punya *High Performance Computing* - HPC, yuk bikin!)
 
-## 🚀 Materi
-
-Untuk mulai belajar, silahkan pilih tutorial mana yang anda inginkan.
-
-### [1. Materi dasar](docs/part1.md)
-
--   [Konsep-konsep dasar biologi molekuler](docs/basic-kosep-biomol.md)
--   [Tren dan perkembangan aplikasi biologi molekuler dan bioinformatika untuk akuakultur](docs/basic-tren-terbaru.md)
--   [Linux di dalam Windows](docs/basic-linux-in-win.md)
--   [Memahami hierarki Linux](docs/basic-hierarki-linux.md)
--   [Instalasi tools bioinformatika](docs/basic-instalasi-tools.md)
-<!--   [Marker-marker genetik: Kunci revolusi genomik dalam akuakultur](docs/basic-marker-genetik.md) --->
-<!--   [Pengenalan dasar-dasar Bash](docs/basic-bash.md) --->
-<!--   [Pengenalan dasar-dasar R](docs/basic-R.md) --->
-<!--   [Pengenalan dasar-dasar python](docs/basic-python.md) --->
-<!--   [Dokumentasi melalui Markdown](docs/basic-markdown.md) --->
-<!--   [Eksplorasi database genomic](docs/basic-eksplorasi-database.md) --->
-<!--   [Cara download file *sequencing*](docs/basic-curl-wget.md) --->
-<!--   [Format file yang digunakan dalam bioinformatika](docs/basic-file_format.md) --->
-<!--   [Cara kerja *sequencing*](docs/basic-sequencing.md) --->
-<!--   [Mengenal tentang studi omics](docs/basic-omics.md) --->
-<!--   [Kosep dasar *alignment*](docs/basic-alignment.md) --->
-<!--   [Statistik untuk biologi modern](docs/basic-stats.md) --->
-
-### [2. Materi lanjutan 1](docs/part2.md)
-
-<!--   [Quality control hasil *sequencing*](docs/tutorial-quality-control.md) --->
-<!--   [*Alignment*](docs/tutorial-alignment.md) --->
-<!--   [Pipeline metagenomics](docs/tutorial-metagenomics.md) --->
-<!--   [Pipeline RNA-Seq](docs/tutorial-RNA-Seq.md) --->
-<!--   [Pipeline genomic varians - SNP discovery](docs/tutorial-SNP-discovery.md) --->
-<!--   [Pipeline genomic varians - haplotype block discovery](docs/tutorial-haplotype.md) --->
-<!--   [Pipeline genomic varians - microhaplotype discovery](docs/tutorial-microhaplotype.md) --->
-
-### [3. Materi lanjutan 2](docs/part3.md)
-
-<!--   [Genetika populasi](docs/adv-GWAS.md) --->
-<!--   [Pemuliaan berbasis genomic - GWAS](docs/adv-GWAS.md) --->
-<!--   [Pemuliaan berbasis genomic - estimasi nilai breeding](docs/adv-EBV.md) --->
-
 <!-- komentar -->
 <div style="text-align: center; font-style: italic; font-weight: bold;">
   Open science, open data, open collaboration — that’s how we make aquaculture smarter, together.

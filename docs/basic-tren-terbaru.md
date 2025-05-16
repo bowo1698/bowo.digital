@@ -2,13 +2,13 @@
 title: "Tren dan perkembangan aplikasi biologi molekuler dan bioinformatika untuk akuakultur"
 layout: default
 parent: 1. Materi dasar
-nav_order: 5
+nav_order: 2
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/basic-linux-in-win" style="font-weight: bold;">Konten berikutnya →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -102,7 +102,7 @@ Keunikan teknologi ini adalah bahwa sel induk spermatogonia dari testis donor da
 <figure style="text-align: center;">
   <img src="images/sb.png" alt="surrogate broodstock" style="width: 85%;">
   <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
-    <strong>Produksi induk pengganti salmon masu dan generasi berikutnya dari trout pelangi melalui transplantasi sel punca germinal.</strong> Sel punca spermatogonia dari trout pelangi jantan ditransplantasikan ke dalam rongga peritoneum larva salmon masu triploid mandul yang baru menetas. Sel spermatogonia trout tersebut kemudian berhasil berkolonisasi di gonad ikan penerima, yang selanjutnya mampu menghasilkan sel telur atau sperma yang berasal dari donor, tergantung pada jenis kelamin ikan penerima.
+    <strong>Produksi induk pengganti salmon masu dan generasi berikutnya dari rainbow trout melalui transplantasi sel punca germinal.</strong> Sel punca spermatogonia dari rainbow trout jantan ditransplantasikan ke dalam rongga peritoneum larva salmon masu triploid mandul yang baru menetas. Sel spermatogonia trout tersebut kemudian berhasil berkolonisasi di gonad ikan penerima, yang selanjutnya mampu menghasilkan sel telur atau sperma yang berasal dari donor, tergantung pada jenis kelamin ikan penerima.
     <br><em>Sumber gambar:</em> <a href="https://doi.org/10.1007/s12562-019-01299-y" target="_blank">Yoshizaki & Yazawa. 2019</a>
   </figcaption>
 </figure>
@@ -179,6 +179,10 @@ Meskipun kemajuan signifikan telah dicapai dalam aplikasi biologi molekuler dan 
     Pengembangan dan penerapan teknologi genomik dalam akuakultur membutuhkan tenaga kerja dengan keterampilan interdisipliner dalam genomik, breeding, dan bioinformatika. Program pelatihan yang komprehensif diperlukan untuk memenuhi kebutuhan ini.
 
 Dengan mengatasi tantangan ini dan memanfaatkan peluang yang ada, aplikasi biologi molekuler dan bioinformatika diharapkan dapat berkontribusi secara signifikan terhadap keberlanjutan dan produktivitas industri akuakultur di masa depan.
+
+> "*Aquaculture is no longer just about water and fish, it’s about data, genes, and the future of food supply and sustainability*"
+>
+> **Agus Wibowo**
 
 # Referensi
 

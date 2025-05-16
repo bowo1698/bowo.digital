@@ -2,7 +2,7 @@
 title: "Konsep-konsep dasar biologi molekuler"
 layout: default
 parent: 1. Materi dasar
-nav_order: 4
+nav_order: 1
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">

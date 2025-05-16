@@ -2,7 +2,7 @@
 title: "Linux di dalam Windows"
 layout: default
 parent: 1. Materi dasar
-nav_order: 1
+nav_order: 3
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">

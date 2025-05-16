@@ -2,7 +2,7 @@
 title: "Memahami hierarki Linux"
 layout: default
 parent: 1. Materi dasar
-nav_order: 2
+nav_order: 4
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">
@@ -197,5 +197,3 @@ Bayangkan Anda masuk ke sebuah rumah besar yang tertata rapi dan canggih, ada ru
     Jangan sembarangan menggunakan `sudo` jika tidak tahu resikonya apa. Misal jangan jalankan `sudo rm /boot`, kecuali menginginkan sistem Linux Anda mati selamanya. 
 
 Dengan memahami hierarki *file system* Linux ini, kita jadi tahu harus menyimpan atau mencari file di mana. Kita tahu di mana bisa mendapatkan sendok di rumah orang lain, karena biasanya ada di laci dapur, kita tau di mana seseorang menyimpan uang, karena biasanya di taruh di bawah kasur (oops). Jadi, meskipun awalnya seperti rumah yang sangat asing, lama kelamaan Anda akan familiar dan bisa dengan mudah bernavigasi di "rumahnya Linux" ini!
-
-**Ditulis oleh: Agus Wibowo**

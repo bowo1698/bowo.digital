@@ -2,13 +2,13 @@
 title: "Instalasi Tools Bioinformatika"
 layout: default
 parent: 1. Materi dasar
-nav_order: 3
+nav_order: 5
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/basic-konsep-biomol.html" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/basic-marker-genetik.html" style="font-weight: bold;">Konten berikutnya →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">

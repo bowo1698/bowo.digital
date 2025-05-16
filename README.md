@@ -80,13 +80,12 @@ Untuk mulai belajar, silahkan pilih tutorial mana yang anda inginkan.
 
 ### [1. Materi dasar](docs/part1.md)
 
+-   [Konsep-konsep dasar biologi molekuler](docs/basic-kosep-biomol.md)
+-   [Tren dan perkembangan aplikasi biologi molekuler dan bioinformatika untuk akuakultur](docs/basic-tren-terbaru.md)
 -   [Linux di dalam Windows](docs/basic-linux-in-win.md)
 -   [Memahami hierarki Linux](docs/basic-hierarki-linux.md)
 -   [Instalasi tools bioinformatika](docs/basic-instalasi-tools.md)
--   [Konsep-konsep dasar biologi molekuler](docs/basic-kosep-biomol.md)
--   [Teknik dasar biologi molekuler](docs/basic-teknik-biomol.md)
--   [Tren dan perkembangan aplikasi biologi molekuler dan bioinformatika untuk akuakultur](docs/basic-tren-terbaru.md)
-<!--   [Marker-marker genetik](docs/basic-marker-genetik.md) --->
+<!--   [Marker-marker genetik: Kunci revolusi genomik dalam akuakultur](docs/basic-marker-genetik.md) --->
 <!--   [Pengenalan dasar-dasar Bash](docs/basic-bash.md) --->
 <!--   [Pengenalan dasar-dasar R](docs/basic-R.md) --->
 <!--   [Pengenalan dasar-dasar python](docs/basic-python.md) --->
@@ -116,6 +115,10 @@ Untuk mulai belajar, silahkan pilih tutorial mana yang anda inginkan.
 <!--   [Pemuliaan berbasis genomic - estimasi nilai breeding](docs/adv-EBV.md) --->
 
 <!-- komentar -->
+<div style="text-align: center; font-style: italic; font-weight: bold;">
+  Open science, open data, open collaboration — that’s how we make aquaculture smarter, together.
+</div>
+
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;

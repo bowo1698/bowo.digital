@@ -99,6 +99,14 @@ Meskipun sangat informatif, microsatellites masih memiliki beberapa keterbatasan
 
 SNP (dibaca snip) adalah variasi nukleotida tunggal pada posisi genom tertentu yang terjadi dengan frekuensi lebih dari 1% dalam populasi. Diperkenalkan sebagai marker genomik pada tahun 1994, SNP telah menjadi marker pilihan hingga era genomika modern. SNP diidentifikasi melalui sekuensing DNA atau teknologi genotyping khusus yang mendeteksi mutasi, seperti substitusi, delesi, atau insersi nukleotida tunggal. Berbagai platform deteksi tersedia, mulai dari sistem berbasis PCR hingga microarray dan sekuensing generasi baru (misalnya Illumina).
 
+<figure style="text-align: center;">
+  <img src="https://static.wixstatic.com/media/15b941_47df96ee398a416f9dbadfcae7369219~mv2.png/v1/fill/w_961,h_516,al_c,q_90/15b941_47df96ee398a416f9dbadfcae7369219~mv2.png" alt="Genomic selection" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
+    <strong>Single Nucleotide Polymorphism.</strong> Salah satu marker untuk menandai adanya variasi genetik pada level populasi, ditandai dengan adanya satu basa tunggal dalam urutan DNA yang berbeda pada posisi tertentu di antara banyak individu.
+    <br><em>Sumber gambar:</em> <a href="https://www.nutrigeneticsspecialists.com/single-post/2017/03/27/what-is-a-snp" target="_blank">Nutrigenetics</a>
+  </figcaption>
+</figure>
+
 Disini, SNP menawarkan keunggulan signifikan, yang tidak dimiliki marker genetik lain, seperti kelimpahan luar biasa dalam genom (jutaan SNP dalam genom vertebrata), distribusi merata di seluruh genom, tingkat mutasi yang sangat rendah dibandingkan microsatellites, dan kemampuan genotyping berbiaya rendah dan *throughput* tinggi.
 
 Dalam akuakultur, SNP merupakan marker yang paling banyak dipakai. SNP telah merevolusi pemuliaan dalam akuakultur melalui seleksi genomik, di mana ribuan marker digunakan untuk memprediksi nilai pemuliaan individu. Moen et al. (2008) menggunakan SNP pada ikan Atlantik cod (*Gadus morhua*) dari empat lokasi berbeda untuk studi struktur populasi, dengan heterozigositas rata-rata SNP adalah 0,25 dan frekuensi alel minor rata-rata adalah 0,18. Selain itu, SNP juga merupakan alat yang kuat untuk pekerjaan genetik di masa depan terkait dengan manajemen dan akuakultur, dengan beberapa SNP menunjukkan tingkat divergensi populasi tinggi yang berpotensi meningkatkan studi struktur populasi ikan Atlantik cod.
@@ -108,6 +116,14 @@ Salah satu keterbatasan utama SNP adalah sifatnya yang bi-alelik (umumnya hanya 
 ## Microhaplotypes
 
 Microhaplotype merupakan penanda genetik yang relatif baru, pertama kali diperkenalkan oleh Kenneth K. Kidd pada tahun 2014, dan kini mulai banyak diterapkan dalam bidang forensik. Microhaplotype adalah segmen DNA pendek (<300 nukleotida) yang terdiri dari dua atau lebih SNP yang terletak berdekatan dan membentuk kombinasi multi-alel. Identifikasi dan analisisnya dilakukan menggunakan teknologi *Massively Parallel Sequencing* (MPS), yang memungkinkan pembacaan dua untai DNA secara langsung serta penentuan fase alel tanpa memerlukan phasing statistik. Menariknya, microhaplotype menggabungkan keunggulan SNP (stabilitas, distribusi merata di genom) dengan karakteristik multi-alelik seperti pada mikrosatelit, menjadikannya ideal untuk keperluan identifikasi individu, analisis hubungan kekerabatan, dan deteksi campuran DNA.
+
+<figure style="text-align: center;">
+  <img src="images/mh.png" alt="Genomic selection" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
+    <strong>Genotipe berbasis mikrohaplotipe.</strong> Pendekatan microhaplotype-based genotyping menggabungkan beberapa SNP berdekatan dalam satu blok pendek (~200 bp) untuk membentuk unit genetik yang bersifat multi-allelic. Hal ini memberikan informasi lebih kaya dan memungkinkan pemetaan genetik yang lebih akurat dibandingkan SNP tunggal.
+    <br><em>Sumber gambar:</em> <a href="https://www.nature.com/articles/s41467-024-51015-3" target="_blank">Siegel et al. 2024</a>
+  </figcaption>
+</figure>
 
 Dalam konteks akuakultur, penggunaan microhaplotype masih berada pada tahap awal, khususnya untuk meningkatkan akurasi imputasi dan seleksi genomik berbiaya rendah. Studi simulasi oleh Delomas et al. (2024) menunjukkan bahwa panel microhaplotype berdensitas rendah dapat menghasilkan akurasi imputasi dan prediksi nilai pemuliaan genomik yang lebih tinggi dibandingkan panel SNP dengan ukuran setara. Simulasi pada tiram Pasifik, tiram timur, dan salmon menunjukkan bahwa 150–250 microhaplotype dapat memberikan akurasi setara dengan 350–450 SNP pada tiram, sementara 350–450 microhaplotype setara dengan 650–750 SNP pada salmon.
 
@@ -191,7 +207,7 @@ Tantangan-tantangan dalam pemanfaatan marker genetik di akuakultur tidak hanya b
 
 > "***Precision breeding in aquaculture requires more than just markers, it demands data, infrastructure, and a shared vision for sustainable innovation***"
 >
-> **Agus Wibowo**
+> *Agus Wibowo*
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>

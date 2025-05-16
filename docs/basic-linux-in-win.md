@@ -192,7 +192,7 @@ Sekarang semua file Linux sudah berpindah ke direktori yang baru dan dapat dijal
 
 > "***Knowledge thrives when shared, not stored - and in open source, we build not just code, but a collective future***"
 >
-> **Agus Wibowo**
+> *Agus Wibowo*
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>

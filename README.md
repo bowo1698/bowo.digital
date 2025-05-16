@@ -88,7 +88,7 @@ Jika anda berminat untuk mengirimkan artikel, silakan hubungi saya melalui:
 
 > ***Open science, open data, open collaboration — that’s how we make aquaculture smarter, together***
 >
-> Agus wibowo
+> *Agus wibowo*
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>

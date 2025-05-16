@@ -7,7 +7,7 @@ permalink: /
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">
-  <a href="https://www.bowo.digital/docs/materi.html" style="font-weight: bold;">Pilih materi -></a>
+  <a href="https://www.bowo.digital/docs/materi.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -87,10 +87,11 @@ Silakan hubungi saya melalui:
 [Linkedln](https://www.linkedin.com/in/agus-wibowo-1608/) atau via [Email](mailto:agus.wibowo@my.jcu.edu.au)
 
 > ***Open science, open data, open collaboration — that’s how we make aquaculture smarter, together***
+>
 > Agus wibowo
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/materi.html" style="font-weight: bold;">Pilih Materi -></a>
+  <a href="https://www.bowo.digital/docs/materi.html" style="font-weight: bold;">Pilih Materi →</a>
 </p>

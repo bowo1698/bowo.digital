@@ -28,10 +28,10 @@ nav_order: 1
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)
--   [Memahami nama file dan ekstensi]()
--   [Aplikasi loop untuk mendownload file sekuen]()
--   [Mendownload file sekuen]()
--   [Mengamankan data sekuen]()
+-   [Memahami nama file dan ekstensi](#memahami-nama-file-dan-ekstensi)
+-   [Aplikasi loop untuk mendownload file sekuen](#aplikasi-loop-untuk-mendownload-file-sekuen)
+-   [Mendownload file sekuen](#mendownload-file-sekuen)
+-   [Mengamankan data sekuen](#mengamankan-data-sekuen)
 
 >   **Catatan**: Dalam tutorial ini, kita akan bekerja menggunakan pemrograman Bash dalam lingkungan Linux. Anda dapat menggunakan VS code baik untuk membuat script bash maupun menjalankan script tersebut via terminal.
 

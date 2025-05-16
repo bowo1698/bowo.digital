@@ -28,12 +28,12 @@ nav_order: 3
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)
--   [Sejarah dan evolusi marker genetik]()
--   [Marker-marker genetik konvensional]()
--   [Marker-marker genetik modern]()
--   [Perbandingan marker genetik]()
--   [Aplikasi marker genetik dalam akuakultur]()
--   [Tantangan dan arah masa depan]()
+-   [Sejarah dan evolusi marker genetik](#sejarah-dan-evolusi-marker-genetik)
+-   [Marker-marker genetik konvensional](#marker-marker-genetik-konvensional)
+-   [Marker-marker genetik modern](#marker-marker-genetik-modern)
+-   [Perbandingan marker genetik](#perbandingan-marker-genetik)
+-   [Aplikasi marker genetik dalam akuakultur](#aplikasi-marker-genetik-dalam-akuakultur)
+-   [Tantangan dan arah masa depan](#tantangan-dan-arah-masa-depan)
 
 # Pendahuluan
 

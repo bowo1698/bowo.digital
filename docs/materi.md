@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Materi Website
-description: "blabla"
+title: Konten Website
+description: " "
 has_children: true
 has_toc: True
 nav_order: 2

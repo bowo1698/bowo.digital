@@ -1,11 +1,10 @@
 ---
 layout: default
 title: Biografi Penulis
-nav_order: 4
 description: "Biografi Penulis "
-parent: Materi Website
-has_children: true
+has_children: false
 has_toc: True
+nav_order: 3
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">

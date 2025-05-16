@@ -6,6 +6,6 @@ logo: assets/bioinfo-notebook_logo.svg
 search_enabled: true
 search_tokenizer_separator: /[\s/]+/
 aux_links:
-  "Bioinformatics Notes on GitHub":
-    - "//github.com/bowo1698/bowo.digital"
+  "Bioinformatic Notes":
+    - "https://www.bowo.digital"
 heading_anchors: true

@@ -6,6 +6,10 @@ description: "Panduan belajar bioinformatika dengan fokus kajian pada akuakultur
 permalink: /
 ---
 
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/docs/materi.html" style="font-weight: bold;">Pilih materi -></a>
+</p>
+
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
   <a href="https://www.bowo.digital/" style="text-decoration: none; color: inherit;">
     Bioinformatic Notes
@@ -72,16 +76,21 @@ Mengapa demikian?
 
 > Seluruh materi dalam website ini disusun dengan asumsi bahwa Anda menjalankan Linux secara langsung (*full system install*), bukan melalui Windows. Panduan penggunaan *Windows Subsystem for Linux* (WSL) hanya disediakan sebagai opsi tambahan untuk keperluan eksplorasi atau pembelajaran awal. Namun, dalam praktiknya, WSL memiliki banyak keterbatasan dalam hal kompatibilitas dan kinerja, sehingga tidak direkomendasikan untuk analisis bioinformatika yang sesungguhnya.
 
-Untuk perangkat keras, saya merancang semua tutorial agar dapat dijalankan pada komputer/laptop dengan spesifikasi medium (*laptop dana pelajar* 😁), selama menggunakan sistem operasi berbasis Linux [cek disini](docs/basic-linux-in-win.md). Hal ini memungkinkan siapapun tetap dapat mengikuti alur tutorial ini, mulai dari unduhan data, pra-pemrosesan, analisis, hingga visualisasi, tanpa memerlukan perangkat mahal!!! (meskipun lebih baik jika setiap kampus punya *High Performance Computing* - HPC, yuk bikin!)
+Untuk perangkat keras, saya merancang semua tutorial agar dapat dijalankan pada komputer/laptop dengan spesifikasi medium (*laptop dana pelajar* 😁), selama menggunakan sistem operasi berbasis Linux [cek disini](docs/basic-linux-in-win.md). Hal ini memungkinkan siapapun tetap dapat mengikuti alur tutorial ini, mulai dari unduhan data, pra-pemrosesan, analisis, hingga visualisasi, tanpa memerlukan perangkat mahal!!! (meskipun lebih baik jika setiap kampus punya *High Performance Computing* - HPC, yuk bikin!).
 
-<!-- komentar -->
-<div style="text-align: center; font-style: italic; font-weight: bold;">
-  Open science, open data, open collaboration — that’s how we make aquaculture smarter, together.
-</div>
+## 💡 Kontribusi & kolaborasi
+
+Saya terbuka untuk kolaborasi dan diskusi, terutama dalam proyek penelitian bioinformatika di bidang akuakultur atau genomik fungsional.
+
+Silakan hubungi saya melalui:
+
+[Linkedln](https://www.linkedin.com/in/agus-wibowo-1608/) atau via [Email](mailto:agus.wibowo@my.jcu.edu.au)
+
+> *Open science, open data, open collaboration — that’s how we make aquaculture smarter, together*
+> Agus wibowo
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/basic-tren-terbaru.html" style="font-weight: bold;">Konten berikutnya →</a>
+  <a href="https://www.bowo.digital/docs/materi.html" style="font-weight: bold;">Pilih Materi -></a>
 </p>
-

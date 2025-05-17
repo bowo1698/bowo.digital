@@ -28,9 +28,9 @@ nav_order: 2
 # Daftar isi
 
 -   [Pendahuluan]()
--   [Apa itu read, mate, dan coverage?]()
--   [FASTA & FASTQ: Format dasar NGS dan kualitasnya]()
--   [SAM & BAM: Dari read ke posisi di genom]()
+-   [Apa itu read, mate, dan coverage?](#apa-itu-read-mate-dan-coverage)
+-   [FASTA & FASTQ: Format dasar NGS dan kualitasnya](#fasta--fastq-format-dasar-ngs-dan-kualitasnya)
+-   [SAM & BAM: Dari read ke posisi di genom](#sam--bam-dari-read-ke-posisi-di-genom)
 -   [GFF/GTF & BED: Menyematkan makna pada genom]()
 -   [VCF: Menyimpan informasi variasi genetik]()
 -   [SRA: Gudangnya data NGS dunia]()
@@ -202,3 +202,110 @@ File .bam pada dasarnya memiliki 11 parameter, diantaranya:
 
 Selain ukuran yang lebih sederhana, format file BAM memiliki akses yang lebih cepat ke data karena indeksing. File BAM dapat diindeks menggunakan file indeks (*.bai), yang memungkinkan program untuk melompat langsung ke bagian tertentu dari file BAM tanpa membaca semua sekuens.
 
+# GFF/GTF & BED: Menyematkan makna pada genom
+
+GFF (*General Feature Format*) dan GTF (*Gene Transfer Format*) merupakan file anotasi genom untuk menggambarkan fitur genom seperti gen, ekson, intron, dan elemen fungsional lainnya. Strukturnya tab-delimited, dengan kolom ke-9 menyimpan atribut seperti `gene_id` dan `transcript_id`. 
+
+Supaya lebih mudah, kita bisa menggunakan data genom dari Turbot (*Scophthalmus maximus*). 
+
+Pertama download file gtf dari [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/) dengan menggunakan `wget` kemudian dekompresi dengan `gunzip`
+
+```bash
+# bash
+# download file gtf
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
+
+# dekompresi dengan gunzip
+gunzip GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
+```
+
+Observasi struktur file GTF dengan `head`
+
+```bash
+# bash
+head GCF_022379125.1_ASM2237912v1_genomic.gtf
+```
+
+Ini akan menampilkan:
+
+- Versi GTF: 2.2
+
+- Genome build: ASM2237912v1, berasal dari Scophthalmus maximus (turbot).
+
+- Akses referensi NCBI: GCF_022379125.1
+
+- Anotasi dilakukan oleh NCBI menggunakan pipeline Gnomon (algoritma prediksi gen otomatis).
+
+Dengan fitur anotasi yaitu:
+
+1.  Gen:
+
+    Misalnya: `fbl`
+
+    ```
+    NC_061515.1	Gnomon	gene	6189	13235	.	+	.	gene_id "fbl"; ...
+    ```
+
+    Dimana Gen ini berada di kromosom/scaffold NC_061515.1, dengan panjang dari posisi 6189 sampai 13235 di strand plus (+) dan merupakan protein-coding gene
+
+2.  Transkrip
+
+    Misalnya: `XM_035607005.2`
+
+    ```
+    NC_061515.1	Gnomon	transcript	6189	13235	.	+	.	gene_id "fbl"; transcript_id "XM_035607005.2"; ...
+    ```
+
+    Transkrip ini mencakup keseluruhan gen `fbl` dan memiliki bukti kuat dari RNA-seq dan EST/Protein homologi. Produk dari transkrip ini adalah fibrillarin, protein penting dalam pembentukan ribonukleoprotein nukleolus (nucleolar ribonucleoprotein)
+
+3.  Ekson-ekson Transkrip
+
+    Setiap ekson diberi anotasi terpisah, menunjukkan struktur ekson dari transkrip tersebut, misalnya:
+
+    Ekson 1: 6189–6345
+
+    Ekson 2: 7987–8139
+
+    Ekson 3: 8343–8492
+
+    Ekson 4: 8933–9027
+
+    Masing-masing baris menyatakan bahwa keempat ekson ini merupakan bagian dari transkrip `XM_035607005.2` dari gen `fbl`, dan semuanya mendukung ekspresi mRNA fibrillarin.
+
+Untuk melihat berapa banyak anotasi, kita bisa menggunakan perintah `wc -l` yang pada dasarnya hanya menampilkan berapa jumlah baris dalam file GTF
+
+```bash
+# bash
+wc -l GCF_022379125.1_ASM2237912v1_genomic.gtf
+```
+
+Ini akan memberikan output:
+
+```shell
+1722738 GCF_022379125.1_ASM2237912v1_genomic.gtf
+```
+
+Kita juga bisa melihat semua fitur dalam file GTF dengan perintah dasar `grep`
+
+```bash
+# bash
+grep -v "^#" GCF_022379125.1_ASM2237912v1_genomic.gtf | cut -f3 | sort | uniq -c
+```
+
+Maka akan menampilkan:
+
+```shell
+727878 CDS
+807421 exon
+26628 gene
+51090 start_codon
+51048 stop_codon
+58668 transcript
+```
+
+Di sisi lain, format BED (*Browser Extensible Data*) merupakan format yang dapat digunakan untuk visualisasi melalui tools seperti IGV (*Integrative Genomics Viewer*), sehingga dapat menampilkan secara visual prihal lokasi dalam genom. Kita dapat mengkonversi file GTF ke BED menggunakan bedtools.
+
+```bash
+# bash
+# Konversi GTF ke BED
+bedtools gtf2bed < GCF_022379125.1_ASM2237912v1_genomic.gtf > GCF_022379125.1_ASM2237912v1_genomic.bed

@@ -68,11 +68,11 @@ $$
 
 di mana:
 
-$𝐿$ = panjang read,
+𝐿 = panjang read,
 
-$𝑁$ = jumlah read,
+𝑁 = jumlah read,
 
-$𝐺$ = ukuran genom.
+𝐺 = ukuran genom.
 
 Misalnya, jika kita punya 30 juta read, masing-masing sepanjang 100 bp, dan genomnya 3 miliar bp, maka coveragenya:
 

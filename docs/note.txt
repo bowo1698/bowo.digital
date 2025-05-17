@@ -13,7 +13,7 @@
 <!--   [Dokumentasi melalui Markdown](docs/basic-markdown.md) --->
 <!--   [Eksplorasi database genomic](docs/basic-eksplorasi-database.md) --->
 <!--    --->
-<!--   [Format file yang digunakan dalam bioinformatika](docs/basic-file_format.md) --->
+   [Format file yang digunakan dalam bioinformatika](docs/basic-file_format.md) 
 <!--   [Cara kerja *sequencing*](docs/basic-sequencing.md) --->
 <!--   [Mengenal tentang studi omics](docs/basic-omics.md) --->
 <!--   [Kosep dasar *alignment*](docs/basic-alignment.md) --->

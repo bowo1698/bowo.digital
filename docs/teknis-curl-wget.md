@@ -12,7 +12,7 @@ nav_order: 1
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
-  <a href="https://www.bowo.digital/docs/lanjutan-curl-wget.html" style="text-decoration: none; color: inherit;">
+  <a href="https://www.bowo.digital/docs/teknis-curl-wget.html" style="text-decoration: none; color: inherit;">
     Variabel, loop, dan izin akses
   </a>
 </h1>

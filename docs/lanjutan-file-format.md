@@ -31,11 +31,10 @@ nav_order: 2
 -   [Apa itu read, mate, dan coverage?](#apa-itu-read-mate-dan-coverage)
 -   [FASTA & FASTQ: Format dasar NGS dan kualitasnya](#fasta--fastq-format-dasar-ngs-dan-kualitasnya)
 -   [SAM & BAM: Dari read ke posisi di genom](#sam--bam-dari-read-ke-posisi-di-genom)
--   [GFF/GTF & BED: Menyematkan makna pada genom]()
--   [VCF: Menyimpan informasi variasi genetik]()
--   [SRA: Gudangnya data NGS dunia]()
--   [BedGraph & BigWig: Visualisasi dari data kuantitatif]()
--   [Memahami format = Menguasai analisis]()
+-   [GFF/GTF & BED: Menyematkan makna pada genom](#gffgtf--bed-menyematkan-makna-pada-genom)
+-   [VCF: Menyimpan informasi variasi genetik](#vcf-menyimpan-informasi-variasi-genetik)
+-   [SRA: Gudangnya data NGS dunia](#sra-gudangnya-data-ngs-dunia)
+-   [Memahami format = Menguasai analisis](#memahami-format--menguasai-analisis)
 
 # Pendahuluan
 
@@ -308,5 +307,84 @@ Di sisi lain, format BED (*Browser Extensible Data*) merupakan format yang dapat
 ```bash
 # bash
 # Konversi GTF ke BED
-bedtools gtf2bed < GCF_022379125.1_ASM2237912v1_genomic.gtf > GCF_022379125.1_ASM2237912v1_genomic.bed
+bedtools intersect -a GCF_022379125.1_ASM2237912v1_genomic.gtf -b GCF_022379125.1_ASM2237912v1_genomic.gtf -wa | awk '$3=="exon"{print $1"\t"$4-1"\t"$5"\t"$10"\t.\t"$7}' > outputBED.bed
 ```
+
+Perintah tersebut mengekstrak ekson dari file GTF dan mengubahnya ke format BED 6 kolom. `bedtools intersect` mempertahankan semua baris asli, lalu `awk` memfilter hanya baris bertipe `"exon"` dan mengkonversi formatnya (termasuk mengubah posisi awal dari 1-based menjadi 0-based) sebelum menyimpan hasilnya ke file `outputBED.bed`. 
+
+Untuk visualisasi menggunakan IGV, akan saya siapkan tutorialnya dalam artikel terpisah.
+
+# VCF: Menyimpan informasi variasi genetik
+
+VCF (Variant Call Format) berisi informasi tentang varian genetik seperti SNP, insertions/deletions (indels), dan varian struktural yang ditemukan pada posisi tertentu dalam genom referensi. Contoh file VCF anda bisa download [di sini](https://myjcuedu-my.sharepoint.com/:u:/g/personal/agus_wibowo_my_jcu_edu_au/EVSErYDha09DixrSwz9DOMABNrS2yb4zaiJSJOFuXSh6Fw?e=tKWXAc). Ini adalah data dari studi oleh [Fraslin et al .(2023)](https://gsejournal.biomedcentral.com/articles/10.1186/s12711-023-00832-z#Abs1) tentang *genomic selection* untuk resistensi bakteri *Flavobacterium columnare* pada rainbow trout, dimana menggunakan SNP sebagai marker genetiknya.
+
+Untuk melihat bagaimana struktur dari file VCF, kita akan menggunakan paket `vcfR` dan `tidyverse` di R.
+
+```r
+# r
+
+# install vcfR
+if (!requireNamespace("vcfR", quietly = TRUE))
+  install.packages("vcfR")
+
+# panggil library
+library(vcfR)
+library(dplyr)
+
+# Baca file VCF terkompresi
+vcf <- read.vcfR("phased.vcf.gz")
+
+# konversi ke data frame
+vcf_df <- vcfR2tidy(vcf)
+
+# melihat struktur data frame utama (informasi varian)
+head(vcf_df$fix)
+
+# melihat data genotipe
+head(vcf_df$gt)
+
+# Ringkasan statistik dasar
+summary(vcf_df$fix)
+
+# Hitung varian per kromosom
+vcf_df$fix %>% 
+  count(CHROM) %>% 
+  arrange(desc(n))
+```
+
+Ketika kita menjalankan fungsi `read.vcfR()`, ini akan menghasilkan output sebagai berikut:
+
+```shell
+File attributes:
+  meta lines: 8
+  header_line: 9
+  variant count: 27907
+  column count: 2883
+Meta line 8 read in.
+All meta lines processed.
+gt matrix initialized.
+Character matrix gt created.
+  Character matrix gt rows: 27907
+  Character matrix gt cols: 2883
+  skip: 0
+  nrows: 27907
+  row_num: 0
+Processed variant: 27907
+All variants processed
+```
+
+Di sini, ada 2 output utama, yaitu jumlah sampel dan jumlah varian. Jumlah sampel terbaca sebanyak 2883 dengan varian (SNP) sebanyak 27.907
+
+Konversi VCF oleh fungsi `vcfR2tidy()` akan menghasilkan beberapa objek (menggunakan `head(vcf_df)` untuk melihat objek-objek nya), yaitu:
+
+- `fix` -> Data frame yang berisi informasi posisi dan anotasi varian
+- `gt` -> Data frame yang berisi informasi genotipe untuk setiap sampel dan varian, terutama untuk data terfase, kolom gt_GT akan menunjukkan alel dari setiap kromosom.
+- `meta` -> Data frame yang berisi metadata dari file VCF, misalnya informasi tentang sampel dan genom referensi.
+
+# SRA: Gudangnya data NGS dunia
+
+SRA (*Sequence Read Archive*) adalah database bioinformatika dari NCBI (*National Center for Biotechnology Information*) yang menyediakan repositori publik untuk data sekuensing. SRA menggunakan format biner untuk menyimpan data sekuensing mentah dalam bentuk yang efisien dan terkompresi, memungkinkan penyimpanan dan distribusi data sekuensing dalam jumlah besar. 
+
+# Memahami format = Menguasai analisis
+
+Format file NGS itu bukan sekadar teknis, ia adalah bahasa data yang harus kita kuasai untuk bisa menggali wawasan biologis. Tiap format punya perannya. Kalau Anda ingin jadi bioinformatikawan yang andal, jangan hanya belajar cara menjalankan perintah, tapi pahami struktur dan makna datanya. Karena jawaban dari analisis bukan di tools-nya, tapi di interpretasi datanya.

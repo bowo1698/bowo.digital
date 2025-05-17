@@ -279,6 +279,13 @@ Misalnya, kita bisa membuat *environment*:
 
 -   `machine_learning` untuk *genomic prediction* menggunakan `scikit-learn` atau `TensorFlow`
 
+Untuk melihat environment apa yang kita miliki, hanya perlu gunakan perintah:
+
+```bash
+# bash
+conda env list
+```
+
 Dengan pendekatan ini, kita tidak hanya menjaga kestabilan sistem, tetapi juga memudahkan reproduksibilitas analisis. Jika ingin melakukan pemindahan, cukup export *environment*-nya menggunakan:
 
 ```bash

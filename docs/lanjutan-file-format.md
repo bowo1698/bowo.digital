@@ -25,6 +25,8 @@ nav_order: 2
   <img src="https://www.genengnews.com/wp-content/uploads/2024/04/A-List_GettyImages-1316511842.jpg" alt="NGS Files" style="max-width: 100%; height: auto;">
 </div>
 
+>   **Catatan**: Dalam tutorial ini, kita akan bekerja menggunakan pemrograman Bash dan R dalam lingkungan Linux. Anda dapat menggunakan VS code baik untuk membuat script R maupun menjalankan script Bash tersebut via terminal.
+
 # Daftar isi
 
 -   [Pendahuluan]()

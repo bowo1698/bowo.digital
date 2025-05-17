@@ -2,7 +2,7 @@
 title: "Mengenal berbagai format file NGS"
 layout: default
 parent: Materi dasar
-nav_order: 6
+nav_order: 7
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">

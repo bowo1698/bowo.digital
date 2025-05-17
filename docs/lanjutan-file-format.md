@@ -22,7 +22,7 @@ nav_order: 2
 </p>
 
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <img src="https://wallpapers.com/images/hd/linux-pictures-g8nflkx3vjw6v0xq.jpg" alt="Linux in Windows" style="max-width: 100%; height: auto;">
+  <img src="https://www.genengnews.com/wp-content/uploads/2024/04/A-List_GettyImages-1316511842.jpg" alt="NGS Files" style="max-width: 100%; height: auto;">
 </div>
 
 # Daftar isi
@@ -155,6 +155,11 @@ Maka output yang dihasilkan akan sangat panjang. Alternatifnya, kita bisa menggu
 
 ```r
 # r
+# install Rsamtools dan GenomicAlignments
+if (!requireNamespace("GenomicAlignments", quietly = TRUE))
+  BiocManager::install(c("GenomicAlignments", "Rsamtools"))
+
+library(Rsamtools)
 library(GenomicAlignments)
 
 # path file
@@ -175,14 +180,9 @@ head(bam_df, 5)
 
 Berikut adalah contoh isi dari file .bam. 
 
-| seqnames | strand | cigar | qwidth | start     | end       | width | njunc | flag | pos      | mapq |
-|----------|--------|--------|--------|-----------|-----------|--------|--------|------|-----------|------|
-| <fct>    | <fct>  | <chr>  | <int>  | <int>     | <int>     | <int> | <int> | <int>| <int>     | <int>|
-| 11       | +      | 101M   | 101    | 45571816  | 45571916  | 101    | 0     | 99   | 45571816  | 60   |
-| 11       | +      | 101M   | 101    | 45571825  | 45571925  | 101    | 0     | 99   | 45571825  | 60   |
-| 11       | -      | 101M   | 101    | 45571838  | 45571938  | 101    | 0     | 147  | 45571838  | 60   |
-| 11       | -      | 101M   | 101    | 45571844  | 45571944  | 101    | 0     | 147  | 45571844  | 60   |
-| 11       | +      | 101M   | 101    | 45572197  | 45572297  | 101    | 0     | 163  | 45572197  | 60   |
+<div style="text-align: center;">
+  <img src="images/bam.png" alt="Contoh format bam" style="width: 90%; height: auto;">
+</div>
 
 File .bam pada dasarnya memiliki 11 parameter, diantaranya:
 

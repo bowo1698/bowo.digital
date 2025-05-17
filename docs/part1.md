@@ -10,4 +10,4 @@ has_toc: True
 
 # 1. Materi dasar
 
-Bagian ini memuat tentang teori-teori dasar tentang bioinformatika, termasuk apa yang harus dipersiapkan sebelum memulai analisis data biologis, seperti pemahaman format data, pengenalan tools umum, serta instalasi lingkungan kerja yang sesuai.
+Bagian ini memperkenalkan landasan teori yang menjadi pijakan awal dalam bioinformatika. Pembahasan mencakup konsep dasar data biologis, format umum yang digunakan (seperti FASTA, FASTQ, GFF), serta pengenalan tools dan perangkat lunak penting. Selain itu, dijelaskan pula cara menyiapkan lingkungan kerja yang sesuai — mulai dari instalasi sistem operasi berbasis Linux hingga manajemen dependensi — agar siap digunakan untuk menjalankan analisis omics secara efisien.

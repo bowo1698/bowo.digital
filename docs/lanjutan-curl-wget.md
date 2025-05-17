@@ -1,7 +1,7 @@
 ---
 title: "Variabel, loop, dan izin akses"
 layout: default
-parent: Materi lanjutan 1
+parent: Skill Teknis
 nav_order: 1
 ---
 

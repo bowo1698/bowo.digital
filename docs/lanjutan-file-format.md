@@ -102,7 +102,7 @@ Format FASTQ adalah format standar berbasis teks untuk menyimpan sekuens DNA dan
 
 Contohnya:
 
-```css
+```shell
 @HWI-K00288_BSF_0436:4:1101:10003:10669
 GTGGAGTATTTGGATGACAGAAACACTTTTCGACATAGTGTGGTGGTGC
 +

@@ -309,3 +309,4 @@ Di sisi lain, format BED (*Browser Extensible Data*) merupakan format yang dapat
 # bash
 # Konversi GTF ke BED
 bedtools gtf2bed < GCF_022379125.1_ASM2237912v1_genomic.gtf > GCF_022379125.1_ASM2237912v1_genomic.bed
+```

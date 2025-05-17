@@ -12,7 +12,7 @@ nav_order: 3
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
-  <a href="https://www.bowo.digital/docs/basic-instalasi-tools.html" style="text-decoration: none; color: inherit;">
+  <a href="https://www.bowo.digital/docs/basic-marker-genetik.html" style="text-decoration: none; color: inherit;">
     Marker-marker genetik: Kunci revolusi genomik dalam akuakultur
   </a>
 </h1>

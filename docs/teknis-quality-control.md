@@ -25,7 +25,7 @@ nav_order: 2
   <img src="https://www.integra-biosciences.com/sites/default/files/styles/large/public/images/data-analysis.jpg?itok=DX2veo4F" alt="QC" style="max-width: 100%; height: auto;">
 </div>
 
->   **Catatan**: Dalam tutorial ini, kita akan bekerja menggunakan pemrograman Bash dan R dalam lingkungan Linux. Anda dapat menggunakan VS code baik untuk membuat script R maupun menjalankan script Bash tersebut via terminal.
+<br>
 
 # Daftar isi
 
@@ -37,5 +37,7 @@ nav_order: 2
 -   [VCF: Menyimpan informasi variasi genetik](#vcf-menyimpan-informasi-variasi-genetik)
 -   [SRA: Gudangnya data NGS dunia](#sra-gudangnya-data-ngs-dunia)
 -   [Memahami format = Menguasai analisis](#memahami-format--menguasai-analisis)
+
+>   **Catatan**: Dalam tutorial ini, kita akan bekerja menggunakan pemrograman Bash dan R dalam lingkungan Linux. Anda dapat menggunakan VS code baik untuk membuat script R maupun menjalankan script Bash tersebut via terminal.
 
 # Pendahuluan

@@ -25,6 +25,8 @@ nav_order: 1
   <img src="https://collections.museumsvictoria.com.au/content/media/12/397512-large.jpg" alt="Gurita Cincin Biru" style="max-width: 100%; height: auto;">
 </div>
 
+<br>
+
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)

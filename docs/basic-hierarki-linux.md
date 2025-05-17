@@ -25,6 +25,8 @@ nav_order: 4
   <img src="images/linux-fhs.webp" alt="Linux in Windows" style="max-width: 100%; height: auto;">
 </div>
 
+<br>
+
 # Daftar isi
 
 -   [Daftar isi](#daftar-isi)

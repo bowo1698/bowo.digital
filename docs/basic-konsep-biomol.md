@@ -25,6 +25,8 @@ nav_order: 1
   <img src="https://png.pngtree.com/background/20250115/original/pngtree-a-close-up-of-dna-strand-in-pink-and-blue-capturing-picture-image_16103219.jpg" alt="Logo Genomik" style="max-width: 100%; height: auto;">
 </div>
 
+<br>
+
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)

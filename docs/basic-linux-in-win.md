@@ -25,6 +25,8 @@ nav_order: 6
   <img src="https://wallpapers.com/images/hd/linux-pictures-g8nflkx3vjw6v0xq.jpg" alt="Linux in Windows" style="max-width: 100%; height: auto;">
 </div>
 
+<br>
+
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)

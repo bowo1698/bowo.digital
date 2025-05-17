@@ -25,6 +25,8 @@ nav_order: 5
   <img src="https://static.vecteezy.com/system/resources/thumbnails/055/370/498/small_2x/scientist-analyzing-dna-strands-on-a-digital-screen-with-glowing-data-in-a-lab-environment-photo.jpg" alt="Tools instalation" style="max-width: 100%; height: auto;">
 </div>
 
+<br>
+
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)

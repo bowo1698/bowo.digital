@@ -25,6 +25,8 @@ nav_order: 2
   <img src="https://neurosys.com/wp-content/webp-express/webp-images/uploads/2023/05/aquaculture-header.png.webp" alt="Tools instalation" style="max-width: 100%; height: auto;">
 </div>
 
+<br>
+
 # Daftar isi
 
 -   [Pendahuluan](#pendahuluan)

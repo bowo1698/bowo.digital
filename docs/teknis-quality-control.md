@@ -2,13 +2,13 @@
 title: "Quality control hasil sequencing"
 layout: default
 parent: Skill Teknis
-nav_order: 2
+nav_order: 3
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+  <a href="https://www.bowo.digital/docs/part2.html" style="font-weight: bold;">Pilih materi →</a>
 </p>
 
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
@@ -64,8 +64,8 @@ mkdir -p data_fastq/
 cd data_fastq/
 
 # download data SRR
-wget https://huggingface.co/datasets/Antijokowisme16/fastqc_data/resolve/main/SRR1695153_R1_edit.fastq.gz
-wget https://huggingface.co/datasets/Antijokowisme16/fastqc_data/resolve/main/SRR1695153_R2_edit.fastq.gz
+wget https://huggingface.co/datasets/Antijokowisme16/fastqc_data/resolve/main/SRR1695153_edit_R1.fastq.gz
+wget https://huggingface.co/datasets/Antijokowisme16/fastqc_data/resolve/main/SRR1695153_edit_R2.fastq.gz
 
 # ubah akses ke read-only
 chmod u-w *fastq.gz
@@ -230,4 +230,43 @@ Penjelasan perintah:
 - `--adapter_sequence=AGATCGGAAGAGC` - Menentukan adapter sequence Illumina yang akan dicari dan dihapus dari read. Ini sangat penting karena sampel sekuens kita mengandung sisa adapter.
 - `-l 36` - Menyaring hasil akhir agar hanya menyimpan read yang memiliki panjang minimal 36 bp. Sehingga read yang lebih pendek dari ini setelah trimming akan dibuang.
 
+Untuk automatisasi proses trimming dengan FASTP serta menangani data yang mungkin banyak, saya sudah menyiapkan code bash yang bisa digunakan untuk menangani data *paired-end* apapun selama memiliki format file *_R1/R2.fastq.gz. Anda bisa download code bash nya <a href="/code/process_paired_fastq.sh" download>di sini</a> dan menjalankan perintah sebagai berikut:
 
+```bash
+# bash
+chmod +x process_paired_fastq.sh
+
+# jalankan proses autotrimming
+bash process_paired_fastq.sh -i data_fastq/ -o fastq_ready/
+```
+
+Perintah di atas akan secara otomatis memproses file .fastq.gz yang berada di direktori `data_fastq/` kemudian menyimpan hasilnya di dalam direktori `fastq_ready/` meskipun anda belum membuat direktori ini sebelumnya. Secara *default*, script ini akan menjalankan perintah dari FASTP dengan jumlah thread pemrosesan sebanyak 4, nilai kualitas minimum 20, panjang minimum read 36, dan menggunakan AGATCGGAAGAGC sebagai sekuen adapter. Kemudian menjalankan FASTQC dan MULTIQC sekaligus.
+
+Anda bisa melihat dokumentasi cara menggunakan script bash ini dengan menggunakan perintah `--help`
+
+```bash
+# bash
+
+# menampilkan dokumentasi script 
+bash process_paired_fastq.sh --help
+
+# menjalankan opsi custom misalnya: 8 threat, dengan nilai kualitas minimum 30, panjang minimum read 50, dan menggunakan AGATCGGAAGAGC sebagai adapter
+bash process_paired_fastq.sh -i data_fastq/ -o fastq_ready/ -t 8 -q 30 -l 50 -a AGATCGGAAGAGC
+```
+
+Anda bisa lihat video demonstrasinya di bawah ini.
+
+<div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/UXbhQsSyCr8"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen></iframe>
+</div>
+
+--Sekian--
+
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part2.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

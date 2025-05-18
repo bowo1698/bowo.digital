@@ -333,7 +333,7 @@ if (!requireNamespace("vcfR", quietly = TRUE))
 
 # panggil library
 library(vcfR)
-library(dplyr)
+library(tidyverse)
 
 # Baca file VCF terkompresi
 vcf <- read.vcfR("phased.vcf.gz")

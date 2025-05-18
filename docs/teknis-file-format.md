@@ -152,7 +152,7 @@ Namun, file berformat .bam tidak dapat dibuka secara langsung dengan text editor
 samtools view data/normal.bam | head -n5
 ```
 
-> **Catatan**: Anda bisa mendownload contoh file .bam <a href="/assets/data/normal.bam" download>di sini</a>
+> **Catatan**: Anda bisa mendownload contoh file .bam <a href="/assets/data/normal.bam" download>di sini</a> melalui `wget https://www.bowo.digital/assets/data/normal.bam`
 
 Maka output yang dihasilkan akan sangat panjang. Alternatifnya, kita bisa menggunakan `GenomicAlignments` dari R-Bioconductor dan menspesifikasikan kolom informasi apa yang diinginkan, dengan menulis script di VScode sebagai berikut:
 
@@ -211,7 +211,7 @@ GFF (*General Feature Format*) dan GTF (*Gene Transfer Format*) merupakan file a
 
 Supaya lebih mudah, kita bisa menggunakan data genom dari Turbot (*Scophthalmus maximus*). 
 
-Pertama download file gtf dari [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/) dengan menggunakan `wget` kemudian dekompresi dengan `gunzip`
+Pertama download file gtf dari [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/) dengan menggunakan `wget` kemudian dekompresi dengan `gunzip`.
 
 ```bash
 # bash

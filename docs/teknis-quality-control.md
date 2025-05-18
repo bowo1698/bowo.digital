@@ -33,12 +33,9 @@ nav_order: 3
 -   [Mendownload data sekuen](#mendownload-data-sekuen)
 -   [FASTQC dan MULTIQC](#fastqc-dan-multiqc)
 -   [Kenapa kualitas data sekuensing bisa jelek?](#kenapa-kualitas-data-sekuensing-bisa-jelek)
--   [Mengatasi data sekuensing berkualitas rendah dengan FASTP]()
--   [VCF: Menyimpan informasi variasi genetik]()
--   [SRA: Gudangnya data NGS dunia]()
--   [Memahami format = Menguasai analisis]()
+-   [Mengatasi data sekuensing berkualitas rendah dengan FASTP](#mengatasi-data-sekuensing-berkualitas-rendah-dengan-fastp)
 
->   **Catatan**: Dalam tutorial ini, kita akan bekerja menggunakan pemrograman Bash dalam lingkungan Linux. Anda dapat menggunakan VS code baik untuk membuat script R maupun menjalankan script Bash tersebut via terminal.
+>   **Catatan**: Dalam tutorial ini, kita akan bekerja menggunakan pemrograman Bash dalam lingkungan Linux. Anda dapat menggunakan VS code baik untuk melihat dan mengedit script maupun menjalankan script Bash tersebut via terminal.
 
 # Apa itu *quality control* dan mengapa penting?
 

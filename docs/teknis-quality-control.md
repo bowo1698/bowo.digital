@@ -47,7 +47,7 @@ Bayangkan Anda mengambil foto dengan kamera harga ratusan juta, tapi lensa yang 
 
 Dalam tutorial ini, kita menggunakan data dari studi oleh [Robledo et al. (2014)](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-1149) yang meneliti respons transkriptomik ikan turbot (*Scophthalmus maximus*) terhadap infeksi *Enteromyxum scophthalmi*, penyebab enteromikosis. Penelitian ini menganalisis perubahan ekspresi gen di ginjal, limpa, dan usus menggunakan RNA-seq berbasis Illumina HiSeq 2000. 
 
-Dataset lengkap dapat diakses melalui [ENA (European Nucleotide Archive)](https://www.ebi.ac.uk/ena/browser/view/PRJNA269386) dengan kode proyek PRJNA269386. Karena ukuran total data mencapai sekitar 27 GB, dalam tutorial ini kita hanya menggunakan satu file sequencing yaitu SRR1695153, yang berasal dari organ limpa. File ini telah dimodifikasi untuk keperluan edukasi sehingga ukurannya menjadi lebih kecil (56 MB) dan lebih mudah diolah. Bagi yang tertarik mempelajari proses manipulasi data tersebut, kode lengkapnya dapat didownload <a href="/code/fastq_manip.py" download>di sini</a>.
+Dataset lengkap dapat diakses melalui [ENA (European Nucleotide Archive)](https://www.ebi.ac.uk/ena/browser/view/PRJNA269386) dengan kode proyek PRJNA269386. Karena ukuran total data mencapai sekitar 27 GB, dalam tutorial ini kita hanya menggunakan satu file sequencing yaitu SRR1695153, yang berasal dari organ limpa. Setiap file ini telah dimodifikasi untuk keperluan edukasi, sehingga ukurannya menjadi lebih kecil (60 MB) dan lebih mudah diolah. Bagi yang tertarik mempelajari proses manipulasi data tersebut, kode lengkapnya dapat didownload <a href="/code/fastq_manip.py" download>di sini</a>.
 
 Buat forlder baru untuk menyimpan dan mendownload file FASTQ yang sudah dikompresi dengan gunzip dengan cara:
 
@@ -61,8 +61,8 @@ mkdir -p data_fastq/
 cd data_fastq/
 
 # download data SRR
-wget https://huggingface.co/datasets/Antijokowisme16/fastqc_data/resolve/main/SRR1695153_edit_R1.fastq.gz
-wget https://huggingface.co/datasets/Antijokowisme16/fastqc_data/resolve/main/SRR1695153_edit_R2.fastq.gz
+wget https://huggingface.co/datasets/bowo1745/fastqc_data/resolve/main/SRR1695148_edit_R1.fastq.gz
+wget https://huggingface.co/datasets/bowo1745/fastqc_data/resolve/main/SRR1695148_edit_R2.fastq.gz
 
 # ubah akses ke read-only
 chmod u-w *fastq.gz

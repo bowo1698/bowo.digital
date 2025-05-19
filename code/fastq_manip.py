@@ -1,3 +1,15 @@
+"""
+Code untuk memanipulasi file fastq untuk edukasi
+Author: Agus Wibowo
+
+Contoh penggunaan:
+python fastq_manip.py input_R1.fastq.gz output_R1.fastq.gz 100
+
+input_R1.fastq.gz: file input R1
+output_R1.fastq.gz: file output R1
+"""
+
+
 import random
 import gzip
 import sys
@@ -72,13 +84,13 @@ def count_fastq_records(input_file):
 
 def estimate_subsample_rate(input_file, target_size_mb=50):
     """Estimasi rate subsample berdasarkan ukuran target"""
-    # Dapatkan ukuran file asli dalam MB
+    # Mendapatkan ukuran file asli dalam MB
     original_size = os.path.getsize(input_file) / (1024 * 1024)
     
-    # Hitung proporsi yang dibutuhkan
+    # Menghitung proporsi yang dibutuhkan
     subsample_rate = target_size_mb / original_size
     
-    # Pastikan rate tidak lebih dari 1.0 (100%)
+    # Memastikan rate tidak lebih dari 1.0 (100%)
     return min(subsample_rate, 1.0)
 
 def print_progress_bar(iteration, total, prefix='Progress:', suffix='Complete', length=50, fill='█'):
@@ -95,25 +107,25 @@ def print_progress_bar(iteration, total, prefix='Progress:', suffix='Complete', 
 def subsample_and_degrade_fastq(input_file, output_file, target_size_mb=50, 
                                degrade_percent=80, adapter_percent=25, n_base_percent=15):
     """Subsample dan manipulasi file FASTQ untuk menurunkan kualitasnya dan ukurannya"""
-    # Tampilkan informasi awal
+    # Menampilkan informasi awal
     print(f"File input: {input_file}")
     print(f"File output: {output_file}")
     print(f"Target ukuran: {target_size_mb} MB")
     
-    # Estimasi rate subsample
+    # Menghitung rate subsample
     subsample_rate = estimate_subsample_rate(input_file, target_size_mb)
     print(f"Subsample rate: {subsample_rate:.4f} (target: {target_size_mb} MB)")
     
-    # Coba dapatkan jumlah total record untuk progress bar
+    # Mendapatkan jumlah total record untuk progress bar
     total_records = count_fastq_records(input_file)
     use_progress_bar = total_records is not None
     
-    # Deteksi apakah file gzip
+    # Mendeteksi apakah file gzip
     is_gzip = input_file.endswith(".gz")
     in_handle = gzip.open(input_file, "rt") if is_gzip else open(input_file, "r")
     out_handle = gzip.open(output_file, "wt") if output_file.endswith(".gz") else open(output_file, "w")
     
-    # Hitung jumlah read yang diproses dan disimpan
+    # Menghitung jumlah read yang diproses dan disimpan
     read_count = 0
     saved_count = 0
     start_time = time.time()
@@ -199,6 +211,7 @@ def subsample_and_degrade_fastq(input_file, output_file, target_size_mb=50,
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Penggunaan: python fastq_manip.py input.fastq[.gz] output.fastq[.gz] [target_size_mb]")
+        print("Contoh: python fastq_manip.py input_R1.fastq.gz output_R1.fastq.gz 100")
         sys.exit(1)
     
     input_file = sys.argv[1]

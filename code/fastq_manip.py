@@ -1,26 +1,3 @@
-"""
-Code ini digunakan untuk memanipulasi file FASTQ untuk keperluan edukasi dengan tujuan menurunkan kualitas dan ukuran file.
-
-Dependencies:
-- Python 3.10
-- Biopython
-- gzip
-- random
-- os
-- time
-
-Cara install dependencies:
-anaconda create -n fastq_manip python=3.10
-conda activate fastq_manip
-conda install -c bioconda biopython
-conda install -c conda-forge gzip
-
-Jalankan dengan: python fastq_manip.py input.fastq output.fastq [target_size_mb]
-
-Contoh:
-python fastq_manip.py data/SRR1695153_1.fastq.gz data/SRR1695153_1_manipulated.fastq.gz 50
-"""
-
 import random
 import gzip
 import sys
@@ -221,7 +198,7 @@ def subsample_and_degrade_fastq(input_file, output_file, target_size_mb=50,
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Penggunaan: python subsample_degrade_fastq.py input.fastq[.gz] output.fastq[.gz] [target_size_mb]")
+        print("Penggunaan: python fastq_manip.py input.fastq[.gz] output.fastq[.gz] [target_size_mb]")
         sys.exit(1)
     
     input_file = sys.argv[1]

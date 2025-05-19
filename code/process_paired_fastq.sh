@@ -12,8 +12,8 @@
 # ===================================
 
 # Default values
-INPUT_DIR="./raw_data"
-OUTPUT_DIR="./cleaned_data"
+INPUT_DIR=${INPUT_DIR%/}
+OUTPUT_DIR=${OUTPUT_DIR%/}
 THREADS=4
 QUALITY=20
 MIN_LENGTH=36
@@ -102,13 +102,13 @@ if [ ! -d "$INPUT_DIR" ]; then
 fi
 
 # Buat direktori output jika belum ada
-mkdir -p $OUTPUT_DIR
-mkdir -p $OUTPUT_DIR/reports
-mkdir -p $OUTPUT_DIR/logs
+mkdir -p "${OUTPUT_DIR}"
+mkdir -p "${OUTPUT_DIR}/reports"
+mkdir -p "${OUTPUT_DIR}/logs"
 
 # Nama file log
 DATE_STAMP=$(date +"%Y%m%d_%H%M%S")
-LOG_FILE="$OUTPUT_DIR/logs/processing_log_$DATE_STAMP.txt"
+LOG_FILE="${OUTPUT_DIR}/logs/processing_log_${DATE_STAMP}.txt"
 
 # Header log
 echo "===================================" | tee $LOG_FILE
@@ -170,10 +170,10 @@ do
   
   # Buat nama untuk file output
   SAMPLE_NAME=$(basename "$R1_FILE" | sed 's/_R1.*//g')
-  OUT_R1="$OUTPUT_DIR/${SAMPLE_NAME}_R1_cleaned.fastq.gz"
-  OUT_R2="$OUTPUT_DIR/${SAMPLE_NAME}_R2_cleaned.fastq.gz"
-  HTML_REPORT="$OUTPUT_DIR/reports/${SAMPLE_NAME}_report.html"
-  JSON_REPORT="$OUTPUT_DIR/reports/${SAMPLE_NAME}_report.json"
+  OUT_R1="${OUTPUT_DIR}/${SAMPLE_NAME}_R1_cleaned.fastq.gz"
+  OUT_R2="${OUTPUT_DIR}/${SAMPLE_NAME}_R2_cleaned.fastq.gz"
+  HTML_REPORT="${OUTPUT_DIR}/reports/${SAMPLE_NAME}_report.html"
+  JSON_REPORT="${OUTPUT_DIR}/reports/${SAMPLE_NAME}_report.json"
   
   # Log info tanpa mengganggu progress bar
   echo -e "\nMemproses sampel: $SAMPLE_NAME (${CURRENT_PAIR}/${TOTAL_PAIRS})" >> $LOG_FILE
@@ -238,18 +238,22 @@ do
   fi
   
   # Ekstrak statistik penting dari laporan JSON fastp
-  KEPT_READS=$(grep -o '"after_filtering":{"total_reads":[0-9]*' "$JSON_REPORT" | grep -o '[0-9]*$')
-  if [ -n "$KEPT_READS" ]; then
-    echo "  Statistik: $KEPT_READS reads dipertahankan setelah filtering" >> $LOG_FILE
-  fi
-  
-  # Hitung persentase adapter yang ditemukan
-  ADAPTER_RATE=$(grep -o '"adapter_trimmed_reads":[0-9]*' "$JSON_REPORT" | grep -o '[0-9]*$')
-  TOTAL_READS=$(grep -o '"before_filtering":{"total_reads":[0-9]*' "$JSON_REPORT" | grep -o '[0-9]*$')
-  
-  if [ -n "$ADAPTER_RATE" ] && [ -n "$TOTAL_READS" ] && [ "$TOTAL_READS" -ne 0 ]; then
-    PERCENT_ADAPTER=$(echo "scale=2; 100 * $ADAPTER_RATE / $TOTAL_READS" | bc)
-    echo "  Statistik: $PERCENT_ADAPTER% reads mengandung adapter" >> $LOG_FILE
+  if [ -f "$JSON_REPORT" ]; then
+    KEPT_READS=$(grep -o '"after_filtering":{"total_reads":[0-9]*' "$JSON_REPORT" | grep -o '[0-9]*$')
+    if [ -n "$KEPT_READS" ]; then
+      echo "  Statistik: $KEPT_READS reads dipertahankan setelah filtering" >> $LOG_FILE
+    fi
+    
+    # Hitung persentase adapter yang ditemukan
+    ADAPTER_RATE=$(grep -o '"adapter_trimmed_reads":[0-9]*' "$JSON_REPORT" | grep -o '[0-9]*$')
+    TOTAL_READS=$(grep -o '"before_filtering":{"total_reads":[0-9]*' "$JSON_REPORT" | grep -o '[0-9]*$')
+    
+    if [ -n "$ADAPTER_RATE" ] && [ -n "$TOTAL_READS" ] && [ "$TOTAL_READS" -ne 0 ]; then
+      PERCENT_ADAPTER=$(echo "scale=2; 100 * $ADAPTER_RATE / $TOTAL_READS" | bc)
+      echo "  Statistik: $PERCENT_ADAPTER% reads mengandung adapter" >> $LOG_FILE
+    fi
+  else
+    echo "  " | tee -a $LOG_FILE
   fi
   
   echo "  Selesai memproses: $SAMPLE_NAME" >> $LOG_FILE

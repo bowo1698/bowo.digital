@@ -8,8 +8,19 @@
 # - Menghilangkan adapter
 # - Standardisasi panjang read
 # - Menghasilkan laporan kualitas 
-# - Jalankan dengan perintah: bash process_paired_fastq.sh -h
+# - Jalankan dengan perintah: bash process_paired_fastq.sh -i direktori_fastq_input -o direktori_output
+# - Lihat dokumentasi: bash process_paired_fastq.sh -h
 # ===================================
+
+echo "==================================="
+echo "FASTQ Cleaning Pipeline for Paired-End Data"
+echo "==================================="
+echo "Author: Agus Wibowo"
+echo "Version: 1.0"
+echo "Last updated: 2025-05-20"
+echo "==================================="
+echo "Lihat dokumentasi: bash process_paired_fastq.sh -h"
+echo "==================================="
 
 # Default values
 INPUT_DIR=${INPUT_DIR%/}

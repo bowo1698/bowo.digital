@@ -260,6 +260,8 @@ Anda bisa lihat video demonstrasinya di bawah ini.
           allowfullscreen></iframe>
 </div>
 
+Setelah diperbaiki, hasil pada "Status Check" MULTIQC menjadi sedikit lebih baik, terutama untuk R2. Bisa dilihat [di sini](results/multiqc_report2.html)
+
 --Sekian--
 
 <p style="text-align: right; font-size: 0.9rem;">

@@ -325,3 +325,9 @@ Dengan mempertimbangkan faktor-faktor di atas dan mencocokkan metode *library pr
 -   [Picelli, S., et al. Full-length RNA-seq from single cells using Smart-seq2. Nature Protocols 2014;9(1):171-181.](https://doi.org/10.1038/nprot.2014.006)
 -   [Quail, M.A., et al. A large genome center's improvements to the Illumina sequencing system. Nature Methods 2008;5(12):1005-1010.](https://doi.org/10.1038/nmeth.1270)
 -   [Segerman, B., et al. The efficiency of Nextera XT tagmentation depends on G and C bases in the binding motif leading to uneven coverage in bacterial species with low and neutral GC-content. Frontiers in Microbiology 2022;Volume 13 - 2022.](https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.944770)
+
+<p style="text-align: right; font-size: 0.9rem;">
+  <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.bowo.digital/docs/part1.html" style="font-weight: bold;">Pilih materi →</a>
+</p>

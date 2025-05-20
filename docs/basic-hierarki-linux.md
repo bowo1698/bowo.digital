@@ -22,7 +22,7 @@ nav_order: 4
 </p>
 
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <img src="images/linux-fhs.webp" alt="Linux in Windows" style="max-width: 100%; height: auto;">
+  <img src="https://media.licdn.com/dms/image/v2/C4E12AQFPvha4VBvb-Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1535910192895?e=2147483647&v=beta&t=8icwEGmeRprmA7ALE2Dp6iCaIShCpL8X3WpLrL4MFgQ" alt="Linux" style="max-width: 100%; height: auto;">
 </div>
 
 <br>

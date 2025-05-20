@@ -211,6 +211,15 @@ Tantangan-tantangan dalam pemanfaatan marker genetik di akuakultur tidak hanya b
 >
 > *Agus Wibowo*
 
+--- Sekian ---
+
+# Referensi
+
+- Hartl, D.L. Essential genetics and genomics. Burlington, MA: Jones & Bartlett Learning; 2020.
+- [Cuéllar-Pinzón, J., et al. Genetic markers in marine fisheries: Types, tasks and trends. Fisheries Research 2016;173:194-205.](https://doi.org/10.1016/j.fishres.2015.10.019)
+- [Marwal, A. and Gaur, R.K. Chapter 18 - Molecular markers: tool for genetic analysis. In: Verma, A.S. and Singh, A., editors, Animal Biotechnology (Second Edition). Boston: Academic Press; 2020. p. 353-372.](https://doi.org/10.1016/B978-0-12-811710-1.00016-1)
+- [Oldoni, F., Kidd, K.K. and Podini, D. Microhaplotypes in forensic genetics. Forensic Science International: Genetics 2019;38:54-69.](https://doi.org/10.1016/j.fsigen.2018.09.009)
+
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;

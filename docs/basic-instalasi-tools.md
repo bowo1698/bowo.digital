@@ -306,7 +306,9 @@ conda env export > alignment_tools.yml
           frameborder="0"
           allowfullscreen></iframe>
 </div>
-```
+
+--- Sekian ---
+
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;

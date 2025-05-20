@@ -393,7 +393,7 @@ SRA (*Sequence Read Archive*) adalah database bioinformatika dari NCBI (*Nationa
 
 Format file NGS itu bukan sekadar teknis, ia adalah bahasa data yang harus kita kuasai untuk bisa menggali wawasan biologis. Tiap format punya perannya. Kalau Anda ingin jadi bioinformatikawan yang andal, jangan hanya belajar cara menjalankan perintah, tapi pahami struktur dan makna datanya. Karena jawaban dari analisis bukan di tools-nya, tapi di interpretasi datanya.
 
---Sekian--
+--- Sekian ---
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>

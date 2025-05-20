@@ -298,6 +298,8 @@ Migrasi genetik atau *gene flow* terjadi ketika individu berpindah dari satu pop
 
 Melalui kombinasi mutasi, rekombinasi, seleksi alam, *genetic drift*, dan *gene flow*, variasi DNA terus terbentuk dan berubah sepanjang waktu. Semua proses ini bersama-sama membentuk cetak biru kehidupan yang terus berkembang, menciptakan keragaman luar biasa yang kita lihat pada seluruh bentuk kehidupan di planet ini.
 
+--- Sekian ---
+
 # Referensi
 
 -   Lodish, H. F. (2008). Molecular cell biology. Macmillan.

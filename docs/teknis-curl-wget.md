@@ -380,7 +380,7 @@ total 56
 -r--r--r--@ 1 aguswibowo  staff  25900 12 Jun  2018 EM1_R1.fastq
 ```
 
---Sekian--
+--- Sekian ---
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>

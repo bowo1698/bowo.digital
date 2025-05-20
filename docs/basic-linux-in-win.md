@@ -196,6 +196,8 @@ Sekarang semua file Linux sudah berpindah ke direktori yang baru dan dapat dijal
 >
 > *Agus Wibowo*
 
+--- Sekian ---
+
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;

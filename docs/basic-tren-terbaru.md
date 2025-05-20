@@ -186,6 +186,8 @@ Dengan mengatasi tantangan ini dan memanfaatkan peluang yang ada, aplikasi biolo
 >
 > **Agus Wibowo**
 
+--- Sekian ---
+
 # Referensi
 
 -   [Meuwissen, T. H., Hayes, B. J., & Goddard, M. E. (2001). Prediction of total genetic value using genome-wide dense marker maps. Genetics, 157(4), 1819-1829.](https://doi.org/10.1093/genetics/157.4.1819)

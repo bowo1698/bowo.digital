@@ -262,7 +262,7 @@ Anda bisa lihat video demonstrasinya di bawah ini.
 
 Setelah diperbaiki, hasil pada "Status Check" MULTIQC menjadi sedikit lebih baik, terutama untuk R2. Bisa dilihat [di sini](results/multiqc_report2.html)
 
---Sekian--
+--- Sekian ---
 
 <p style="text-align: right; font-size: 0.9rem;">
   <a href="https://www.bowo.digital/" style="font-weight: bold;">← Beranda</a>

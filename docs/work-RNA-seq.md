@@ -32,10 +32,10 @@ nav_order: 1
 -   [Apa itu studi RNA-seq?](#apa-itu-studi-rna-seq)
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
 -   [*Quality control* data *sequencing*](#quality-control-data-sequencing)
--   [Pemilihan tools bioinformatika]()
--   [Persiapan index referensi genom dengan RSEM]()
+-   [Memilih tools bioinformatika]()
+-   [Menyiapkan index referensi genom dengan RSEM]()
 -   [Alignment dan kuantifikasi gen-transkrip menggunakan Bowtie2 dan RSEM]()
--   [Persiapan data hasil kuantifikasi]()
+-   [Menyiapkan data hasil kuantifikasi]()
 -   [Analisis korelasi antar sampel]()
 -   [Analisis perbedaan ekspresi]()
 -   [Analisis fungsi gen - GO dan KEGG *pathway*]()
@@ -188,7 +188,7 @@ Sampai tahap ini, kita hanya mengetahui bagaimana struktur hasil sekuensing dan 
 
 Sebelumnya, perlu diketahui bahwa setiap data yang di-*publish* di database seperti ENA atau NCBI-SRA, semuanya adalah data yang "bersih" dan siap analisis, sehingga pada dasarnya kita bisa lewati tahap QC. Namun jika Anda melakukan penelitian RNA-seq dan menerima hasil sekuensing dari Illumina misalnya, proses QC adalah tahapan WAJIB. Untuk mengetahui bagaimana proses ini dilakukan, Anda bisa pelajari pada artikel berjudul: [Quality control hasil *sequencing*](https://www.bowo.digital/docs/teknis-quality-control.html).
 
-# Pemilihan tools bioinformatika
+# Memilih tools bioinformatika
 
 Pemilihan tools bioinformatika dalam studi RNA-seq sebaiknya disesuaikan dengan kebutuhan spesifik dari studi dan pertanyaan biologis yang ingin dijawab. Hal ini penting karena hingga saat ini, telah dikembangkan ratusan tools dengan fungsi, kelebihan, dan kekurangan masing-masing, mulai dari tahap *preprocessing*, *alignment*, kuantifikasi, hingga analisis diferensial.
 

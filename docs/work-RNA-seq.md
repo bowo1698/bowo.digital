@@ -148,7 +148,7 @@ GGGACTTCTATCTTGAGTTACTACGAGTGAATCCAGGCTAACCTTACAGAAAGTGGAAACAGTATATTTATAGCACATCT
 TGTGTTGTACTTCATGTCCACTGGCAAGCCGTTGTCAGAAACCTGACGGAGGACCCAGGCACCACGACGAGTGCTCAGATAAACCTCCTCAGCTACTCT
 ```
 
-Untuk penjelasan detail tentang format file FASTQ, bisa lihat pada artikel: [Mengenal berbagai format file NGS](https://www.bowo.digital/docs/teknis-file-format.html)
+Untuk penjelasan detail tentang format file FASTQ, bisa lihat pada artikel: [Mengenal berbagai format file NGS](https://www.bowo.digital/docs/teknis-file-format.html#fasta--fastq-format-dasar-ngs-dan-kualitasnya)
 
 Kemudian, jika kita ingin mengetahui seberapa panjang setiap *reads* dan berapa banyak *reads* yang dihasilkan, kita bisa menggunakan `gunzip` yang dikombinasikan dengan `tail`, `wc`, dan `awk`.
 

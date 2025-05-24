@@ -40,7 +40,7 @@ nav_order: 1
 -   [Analisis perbedaan ekspresi]()
 -   [Analisis fungsi gen - GO dan KEGG *pathway*]()
 
->   **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup besar dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 12 GB dan prosesor Intel Core i5 generasi ke-10, ini memerlukan waktu sekitar 12 jam non-stop. Namun, saat dijalankan di JCU HPC (High Performance Computing), proses yang sama hanya memakan waktu sekitar 2 jam. 
+> **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup besar dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 12 GB dan prosesor Intel Core i5 generasi ke-10, ini memerlukan waktu sekitar 12 jam non-stop. Namun, saat dijalankan di JCU HPC (High Performance Computing), proses yang sama hanya memakan waktu sekitar 2 jam. 
 >
 > Namun jangan khawatir, bagi Anda yang tidak memiliki akses ke komputer dengan spesifikasi tinggi, saya telah menyediakan file hasil preproses dalam format *.rds yang siap dianalisis.
 >

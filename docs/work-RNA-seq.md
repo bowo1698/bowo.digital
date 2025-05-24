@@ -31,8 +31,8 @@ nav_order: 1
 
 -   [Apa itu studi RNA-seq?](#apa-itu-studi-rna-seq)
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
--   [Pemilihan tools bioinformatika]()
 -   [*Quality control* data *sequencing*]()
+-   [Pemilihan tools bioinformatika]()
 -   [Persiapan index referensi genom dengan RSEM]()
 -   [Alignment dan kuantifikasi gen-transkrip menggunakan Bowtie2 dan RSEM]()
 -   [Persiapan data hasil kuantifikasi]()
@@ -76,11 +76,11 @@ RNA-seq menjembatani dunia molekuler dan praktik budidaya. Dengan memahami "baha
 
 # Tentang data yang digunakan dan persiapannya
 
-## Analisis ekspresi gen pada ikan Turbot
+## Studi analisis ekspresi gen pada ikan Turbot
 
 Dalam tutorial ini, kita menggunakan data dari studi oleh [Robledo et al. (2014)](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-1149) yang meneliti respons transkriptomik ikan turbot (*Scophthalmus maximus*) terhadap infeksi *Enteromyxum scophthalmi*, penyebab enteromikosis. Penelitian ini menganalisis perubahan ekspresi gen di ginjal, limpa, dan usus menggunakan RNA-seq berbasis *short reads sequencing* (Illumina HiSeq 2000 - *paired-end reads*) untuk melihat bagaimana jaringan merespons infeksi pada tingkat molekuler. Melalui analisis ini, kita bisa memperoleh wawasan baru mengenai mekanisme patogenesis enteromikosis melalui identifikasi sejumlah besar gen yang terekspresi berbeda (DE genes)sebagai langkah penting menuju pengembangan strategi pengendalian penyakit yang lebih efektif.
 
-## Persiapan data dan inspeksi awal
+## Persiapan data hasil sekuensing
 
 Dataset lengkap dapat diakses melalui [ENA (European Nucleotide Archive)](https://www.ebi.ac.uk/ena/browser/view/PRJNA269386) dengan kode proyek PRJNA269386. Untuk melihat detail eksperimen, kita bisa klik pada bagian "*Sample Accession*", di sana terdapat informasi seperti perlakuan dan organ yang digunakan. 
 
@@ -153,6 +153,16 @@ gunzip -c SRR1695148_1.fastq.gz | head -n 100 | tail -n 1 | wc -c
 gunzip -c SRR1695148_1.fastq.gz | awk 'END {print NR/4}'
 ```
 
+Secara berturut-turut, output dari perintah di atas akan menghasilkan:
+
+```php
+# panjang urutan basa nukleotida
+101
+
+# jumlah reads
+17260721
+```
+
 Penjelasan perintah:
 -   `gunzip -c`: membuka file `.gz` tanpa perlu meng-ekstrak nya karena menggunakan option `-c`.
 -   `head -n 100`: mengambil informasi untuk 50 nukleotida (baris pertama adalah header reads dan baris kedua adalah urutan sekuen nukleotida).
@@ -160,5 +170,13 @@ Penjelasan perintah:
 -   `wc -c`: menghitung berapa banyak karakter (banyaknya basa nukleotida)
 -   `awk 'END {print NR/4}'`: menghitung total baris (NR - Number of Reads), lalu membaginya dengan 4 (karena setiap read FASTQ terdiri dari 4 baris).
 -   Antar perintah selalu dihubungkan dengan *pipe* (`|`), artinya --> gunakan hasil dari perintah "x" untuk perintah "y".
+
+Jadi secara umum, proses *sequencing paired-ends* berhasil membaca sekitar 17 juta *reads* dengan masing-masing *reads* berisi 101 basa nukleotida.
+
+## *Quality control* data FASTQ
+
+Sampai tahap ini, kita hanya mengetahui bagaimana struktur hasil sekuensing dan berapa banyak *reads* yang dihasilkan, tapi belum mengetahui bagaimana kualitas keseluruhan data hasil *sequencing* dan perlukah data yang diperoleh "diolah" sehingga siap untuk proses berikutnya. Di sinilah tahap *quality control* (QC) diperlukan.
+
+Sebelumnya, perlu diketahui bahwa setiap data yang di-*publish* di database seperti ENA atau NCBI-SRA, semuanya adalah data yang "bersih" dan siap analisis, sehingga pada dasarnya kita bisa lewati tahap QC. Namun jika Anda melakukan penelitian RNA-seq dan menerima hasil sekuensing dari Illumina misalnya, proses QC adalah tahapan WAJIB. Untuk mengetahui bagaimana proses ini dilakukan, Anda bisa pelajari pada artikel berjudul: [Quality control hasil *sequencing*](https://www.bowo.digital/docs/teknis-quality-control.html).
 
 # Pemilihan tools bioinformatika

@@ -124,7 +124,7 @@ Memahami penamaan file ini sangat penting karena membantu kita mengelola dan men
 Selain data *reads* hasil *sequencing*, kita juga membutuhkan genom referensi yang valid untuk *alignment*. Untuk Turbot, kita dapat menunduh 2 jenis file dari NCBI, yaitu:
 
 -   Genom referensi dengan format: `_genomic.fna.gz`
--   Anotasi genom dengan format: `_genomic.gtf.gz`
+-   Anotasi genom dengan format: `_genomic.gff.gz`
 
 Download kedua data ini dengan menggunakan `wget`:
 
@@ -135,11 +135,11 @@ mkdir -p reference
 
 # download genom referensi dan anotasinya dan simpan ke folder reference
 wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.fna.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.fna.gz
-wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
+wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.gff.gz
 
 # ekstrak file genom referensi dan anotasi
 gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.fna.gz
-gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
+gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz
 ```
 
 Sekarang kita sudah memiliki semua data yang dibutuhkan. 

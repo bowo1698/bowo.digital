@@ -33,15 +33,15 @@ nav_order: 1
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
 -   [*Quality control* data *sequencing*](#quality-control-data-sequencing)
 -   [Memilih tools bioinformatika](#memilih-tools-bioinformatika)
--   [Menyiapkan index referensi genom dengan RSEM]()
--   [Alignment dan kuantifikasi gen-transkrip menggunakan Bowtie2 dan RSEM]()
--   [Menyiapkan data hasil kuantifikasi]()
--   [Analisis korelasi antar sampel]()
--   [Analisis perbedaan ekspresi]()
--   [Analisis fungsi gen - GO dan KEGG *pathway*]()
--   [Apa yang perlu dipertimbangkan sebelum studi RNA-seq]()
+-   [Menyiapkan index referensi dengan HISAT2](#menyiapkan-index-referensi-dengan-hisat2)
+-   [Alignment dan konversi dari SAM ke BAM](#alignment-dan-konversi-dari-sam-ke-bam)
+-   [Merakit transkrip dan menghitung level ekspresi gen menggunakan StringTie](#merakit-transkrip-dan-menghitung-level-ekspresi-gen-menggunakan-stringtie)
+-   [Analisis korelasi antar sampel](#analisis-korelasi-antar-sampel)
+-   [Analisis perbedaan ekspresi](#analisis-perbedaan-ekspresi)
+-   [Analisis fungsi gen - GO dan KEGG *pathway*](#analisis-fungsi-gen---go-dan-kegg-pathway)
+-   [Apa yang perlu dipertimbangkan sebelum studi RNA-seq](#apa-yang-perlu-dipertimbangkan-sebelum-studi-rna-seq)
 
-> **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup besar dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 12 GB dan prosesor Intel Core i5 generasi ke-10, ini memerlukan waktu sekitar 12 jam non-stop. Namun, saat dijalankan di JCU HPC (High Performance Computing), proses yang sama hanya memakan waktu sekitar 2 jam. 
+> **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 16 GB dan prosesor M3, ini memerlukan waktu sekitar 4 jam. 
 > 
 > Pastikan juga Anda memiliki ruang penyimpanan data yang cukup, minimal 50 - 100 GB disertai dengan koneksi internet yang stabil untuk mendownload data FASTQ.
 >
@@ -105,9 +105,8 @@ mkdir -p raw_data
 # pindahkan script .sh ke raw_data
 mv file_script_download_ena.sh raw_data/file_script_download_ena.sh
 
-# masuk ke folder raw_data dan download semua file fastq.gz
-cd raw_data
-bash file_script_download_ena.sh
+# download semua file fastq.gz
+bash raw_data/file_script_download_ena.sh
 ```
 
 Tunggu proses pengunduhan data, mungkin akan memakan waktu cukup lama tergantung kecepatan internet yang Anda miliki, "*so, be chill and take your coffee*. Setelah selesai, semua file *.fastq.gz akan berada di dalam folder `raw_data`.
@@ -119,6 +118,35 @@ Perhatikan penamaan filenya:
 -   `_1.fastq.gz` dan `_2.fastq.gz`: menunjukkan bahwa data ini berasal dari *paired-end sequencing*, artinya satu fragmen DNA dibaca dari dua arah, *forward* (_1) dan *reverse* (_2). Semua file pada dasarnya berformat FASTQ, namun dikompresi dengan gunzip.
 
 Memahami penamaan file ini sangat penting karena membantu kita mengelola dan mengidentifikasi data sekuensing dengan benar, terutama saat bekerja dengan banyak sampel.
+
+## Menyiapkan *reference genome*
+
+Selain data *reads* hasil *sequencing*, kita juga membutuhkan genom referensi yang valid untuk *alignment*. Untuk Turbot, kita dapat menunduh 2 jenis file dari NCBI, yaitu:
+
+-   Genom referensi dengan format: `_genomic.fna.gz`
+-   Anotasi genom dengan format: `_genomic.gtf.gz`
+
+Download kedua data ini dengan menggunakan `wget`:
+
+```bash
+# bash
+# buat folder untuk menyimpan genom referensi
+mkdir -p reference
+
+# download genom referensi dan anotasinya dan simpan ke folder reference
+wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.fna.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.fna.gz
+wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
+
+# ekstrak file genom referensi dan anotasi
+gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.fna.gz
+gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
+```
+
+Sekarang kita sudah memiliki semua data yang dibutuhkan. 
+
+1.  File *reads* hasil sequencing yang disimpan di: `raw_data/*.fastq.gz`
+2.  Genom referensi dan anotasinya yang disimpan di: `reference/`
+
 
 # *Quality control* data *sequencing*
 
@@ -210,3 +238,16 @@ Di sisi lain, tutorial ini juga menyediakan data hasil dari pipeline Bowtie2 + [
 
 Perbandingan kedua pipeline ini penting untuk memahami *trade-off* antara kecepatan komputasi dan kemampuan *discovery*. Dengan menyajikan kedua pendekatan, tutorial ini memberikan pemahaman praktis tentang bagaimana pilihan tools dapat mempengaruhi hasil analisis dan membantu peneliti menentukan strategi yang sesuai dengan tujuan penelitian mereka.
 
+# Menyiapkan index referensi dengan HISAT2
+
+# Alignment dan konversi dari SAM ke BAM
+
+# Merakit transkrip dan menghitung level ekspresi gen menggunakan StringTie
+
+# Analisis korelasi antar sampel
+
+# Analisis perbedaan ekspresi
+
+# Analisis fungsi gen - GO dan KEGG *pathway*
+
+# Apa yang perlu dipertimbangkan sebelum studi RNA-seq

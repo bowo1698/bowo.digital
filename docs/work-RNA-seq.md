@@ -171,7 +171,7 @@ Penjelasan perintah:
 -   `awk 'END {print NR/4}'`: menghitung total baris (NR - Number of Reads), lalu membaginya dengan 4 (karena setiap read FASTQ terdiri dari 4 baris).
 -   Antar perintah selalu dihubungkan dengan *pipe* (`|`), artinya --> gunakan hasil dari perintah "x" untuk perintah "y".
 
-Jadi secara umum, proses *sequencing paired-ends* berhasil membaca sekitar 17 juta *reads* dengan masing-masing *reads* berisi 101 basa nukleotida.
+Jadi secara umum, proses *sequencing paired-ends* berhasil membaca sekitar **17 juta** *reads* dengan masing-masing *reads* berisi **101 basa nukleotida**.
 
 ## *Quality control* data FASTQ
 

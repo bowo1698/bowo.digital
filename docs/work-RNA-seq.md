@@ -32,7 +32,7 @@ nav_order: 1
 -   [Apa itu studi RNA-seq?](#apa-itu-studi-rna-seq)
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
 -   [*Quality control* data *sequencing*](#quality-control-data-sequencing)
--   [Memilih tools bioinformatika]()
+-   [Memilih tools bioinformatika](#memilih-tools-bioinformatika)
 -   [Menyiapkan index referensi genom dengan RSEM]()
 -   [Alignment dan kuantifikasi gen-transkrip menggunakan Bowtie2 dan RSEM]()
 -   [Menyiapkan data hasil kuantifikasi]()

@@ -30,7 +30,7 @@ nav_order: 1
 # Daftar isi
 
 -   [Apa itu studi RNA-seq?](#apa-itu-studi-rna-seq)
--   [Tentang data yang digunakan]()
+-   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
 -   [Pemilihan tools bioinformatika]()
 -   [*Quality control* data *sequencing*]()
 -   [Persiapan index referensi genom dengan RSEM]()
@@ -41,6 +41,8 @@ nav_order: 1
 -   [Analisis fungsi gen - GO dan KEGG *pathway*]()
 
 > **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup besar dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 12 GB dan prosesor Intel Core i5 generasi ke-10, ini memerlukan waktu sekitar 12 jam non-stop. Namun, saat dijalankan di JCU HPC (High Performance Computing), proses yang sama hanya memakan waktu sekitar 2 jam. 
+> 
+> Pastikan juga Anda memiliki ruang penyimpanan data yang cukup, minimal 50 - 100 GB disertai dengan koneksi internet yang stabil untuk mendownload data FASTQ.
 >
 > Namun jangan khawatir, bagi Anda yang tidak memiliki akses ke komputer dengan spesifikasi tinggi, saya telah menyediakan file hasil preproses dalam format *.rds yang siap dianalisis, tapi setidaknya Anda memahami workflow umum dalam studi RNA-seq. 
 >
@@ -72,7 +74,43 @@ RNA-seq menjembatani dunia molekuler dan praktik budidaya. Dengan memahami "baha
   </figcaption>
 </figure>
 
-# Tentang data yang digunakan
+# Tentang data yang digunakan dan persiapannya
 
-Dalam tutorial ini, kita menggunakan data dari studi oleh [Robledo et al. (2014)](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-1149) yang meneliti respons transkriptomik ikan turbot (*Scophthalmus maximus*) terhadap infeksi *Enteromyxum scophthalmi*, penyebab enteromikosis. Penelitian ini menganalisis perubahan ekspresi gen di ginjal, limpa, dan usus menggunakan RNA-seq berbasis Illumina HiSeq 2000 untuk melihat bagaimana jaringan merespons infeksi pada tingkat molekuler. Melalui analisis ini, kita bisa memperoleh wawasan baru mengenai mekanisme patogenesis enteromikosis melalui identifikasi sejumlah besar gen yang terekspresi berbeda (DE genes)sebagai langkah penting menuju pengembangan strategi pengendalian penyakit yang lebih efektif.
+## Analisis ekspresi gen pada ikan Turbot
 
+Dalam tutorial ini, kita menggunakan data dari studi oleh [Robledo et al. (2014)](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-1149) yang meneliti respons transkriptomik ikan turbot (*Scophthalmus maximus*) terhadap infeksi *Enteromyxum scophthalmi*, penyebab enteromikosis. Penelitian ini menganalisis perubahan ekspresi gen di ginjal, limpa, dan usus menggunakan RNA-seq berbasis *short reads sequencing* (Illumina HiSeq 2000 - *paired-end reads*) untuk melihat bagaimana jaringan merespons infeksi pada tingkat molekuler. Melalui analisis ini, kita bisa memperoleh wawasan baru mengenai mekanisme patogenesis enteromikosis melalui identifikasi sejumlah besar gen yang terekspresi berbeda (DE genes)sebagai langkah penting menuju pengembangan strategi pengendalian penyakit yang lebih efektif.
+
+## Persiapan data dan inspeksi awal
+
+Dataset lengkap dapat diakses melalui [ENA (European Nucleotide Archive)](https://www.ebi.ac.uk/ena/browser/view/PRJNA269386) dengan kode proyek PRJNA269386. Untuk melihat detail eksperimen, kita bisa klik pada bagian "*Sample Accession*", di sana terdapat informasi seperti perlakuan dan organ yang digunakan. 
+
+Pada database, kita akan mengunduh semua data performat `*.fastq.gz` (sekitar 27 GB). Untuk memudahkan, Anda dapat mengklik tombol “*Download All*” pada bagian “*Generated FASTQ files*: FTP”. Tindakan ini akan mengunduh sebuah file `.sh`, yaitu skrip otomatis yang dapat dijalankan menggunakan `wget` untuk mengunduh semua file *paired-end reads* FASTQ secara langsung.
+
+Setelah mengunduh file `.sh`, jalankan perintah bash berikut satu persatu di terminal.
+
+```bash
+#bash
+# buat folder tempat menyimpan data fastq.gz
+mkdir -p raw_data
+
+# pindahkan script .sh ke raw_data
+mv file_script_download_ena.sh raw_data/file_script_download_ena.sh
+
+# masuk ke folder raw_data dan download semua file fastq.gz
+cd raw_data
+bash file_script_download_ena.sh
+```
+
+Tunggu proses pengunduhan data, mungkin akan memakan waktu cukup lama tergantung kecepatan internet yang Anda miliki, "*so, be chill and take your coffee*. Setelah selesai, semua file *.fastq.gz akan berada di dalam folder `raw_data`.
+
+Perhatikan penamaan filenya:
+
+-   `SRR`: singkatan dari *Sequence Read Run* yang merupakan ID akses unik (*run accession*) dari satu unit percobaan sekuensing.
+-   7 digit angka setelah `SRR`: merepresentasikan kode percobaan yang mana 2 angka terakhir merepresentasikan detail perlakuan. Misalnya "48" merepresentasikan organ ginjal dengan perlakuan "terinfeksi".
+-   `_1.fastq.gz` dan `_2.fastq.gz`: menunjukkan bahwa data ini berasal dari *paired-end sequencing*, artinya satu fragmen DNA dibaca dari dua arah, *forward* (_1) dan *reverse* (_2). Semua file pada dasarnya berformat FASTQ, namun dikompresi dengan gunzip.
+
+Memahami penamaan file ini sangat penting karena membantu kita mengelola dan mengidentifikasi data sekuensing dengan benar, terutama saat bekerja dengan banyak sampel.
+
+# *Quality control* data *sequencing*
+
+# Pemilihan tools bioinformatika

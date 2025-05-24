@@ -83,7 +83,7 @@ Dalam tutorial ini, kita menggunakan data dari studi oleh [Robledo et al. (2014)
 <figure style="text-align: center;">
   <img src="https://www.necropsymanual.net/wp-content/uploads/2015/08/Lymphocystis-on-ventral-surface-of-common-dab-400x284.jpg" alt="turbot" style="width: 85%;">
   <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
-    <strong>Ikan sebelah dengan infeksi parasit.</strong>
+    <strong>Ikan sebelah dengan infeksi parasit</strong>
     <br><em>Sumber gambar:</em> <a href="https://www.necropsymanual.net/en/additional-info/fpa/" target="_blank">Fish pathology</a>
   </figcaption>
 </figure>

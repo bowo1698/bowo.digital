@@ -42,7 +42,7 @@ nav_order: 1
 
 > **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup besar dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 12 GB dan prosesor Intel Core i5 generasi ke-10, ini memerlukan waktu sekitar 12 jam non-stop. Namun, saat dijalankan di JCU HPC (High Performance Computing), proses yang sama hanya memakan waktu sekitar 2 jam. 
 >
-> Namun jangan khawatir, bagi Anda yang tidak memiliki akses ke komputer dengan spesifikasi tinggi, saya telah menyediakan file hasil preproses dalam format *.rds yang siap dianalisis.
+> Namun jangan khawatir, bagi Anda yang tidak memiliki akses ke komputer dengan spesifikasi tinggi, saya telah menyediakan file hasil preproses dalam format *.rds yang siap dianalisis, tapi setidaknya Anda memahami workflow umum dalam studi RNA-seq. 
 >
 > Dalam tutorial ini, kita akan menggunakan bahasa pemrograman Bash dan R dalam lingkungan Linux. Anda bisa menggunakan VS Code baik untuk mengedit skrip maupun menjalankannya melalui terminal secara langsung. Script bash dan R untuk menangani data dalam tutorial ini sudah saya sediakan.
 

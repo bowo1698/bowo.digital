@@ -136,6 +136,14 @@ Pendekatan multi-omics merujuk pada pengintegrasian berbagai lapisan data "omics
 
 Selain itu, beberapa studi terkini telah mengintegrasikan data transkriptomik, proteomik, dan/atau metabolomik dengan algoritma machine learning, dengan tujuan untuk menentukan penanda omik pertumbuhan dan ukuran tubuh, memprediksi kualitas telur, mengidentifikasi respons terhadap paparan kimia atau kondisi perkembangan, memprediksi resistensi penyakit, dan termasuk mendeteksi penanda ketertelusuran makanan laut.
 
+<figure style="text-align: center;">
+  <img src="https://i0.wp.com/gen-fish.ca/wp-content/uploads/2024/04/Omics-Infographic.png?fit=4000%2C2000&ssl=1" alt="Omics" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
+    <strong>Studi OMICS.</strong>
+    <br><em>Sumber gambar:</em> <a href="https://doi.org/10.1007/s12562-019-01299-y" target="_blank">Yoshizaki & Yazawa. 2019</a>
+  </figcaption>
+</figure>
+
 Meskipun menjanjikan, integrasi data multi-omics menghadapi beberapa tantangan seperti standardisasi data, kompatibilitas lintas platform, penanganan data dan metadata yang tidak lengkap, dan keragaman metode analisis. Namun demikian, pengembangan alur kerja (*workflow*) dan aplikasi untuk mengintegrasikan data multi-omics terus berlangsung, misalnya MOMIC, OmicsSuite, IDARE2, dan integrator berbasis AI/ML.
 
 # Deteksi dan monitoring patogen melalui *Metatranscriptomics*

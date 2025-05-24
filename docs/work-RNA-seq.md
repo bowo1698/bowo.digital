@@ -127,7 +127,7 @@ gunzip -c SRR1695148_1.fastq.gz | head
 
 Perintah di atas akan menghasilkan 3 sekuen yang kodenya selalu diawali dengan `@`, di bawahnya secara berturut-turut adalah urutan basa DNA dan skor kualitas:
 
-```php
+```bash
 @SRR1695148.1 1/1
 GTGTGCTCCAGCAGCCTAACCGGATCCTAATTTTTGACTTCCCAGCGTCTTCTACAGTTCCTTTCTCATCAATGGGCTGCAGACGATCATCCTTCTCCAG
 +

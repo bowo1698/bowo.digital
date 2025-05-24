@@ -31,7 +31,7 @@ nav_order: 1
 
 -   [Apa itu studi RNA-seq?](#apa-itu-studi-rna-seq)
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
--   [*Quality control* data *sequencing*]()
+-   [*Quality control* data *sequencing*](#quality-control-data-sequencing)
 -   [Pemilihan tools bioinformatika]()
 -   [Persiapan index referensi genom dengan RSEM]()
 -   [Alignment dan kuantifikasi gen-transkrip menggunakan Bowtie2 dan RSEM]()
@@ -39,6 +39,7 @@ nav_order: 1
 -   [Analisis korelasi antar sampel]()
 -   [Analisis perbedaan ekspresi]()
 -   [Analisis fungsi gen - GO dan KEGG *pathway*]()
+-   [Apa yang perlu dipertimbangkan sebelum studi RNA-seq]()
 
 > **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup besar dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 12 GB dan prosesor Intel Core i5 generasi ke-10, ini memerlukan waktu sekitar 12 jam non-stop. Namun, saat dijalankan di JCU HPC (High Performance Computing), proses yang sama hanya memakan waktu sekitar 2 jam. 
 > 
@@ -188,3 +189,24 @@ Sampai tahap ini, kita hanya mengetahui bagaimana struktur hasil sekuensing dan 
 Sebelumnya, perlu diketahui bahwa setiap data yang di-*publish* di database seperti ENA atau NCBI-SRA, semuanya adalah data yang "bersih" dan siap analisis, sehingga pada dasarnya kita bisa lewati tahap QC. Namun jika Anda melakukan penelitian RNA-seq dan menerima hasil sekuensing dari Illumina misalnya, proses QC adalah tahapan WAJIB. Untuk mengetahui bagaimana proses ini dilakukan, Anda bisa pelajari pada artikel berjudul: [Quality control hasil *sequencing*](https://www.bowo.digital/docs/teknis-quality-control.html).
 
 # Pemilihan tools bioinformatika
+
+Pemilihan tools bioinformatika dalam studi RNA-seq sebaiknya disesuaikan dengan kebutuhan spesifik dari studi dan pertanyaan biologis yang ingin dijawab. Hal ini penting karena hingga saat ini, telah dikembangkan ratusan tools dengan fungsi, kelebihan, dan kekurangan masing-masing, mulai dari tahap *preprocessing*, *alignment*, kuantifikasi, hingga analisis diferensial.
+
+Misalnya, jika fokus penelitian hanya *screening* awal ekspresi gen dengan memprioritaskan kecepatan dan efisiensi komputasi, maka tools *pseudo-alignment* seperti Salmon atau Kallisto bisa menjadi pilihan yang tepat. Namun, jika studi memerlukan informasi posisi genomik secara akurat, seperti mendeteksi *splice junction* dan mencari variasi gen baru, maka pendekatan *full alignment* ke genom seperti STAR, HISAT2, atau Bowtie2 lebih disarankan.
+
+<figure style="text-align: center;">
+  <img src="images/alignment-tools.png" alt="aligners" style="width: 85%;">
+  <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
+    <strong>Perkembangan tools alignment dari tahun ke tahun</strong> 
+    <br><em>Sumber gambar:</em> <a href="https://bioinformatics.ccr.cancer.gov/docs/b4b/RNASeq_Overview/05.Alignment/" target="_blank">bioinformatics.ccr.cancer.gov</a>
+  </figcaption>
+</figure>
+
+Pada tutorial ini misalnya, karena tujuannya selain untuk mengetahui perbedaan ekspresi gen dari dua kondisi (normal vs infeksi), penemuan varian gen baru (*alternative splicing*) juga menjadi prioritas. Maka, HISAT2 sebagai *aligner*, StringTie sebagai *quantifier*, dan DESeq2 sebagai *differential expression analyzer* dipilih karena kombinasi ini memberikan keseimbangan optimal antara akurasi deteksi dan kemampuan penemuan varian baru.
+
+HISAT2 unggul dalam menangani karakteristik unik RNA-seq dengan *algoritma splice-aware* yang dapat mengidentifikasi *novel splice junctions* secara akurat sambil mempertahankan kecepatan *alignment* yang *reasonable* untuk dataset besar. StringTie kemudian melakukan *transcript assembly* dan kuantifikasi secara simultan, memungkinkan penemuan isoform baru yang tidak ada dalam anotasi referensi. DESeq2 dipilih karena menyediakan framework statistik yang robust untuk analisis differential expression dengan normalisasi yang tepat untuk *count data* RNA-seq.
+
+Di sisi lain, tutorial ini juga menyediakan data hasil dari pipeline Bowtie2 + RSEM untuk perbandingan. Pipeline Bowtie2 + RSEM lebih cepat dan memberikan estimasi *abundance* yang akurat untuk *transcript* yang sudah teranotasi, namun terbatas dalam menemukan *alternative splicing* baru karena Bowtie2 bukan *splice-aware aligner* dan RSEM hanya mengkuantifikasi *transcript* yang sudah ada dalam referensi.
+
+Perbandingan kedua pipeline ini penting untuk memahami *trade-off* antara kecepatan komputasi dan kemampuan *discovery*. Dengan menyajikan kedua pendekatan, tutorial ini memberikan pemahaman praktis tentang bagaimana pilihan tools dapat mempengaruhi hasil analisis dan membantu peneliti menentukan strategi yang sesuai dengan tujuan penelitian mereka.
+

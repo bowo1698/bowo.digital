@@ -140,7 +140,7 @@ Selain itu, beberapa studi terkini telah mengintegrasikan data transkriptomik, p
   <img src="https://i0.wp.com/gen-fish.ca/wp-content/uploads/2024/04/Omics-Infographic.png?fit=4000%2C2000&ssl=1" alt="Omics" style="width: 85%;">
   <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
     <strong>Studi OMICS.</strong>
-    <br><em>Sumber gambar:</em> <a href="https://doi.org/10.1007/s12562-019-01299-y" target="_blank">Yoshizaki & Yazawa. 2019</a>
+    <br><em>Sumber gambar:</em> <a href="https://gen-fish.ca/intro-to-omics/" target="_blank">Gen-Fish</a>
   </figcaption>
 </figure>
 

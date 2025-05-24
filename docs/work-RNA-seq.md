@@ -40,6 +40,12 @@ nav_order: 1
 -   [Analisis perbedaan ekspresi]()
 -   [Analisis fungsi gen - GO dan KEGG *pathway*]()
 
+>   **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup besar dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 12 GB dan prosesor Intel Core i5 generasi ke-10, ini memerlukan waktu sekitar 12 jam non-stop. Namun, saat dijalankan di JCU HPC (High Performance Computing), proses yang sama hanya memakan waktu sekitar 2 jam. 
+>
+> Namun jangan khawatir, bagi Anda yang tidak memiliki akses ke komputer dengan spesifikasi tinggi, saya telah menyediakan file hasil preproses dalam format *.rds yang siap dianalisis.
+>
+> Dalam tutorial ini, kita akan menggunakan bahasa pemrograman Bash dan R dalam lingkungan Linux. Anda bisa menggunakan VS Code baik untuk mengedit skrip maupun menjalankannya melalui terminal secara langsung. Script bash dan R untuk menangani data dalam tutorial ini sudah saya sediakan.
+
 # Apa itu studi RNA-Seq?
 
 ## Menyelami percakapan genetik
@@ -65,3 +71,8 @@ RNA-seq menjembatani dunia molekuler dan praktik budidaya. Dengan memahami "baha
     <br><em>Sumber gambar:</em> <a href="https://www.mdpi.com/1422-0067/25/19/10784" target="_blank">Liu et al 2024</a>
   </figcaption>
 </figure>
+
+# Tentang data yang digunakan
+
+Dalam tutorial ini, kita menggunakan data dari studi oleh [Robledo et al. (2014)](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-1149) yang meneliti respons transkriptomik ikan turbot (*Scophthalmus maximus*) terhadap infeksi *Enteromyxum scophthalmi*, penyebab enteromikosis. Penelitian ini menganalisis perubahan ekspresi gen di ginjal, limpa, dan usus menggunakan RNA-seq berbasis Illumina HiSeq 2000 untuk melihat bagaimana jaringan merespons infeksi pada tingkat molekuler. Melalui analisis ini, kita bisa memperoleh wawasan baru mengenai mekanisme patogenesis enteromikosis melalui identifikasi sejumlah besar gen yang terekspresi berbeda (DE genes)sebagai langkah penting menuju pengembangan strategi pengendalian penyakit yang lebih efektif.
+

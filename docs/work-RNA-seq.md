@@ -22,7 +22,7 @@ nav_order: 1
 </p>
 
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <img src="https://img.freepik.com/premium-photo/exploring-bioinformatics-genetic-data-dna-analysis-computational-biology_1086681-10214.jpg" alt="RNA-seq" style="max-width: 100%; height: auto;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Psetta_maxima_Luc_Viatour.jpg/1200px-Psetta_maxima_Luc_Viatour.jpg" alt="RNA-seq" style="max-width: 100%; height: auto;">
 </div>
 
 <br>
@@ -81,10 +81,10 @@ RNA-seq menjembatani dunia molekuler dan praktik budidaya. Dengan memahami "baha
 Dalam tutorial ini, kita menggunakan data dari studi oleh [Robledo et al. (2014)](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-1149) yang meneliti respons transkriptomik ikan sebelah (*Scophthalmus maximus*) terhadap infeksi *Enteromyxum scophthalmi*, penyebab enteromikosis. Penelitian ini menganalisis perubahan ekspresi gen di ginjal, limpa, dan usus menggunakan RNA-seq berbasis *short reads sequencing* (Illumina HiSeq 2000 - *paired-end reads*) untuk melihat bagaimana jaringan merespons infeksi pada tingkat molekuler. Melalui analisis ini, kita bisa memperoleh wawasan baru mengenai mekanisme patogenesis enteromikosis melalui identifikasi sejumlah besar gen yang terekspresi berbeda (DE genes)sebagai langkah penting menuju pengembangan strategi pengendalian penyakit yang lebih efektif.
 
 <figure style="text-align: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Psetta_maxima_Luc_Viatour.jpg/1200px-Psetta_maxima_Luc_Viatour.jpg" alt="turbot" style="width: 85%;">
+  <img src="https://www.necropsymanual.net/wp-content/uploads/2015/08/Lymphocystis-on-ventral-surface-of-common-dab-400x284.jpg" alt="turbot" style="width: 85%;">
   <figcaption style="font-size: 0.95em; margin-top: 8px; text-align: left;">
-    <strong>Ikan sebelah.</strong>
-    <br><em>Sumber gambar:</em> <a href="https://en.wikipedia.org/wiki/Turbot" target="_blank">Wikipedia</a>
+    <strong>Ikan sebelah dengan infeksi parasit.</strong>
+    <br><em>Sumber gambar:</em> <a href="https://www.necropsymanual.net/en/additional-info/fpa/" target="_blank">Fish pathology</a>
   </figcaption>
 </figure>
 

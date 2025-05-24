@@ -113,4 +113,52 @@ Memahami penamaan file ini sangat penting karena membantu kita mengelola dan men
 
 # *Quality control* data *sequencing*
 
+## Inspeksi awal file sequencing
+
+Cara paling sederhana untuk melihat seperti apa hasil sequencing adalah melalui terminal bash. 
+
+Pertama, kita bisa lihat terlebih dahulu bagaimana struktur file `.fastq.gz` menggunakan `head`.
+
+```bash
+# bash
+# lihat struktur file SRR1695148_1.fastq.gz
+gunzip -c SRR1695148_1.fastq.gz | head
+```
+
+Perintah di atas akan menghasilkan 3 sekuen yang kodenya selalu diawali dengan `@`, di bawahnya secara berturut-turut adalah urutan basa DNA dan skor kualitas:
+
+```php
+@SRR1695148.1 1/1
+GTGTGCTCCAGCAGCCTAACCGGATCCTAATTTTTGACTTCCCAGCGTCTTCTACAGTTCCTTTCTCATCAATGGGCTGCAGACGATCATCCTTCTCCAG
++
+@@@BDEFFHHHHGJJIJGGJJJI@FHIGGGIIJJJFGCHIGIFGGGIJJIJJJIIEHDEGHHHHHGGCDEDFFECACEDDDCDDDDDDDDDDDDDDDDDC
+@SRR1695148.2 2/1
+GGGACTTCTATCTTGAGTTACTACGAGTGAATCCAGGCTAACCTTACAGAAAGTGGAAACAGTATATTTATAGCACATCTGGCAGGGCAGCCTTCTTTG
++
+1:B=ADDHFFFHIIGEIHIDHFCFEEGHCHGIIFGFG?DHIIIHH<FEHCDEHHGIGGGI<FFHGIIIIIIIEEEHHE@EHEEEECC?@BB=?>CCCC@
+@SRR1695148.3 3/1
+TGTGTTGTACTTCATGTCCACTGGCAAGCCGTTGTCAGAAACCTGACGGAGGACCCAGGCACCACGACGAGTGCTCAGATAAACCTCCTCAGCTACTCT
+```
+
+Untuk penjelasan detail tentang format file FASTQ, bisa lihat pada artikel: [Mengenal berbagai format file NGS](https://www.bowo.digital/docs/teknis-file-format.html)
+
+Kemudian, jika kita ingin mengetahui seberapa panjang setiap *reads* dan berapa banyak *reads* yang dihasilkan, kita bisa menggunakan `gunzip` yang dikombinasikan dengan `tail`, `wc`, dan `awk`.
+
+```bash
+# bash
+# melihat seberapa panjang sekuen untuk 50 reads dan melihat konsitensinya
+gunzip -c SRR1695148_1.fastq.gz | head -n 100 | tail -n 1 | wc -c
+
+# melihat ada berapa banyak reads
+gunzip -c SRR1695148_1.fastq.gz | awk 'END {print NR/4}'
+```
+
+Penjelasan perintah:
+-   `gunzip -c`: membuka file `.gz` tanpa perlu meng-ekstrak nya karena menggunakan option `-c`.
+-   `head -n 100`: mengambil informasi untuk 50 nukleotida (baris pertama adalah header reads dan baris kedua adalah urutan sekuen nukleotida).
+-   `tail -n 1`: mengambil baris ke-2 saja (urutan basa nukleotida)
+-   `wc -c`: menghitung berapa banyak karakter (banyaknya basa nukleotida)
+-   `awk 'END {print NR/4}'`: menghitung total baris (NR - Number of Reads), lalu membaginya dengan 4 (karena setiap read FASTQ terdiri dari 4 baris).
+-   Antar perintah selalu dihubungkan dengan *pipe* (`|`), artinya --> gunakan hasil dari perintah "x" untuk perintah "y".
+
 # Pemilihan tools bioinformatika

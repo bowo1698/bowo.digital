@@ -41,11 +41,11 @@ nav_order: 1
 -   [Analisis fungsi gen - GO dan KEGG *pathway*](#analisis-fungsi-gen---go-dan-kegg-pathway)
 -   [Apa yang perlu dipertimbangkan sebelum studi RNA-seq](#apa-yang-perlu-dipertimbangkan-sebelum-studi-rna-seq)
 
-> **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di laptop dengan RAM 16 GB dan prosesor M3, ini memerlukan waktu sekitar 4 jam. 
+> **Catatan**: Jika Anda mengikuti tutorial ini dari awal hingga akhir, perlu diketahui bahwa proses alignment dan kuantifikasi ekspresi memerlukan sumber daya komputasi yang cukup dan waktu yang tidak singkat. Sebagai gambaran, ketika saya menjalankan proses ini di *laptop dengan RAM 12 GB dan prosesor Intel i5 gen 10 pada LINUX UBUNTU*, ini memerlukan waktu sekitar *4 jam*. Sehingga, tutorial ini mungkin masih *achievable*.
 > 
 > Pastikan juga Anda memiliki ruang penyimpanan data yang cukup, minimal 50 - 100 GB disertai dengan koneksi internet yang stabil untuk mendownload data FASTQ.
 >
-> Namun jangan khawatir, bagi Anda yang tidak memiliki akses ke komputer dengan spesifikasi tinggi, saya telah menyediakan file hasil preproses dalam format *.rds yang siap dianalisis, tapi setidaknya Anda memahami workflow umum dalam studi RNA-seq. 
+> Namun jangan khawatir, bagi Anda yang tidak memiliki akses ke komputer dengan spesifikasi tinggi, saya telah menyediakan file hasil preproses dalam format `*.rds` yang siap dianalisis, tapi setidaknya Anda memahami *workflow* umum dalam studi RNA-seq. 
 >
 > Dalam tutorial ini, kita akan menggunakan bahasa pemrograman Bash dan R dalam lingkungan Linux. Anda bisa menggunakan VS Code baik untuk mengedit skrip maupun menjalankannya melalui terminal secara langsung. Script bash dan R untuk menangani data dalam tutorial ini sudah saya sediakan.
 
@@ -238,9 +238,173 @@ Di sisi lain, tutorial ini juga menyediakan data hasil dari pipeline Bowtie2 + [
 
 Perbandingan kedua pipeline ini penting untuk memahami *trade-off* antara kecepatan komputasi dan kemampuan *discovery*. Dengan menyajikan kedua pendekatan, tutorial ini memberikan pemahaman praktis tentang bagaimana pilihan tools dapat mempengaruhi hasil analisis dan membantu peneliti menentukan strategi yang sesuai dengan tujuan penelitian mereka.
 
+> ***Catatan:*** Karena proses analisis RNA-Seq cukup panjang dan kompleks, terutama jika dikerjakan untuk banyak sampel satu per satu, di akhir tutorial ini saya sudah menyiapkan *script* dan konfigurasi yang bisa langsung digunakan. Semua sudah dirancang agar dapat menangani banyak sampel sekaligus menggunakan pipeline: HISAT2 - StringTie - DESeq2, selama data berasal dari *paired-end reads*, apapun jenis sampelnya.
+
+# Instalasi tools untuk RNA-Seq
+
+Dalam tutorial ini, kita membutuhkan 4 tools utama, yaitu; `HISAT2` untuk *alignment*, `Samtools` untuk konversi file `.sam` ke `.bam`, `StringTie` untuk kuantifikasi ekspresi, `DESeq2` untuk analisis perbedaan ekspresi gen, serta beberapa paket R lainnya.
+
+Karena HISAT2, Samtools, dan StringTie tersedia melalui conda, maka kita dapat menjalankan perintah sebagai berikut.
+
+```bash
+# bash
+# buat dan aktifkan environment baru (opsional namun disarankan)
+conda create -n rna_seq -y
+conda activate rna_seq
+
+# instalasi tools utama
+conda install -c bioconda hisat2 samtools stringtie -y
+```
+
+Install paket-paket dari R dengan perintah berikut
+
+```bash
+# masuk ke R console melalui terminal dengan mengetikkan R
+R
+```
+
+Jalankan proses instalasinya satu-persatu mulai dari instalasi paket dari Bioconductor dan dilanjutkan dengan instalasi paket dari CRAN:
+
+```r
+# r
+# install paket dari Bioconductor
+BiocManager::install(c("DESeq2", "limma", "ComplexHeatmap"))
+
+# install paket dari CRAN
+install.packages(c(
+  "tidyverse", "ggrepel", "RColorBrewer", "viridis", "pheatmap",
+  "VennDiagram", "patchwork", "corrplot", "ggcorrplot", 
+  "grid", "reshape2", "circlize", "stringr", "dplyr"
+))
+
+# terakhir, keluar dari console R dengan perintah
+q() # y --> Enter
+```
+
 # Menyiapkan index referensi dengan HISAT2
 
+Index referensi adalah langkah awal yang penting dalam analisis RNA-seq, di mana komputer membangun “peta navigasi” genom untuk memandu proses *alignment* (pencocokan fragmen RNA ke lokasi asalnya di DNA). Tanpa index, *alignment* akan seperti penyusunan puzzle tanpa melihat gambar aslinya. Proses ini mencakup ekstraksi informasi dari anotasi genom (seperti exon dan *splice sites*), lalu menyusunnya bersama urutan genom menjadi struktur data yang dioptimalkan agar *alignment* bisa dilakukan secara cepat dan presisi.
+
+Sebelum membuat index, kita perlu mengekstraksi *splice site* dan daerah exon dari file `.gtf`. Gunakan perintah berikut.
+
+```bash
+# bash
+# buat direktori kerja HISAT-StringTie
+mkdir -p HISAT-StringTie
+
+hisat2_extract_splice_sites.py reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz > HISAT-StringTie/splice_sites.txt
+hisat2_extract_exons.py reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz > HISAT-StringTie/exons.txt
+```
+
+Kemudian kita bisa membuat index dengan menggunakan `hisat2-build`:
+
+```bash
+# bash
+# buat direktori untuk menyimpan index di dalam folder HISAT-StringTie
+mkdir -p HISAT-StringTie/index
+
+# jalankan indexing
+hisat2-build -p 4 \
+    --ss HISAT-StringTie/splice_sites.txt \
+    --exon HISAT-StringTie/exons.txt  \
+    references/GCF_022379125.1_ASM2237912v1_genomic.fna \
+    HISAT-StringTie/index/ASM2237912v1_hisat2_index
+```
+
+Ketika proses pembuatan index selesai, maka di dalam direktori `HISAT-StringTie/index/` akan ada 8 file index dengan format `.ht2` untuk digunakan sebagai input pada proses *alignment*.
+
 # Alignment dan konversi dari SAM ke BAM
+
+Proses *alignment* dilakukan untuk **semua sampel**, dengan input data diantaranya:
+
+- File-file index: `HISAT-StringTie/index/ASM2237912v1_hisat2_index` dengan format `.ht2`
+- Raw data sequencing (*paired-end reads*): misal kita mengerjakan untuk file `raw_data/SRR1695148_1.fastq.gz` dan `raw_data/SRR1695148_2.fastq.gz`
+
+Jalankan proses *alignment* untuk **semua sampel** dengan perintah dasar sebagai berikut:
+
+```bash
+# bash
+# buat direktori hasil alignment
+mkdir -p HISAT-StringTie/aligned_data
+
+# jalankan alignment
+hisat2 -p 4 --dta \
+    -x HISAT-StringTie/index/ASM2237912v1_hisat2_index \
+    --rna-strandness --rf \
+    -1 raw_data/SRR1695148_1.fastq.gz \
+    -2 raw_data/SRR1695148_2.fastq.gz \
+    -S HISAT-StringTie/aligned_data/SRR1695148.sam
+```
+
+> **Catatan:** *option* `-p 4` berarti kita menggunakan 4 core processor, sehingga anda dapat menyesuaikan dengan kapabilitas komputasi yang anda miliki, misal `-p 6` jika ingin menggunakan 6 core processor untuk *alignment* yang lebih cepat. *Option* `--rna-strandness --rf` digunakan karena data yang kita kerjakan berasal dari *strand-specific* (*stranded*) RNA-seq dengan orientasi *reverse-forward* (library dibangun dari untai RNA negatif).
+
+Hasil dari perintah di atas adalah file-file dengan format `.sam` yang berisi hasil alignment, yakni informasi detail tentang bagaimana setiap pasangan fragmen RNA (`read pair`) dipetakan ke lokasi tertentu di genom referensi. File ini mencatat posisi, orientasi, kualitas pencocokan, dan status `splice site` dari tiap read, sehingga menjadi dasar penting untuk analisis ekspresi gen selanjutnya. Karena file `.sam` biasanya berukuran sangat besar (>15 GB), maka ini perlu dikonversi ke format `.bam` yang lebih ringkas dan efisien untuk diproses lebih lanjut, terutama untuk perakitan transkrip (*transcript assembly*) menggunakan `StringTie`.
+
+Konversi file dari `.sam` ke `.bam` dapat dilakukan melalui perintah dasar sebagai berikut:
+
+```bash
+# bash
+# buat direktori untuk menyimpan file .bam
+mkdir -p HISAT-StringTie/bam_data
+
+# lakukan konversi menggunakan samtools
+samtools view -@ 6 -bS HISAT-StringTie/aligned_data/SRR1695148.sam > HISAT-StringTie/bam_data/SRR1695148.bam
+
+# Sorting BAM file
+samtools sort -@ 6 HISAT-StringTie/bam_data/SRR1695148.bam -o HISAT-StringTie/bam_data/SRR1695148.sorted.bam
+
+# Indeks BAM file
+samtools index HISAT-StringTie/bam_data/SRR1695148.sorted.bam
+
+# Hapus file BAM untuk menghemat ruang penyimpanan
+rm HISAT-StringTie/bam_data/SRR1695148.bam
+```
+
+Perintah-perintah di atas merupakan perintah dasar, dan Anda dapat menggunakan teknik *looping* sehingga proses *alignment* dan konversi dapat berjalan secara simultan untuk semua sampel dengan cara sebagai berikut:
+
+```bash
+# bash
+
+# buat direktori untuk hasil alignment dan file .bam
+mkdir -p HISAT-StringTie/aligned_data
+mkdir -p HISAT-StringTie/bam_data
+
+# daftar nama sampel
+samples=(
+  "SRR1695148" "SRR1695149" "SRR1695150" "SRR1695151"
+  "SRR1695152" "SRR1695153" "SRR1695154" "SRR1695155"
+  "SRR1695156" "SRR1695157" "SRR1695158" "SRR1695159"
+)
+
+# loop untuk proses alignment dan konversi untuk setiap sampel
+for sample in "${samples[@]}"; do
+  echo "Memproses sampel: $sample"
+
+  # Langkah 1: Alignment dengan HISAT2
+  hisat2 -p 4 --dta \
+    -x HISAT-StringTie/index/ASM2237912v1_hisat2_index \
+    --rna-strandness RF \
+    -1 raw_data/${sample}_1.fastq.gz \
+    -2 raw_data/${sample}_2.fastq.gz \
+    -S HISAT-StringTie/aligned_data/${sample}.sam
+
+  # Langkah 2: Konversi SAM ke BAM
+  samtools view -@ 6 -bS HISAT-StringTie/aligned_data/${sample}.sam > HISAT-StringTie/bam_data/${sample}.bam
+
+  # Langkah 3: Sorting BAM file
+  samtools sort -@ 6 HISAT-StringTie/bam_data/${sample}.bam -o HISAT-StringTie/bam_data/${sample}.sorted.bam
+
+  # Langkah 4: Indexing BAM file
+  samtools index HISAT-StringTie/bam_data/${sample}.sorted.bam
+
+  # Langkah 5: Hapus file SAM dan BAM mentah untuk menghemat ruang
+  rm HISAT-StringTie/aligned_data/${sample}.sam
+  rm HISAT-StringTie/bam_data/${sample}.bam
+
+  echo "Selesai memproses $sample"
+  echo "------------------------------------------"
+done
+```
 
 # Merakit transkrip dan menghitung level ekspresi gen menggunakan StringTie
 

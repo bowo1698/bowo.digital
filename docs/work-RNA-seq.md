@@ -33,6 +33,7 @@ nav_order: 1
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
 -   [*Quality control* data *sequencing*](#quality-control-data-sequencing)
 -   [Memilih tools bioinformatika](#memilih-tools-bioinformatika)
+-   [Instalasi tools untuk RNA-Seq](#instalasi-tools-untuk-rna-seq)
 -   [Menyiapkan index referensi dengan HISAT2](#menyiapkan-index-referensi-dengan-hisat2)
 -   [Alignment dan konversi dari SAM ke BAM](#alignment-dan-konversi-dari-sam-ke-bam)
 -   [Merakit transkrip dan menghitung level ekspresi gen menggunakan StringTie](#merakit-transkrip-dan-menghitung-level-ekspresi-gen-menggunakan-stringtie)
@@ -124,7 +125,7 @@ Memahami penamaan file ini sangat penting karena membantu kita mengelola dan men
 Selain data *reads* hasil *sequencing*, kita juga membutuhkan genom referensi yang valid untuk *alignment*. Untuk Turbot, kita dapat menunduh 2 jenis file dari NCBI, yaitu:
 
 -   Genom referensi dengan format: `_genomic.fna.gz`
--   Anotasi genom dengan format: `_genomic.gff.gz`
+-   Anotasi genom dengan format: `_genomic.gff.gz` dan `_genomic.gtf.gz`
 
 Download kedua data ini dengan menggunakan `wget`:
 
@@ -135,10 +136,12 @@ mkdir -p reference
 
 # download genom referensi dan anotasinya dan simpan ke folder reference
 wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.fna.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.fna.gz
+wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
 wget -O reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/379/125/GCF_022379125.1_ASM2237912v1/GCF_022379125.1_ASM2237912v1_genomic.gff.gz
 
 # ekstrak file genom referensi dan anotasi
 gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.fna.gz
+gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz
 gunzip reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz
 ```
 
@@ -292,8 +295,9 @@ Sebelum membuat index, kita perlu mengekstraksi *splice site* dan daerah exon da
 # buat direktori kerja HISAT-StringTie
 mkdir -p HISAT-StringTie
 
-hisat2_extract_splice_sites.py reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz > HISAT-StringTie/splice_sites.txt
-hisat2_extract_exons.py reference/GCF_022379125.1_ASM2237912v1_genomic.gff.gz > HISAT-StringTie/exons.txt
+# ekstrak informasi splice site dan exon dari file .gtf
+hisat2_extract_splice_sites.py reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz > HISAT-StringTie/splice_sites.txt
+hisat2_extract_exons.py reference/GCF_022379125.1_ASM2237912v1_genomic.gtf.gz > HISAT-StringTie/exons.txt
 ```
 
 Kemudian kita bisa membuat index dengan menggunakan `hisat2-build`:

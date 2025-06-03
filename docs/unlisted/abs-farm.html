@@ -76,6 +76,11 @@
 
             .metrics-section {
                 margin-bottom: 40px;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             }
 
             .section-title {
@@ -90,7 +95,7 @@
 
             .metrics-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                grid-template-columns: repeat(4, 1fr);
                 gap: 25px;
                 margin-bottom: 40px;
             }
@@ -305,6 +310,93 @@
                     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 }
             }
+
+            .aquaculture-section {
+                margin: 40px 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .section-subtitle {
+                font-size: 1.8rem;
+                font-weight: 600;
+                background: linear-gradient(135deg, #2ecc71, #3498db);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+
+            .aqua-metrics-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+            }
+
+            .aqua-product-card {
+                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                border-radius: 12px;
+                padding: 25px;
+                border: 2px solid rgba(52, 152, 219, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            .aqua-product-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                border-color: rgba(52, 152, 219, 0.3);
+            }
+
+            .aqua-product-card h4 {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #2c3e50;
+                margin-bottom: 15px;
+                text-align: center;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .aqua-metrics {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .aqua-metric {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px 12px;
+                background: rgba(52, 152, 219, 0.05);
+                border-radius: 8px;
+                transition: background-color 0.2s ease;
+            }
+
+            .aqua-metric:hover {
+                background: rgba(52, 152, 219, 0.1);
+            }
+
+            .aqua-metric:last-child {
+                border-bottom: none;
+            }
+
+            .aqua-label {
+                font-weight: 500;
+                color: #5d6d7e;
+                font-size: 0.95rem;
+            }
+
+            .aqua-value {
+                font-weight: 600;
+                color: #3498db;
+                font-size: 1rem;
+            }
         </style>
     </head>
     <body>
@@ -344,6 +436,71 @@
                     </div>
                 </div>
 
+                </div>
+                <!-- NEW AQUACULTURE METRICS SECTION -->
+                <div class="aquaculture-section">
+                    <h3 class="section-subtitle">🐟 Production Targets</h3>
+                    <div class="aqua-metrics-grid">
+                        <div class="aqua-product-card">
+                            <h4>Barramundi</h4>
+                            <div class="aqua-metrics">
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Survival Rate</span>
+                                    <span class="aqua-value">90%</span>
+                                </div>
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Avg Harvest Weight</span>
+                                    <span class="aqua-value">500g</span>
+                                </div>
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">FCR</span>
+                                    <span class="aqua-value">1.3</span>
+                                </div>
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Cultivation Period</span>
+                                    <span class="aqua-value">6 months</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="aqua-product-card">
+                            <h4>Sea Urchin</h4>
+                            <div class="aqua-metrics">
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Survival Rate</span>
+                                    <span class="aqua-value">80%</span>
+                                </div>
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Avg Harvest Weight</span>
+                                    <span class="aqua-value">130g</span>
+                                </div>
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Gonad Ratio</span>
+                                    <span class="aqua-value">12%</span>
+                                </div>
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Cultivation Period</span>
+                                    <span class="aqua-value">8 months</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="aqua-product-card">
+                            <h4>Sea Lettuce</h4>
+                            <div class="aqua-metrics">
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Survival Rate</span>
+                                    <span class="aqua-value">95%</span>
+                                </div>
+                                <div class="aqua-metric">
+                                    <span class="aqua-label">Cultivation Period</span>
+                                    <span class="aqua-value">2 months</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="dashboard-grid">
                     <div class="dashboard-card">
                         <a href="01_strategic_overview.html" class="chart-link">
@@ -353,7 +510,7 @@
                             </div>
                             <div class="card-content">
                                 <ul class="chart-features">
-                                    <li>Profit waterfall analysis</li>
+                                    <li>Revenue to Net Profit Breakdown</li>
                                     <li>Revenue growth trajectory</li>
                                     <li>Market positioning matrix</li>
                                     <li>Sustainability scorecard</li>
@@ -465,7 +622,7 @@
                     </div>
                     <div class="footer-section">
                         <h4>Generated by ABS Aquaculture</h4>
-                        <p>Dashboard created on June 03, 2025 at 07:05 PM</p>
+                        <p>Dashboard created on June 03, 2025 at 09:26 PM</p>
                     </div>
                 </div>
                 <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #7f8c8d;">

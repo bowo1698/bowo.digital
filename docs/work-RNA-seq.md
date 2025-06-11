@@ -588,12 +588,15 @@ echo "Selesai pada: $(date)"
 
 Kode di atas adalah kode dasar untuk memperoleh data siap analisis *differential expression*. Tapi sering kali kita akan menjumpai ketidaksesuaian antara file GTF hasil `StringTie` dan file count data (`t_data.ctab`) yang dihasilkan oleh parameter `-B` (Ballgown). Masalah ini dapat menyebabkan hilangnya beberapa transkrip dalam analisis downstream.
 
-Secara umum, untuk mengtasi ini kita perlu:
+Secara umum, untuk mengatasi ini kita perlu:
 
 1.  Memvalidasi konsistensi data antara file GTF dan file Ballgown: Gunakan `grep` dan `comm` untuk membandingkan transcript IDs antara file GTF dan `t_data.ctab`
 2.  Jika ditemukan ketidaksesuaian, kita dapat memperbaiki file GTF dengan menambahkan transkrip yang hilang: Gunakan `cut`, `echo -e`, dan redirection (`>>`) untuk mengekstrak koordinat dari `t_data.ctab` dan menambahkan entry baru ke file GTF.
 3.  Regenerasi count matrix dengan data yang sudah diperbaiki: Ulangi `prepDE.py` untuk menghasilkan count matrix yang lengkap dan konsisten.
 
+Mengingat mulai dari proses aligment hingga kuantifikasi cukup kompleks, saya telah menyiapkan bash script untuk otomatisasi semua jenis data sequencing, selama data itu adalah paired-end reads dan stranded. Download kedua file <a href="/code/config.yaml" download>config.yaml</a> dan <a href="/code/All-hisat-stringtie.sh" download>All-hisat-stringtie.sh</a>.
+
+Anda hanya perlu mengatur file `config.yaml`, simpan, dan jalankan script `All-hisat-stringtie.sh` dengan perintah `bash All-hisat-stringtie.sh`. 
 
 # Analisis korelasi antar sampel
 

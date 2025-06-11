@@ -31,8 +31,6 @@ has_toc: false
 
 # Daftar isi
 
-{: .no_toc .text-delta }
-
 -   [Apa itu studi RNA-seq?](#apa-itu-studi-rna-seq)
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)
 -   [*Quality control* data *sequencing*](#quality-control-data-sequencing)

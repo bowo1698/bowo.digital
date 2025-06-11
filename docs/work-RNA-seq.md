@@ -2,6 +2,7 @@
 title: "RNA-Seq workflow"
 layout: default
 parent: Workflows
+grand_parent: Konten Website
 nav_order: 1
 has_toc: true
 ---

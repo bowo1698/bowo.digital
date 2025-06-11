@@ -4,7 +4,7 @@ layout: default
 parent: Workflows
 grand_parent: Konten Website
 nav_order: 1
-has_toc: true
+has_toc: false
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">
@@ -30,6 +30,8 @@ has_toc: true
 <br>
 
 # Daftar isi
+
+{: .no_toc .text-delta }
 
 -   [Apa itu studi RNA-seq?](#apa-itu-studi-rna-seq)
 -   [Tentang data yang digunakan dan persiapannya](#tentang-data-yang-digunakan-dan-persiapannya)

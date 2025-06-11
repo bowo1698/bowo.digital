@@ -412,6 +412,189 @@ done
 
 # Merakit transkrip dan menghitung level ekspresi gen menggunakan StringTie
 
+Untuk merakit (assembling) transkrip RNA dan menghitung abundansi/ekspresi gen dari data RNA sequencing yang sudah disejajarkan (alignment), kita akan menggunakan `StringTie` dan menggunakan input data untuk semua sampel dengan format `.sorted.bam` dan file anotasi `references/GCF_022379125.1_ASM2237912v1_genomic.gff`. 
+
+Perintah dasar `StringTie` untuk assemby dan kuantifikasi adalah sebagai berikut:
+
+```bash
+# bash
+# membuat direktori output
+mkdir -p HISAT-StringTie/stringtie_output/
+
+# menjalankan stringtie
+stringtie HISAT-StringTie/bam_data/nama_sampel.sorted.bam \
+        -p 4 \
+        -G references/GCF_022379125.1_ASM2237912v1_genomic.gff \
+        --rf \
+        -A HISAT-StringTie/stringtie_output/nama_sampel_abundance.tab \
+        -o HISAT-StringTie/stringtie_output/nama_sampel.gtf \
+        -l nama_sampel
+```
+
+Dalam perintah di atas, ada beberapa parameter penting diantaranya:
+
+- `-p`: berapa banyak thread/core CPU yang ingin digunakan, misalnya 4, 6, 8, dst
+- `--rf`: parameter untuk menentukan orientasi strand data sequencing (`--rf` untuk *stranded* atau `--fr` untuk *unstranded*)
+- `-A`: menghasilkan file abundansi/ekspresi dalam format tabular yang berisi informasi kuantitatif gen dan transkrip
+- `-o`: menentukan file output utama berupa hasil assembly transkrip dalam format `.gtf`
+- `-l`: memberikan label/prefix untuk penamaan transkrip yang dirakit oleh StringTie
+
+Karena kita akan melakukan assembly dan kuantifikasi untuk semua sampel, maka teknik *looping* sangat diperlukan.
+
+```bash
+# bash
+# membuat direktori output stringtie
+mkdir -p HISAT-StringTie/stringtie_output/
+
+# daftar nama sampel
+samples=(
+  "SRR1695148" "SRR1695149" "SRR1695150" "SRR1695151"
+  "SRR1695152" "SRR1695153" "SRR1695154" "SRR1695155"
+  "SRR1695156" "SRR1695157" "SRR1695158" "SRR1695159"
+)
+
+# menghitung total sampel dan inisialisasi counter
+total=${#samples[@]}
+counter=1
+
+for sample in "${samples[@]}"; do
+    echo ""
+    echo "Running StringTie for sample: $sample ($counter/$total)"
+    echo "Started at: $(date)"
+    
+    stringtie HISAT-StringTie/bam_data/${sample}.sorted.bam \
+        -p 4 \
+        -G references/GCF_022379125.1_ASM2237912v1_genomic.gff \
+        --rf \
+        -A HISAT-StringTie/stringtie_output/${sample}_abundance.tab \
+        -o HISAT-StringTie/stringtie_output/${sample}.gtf \
+        -l ${sample}
+    
+    echo "Sample $sample StringTie completed at: $(date)"
+    echo "Progress: $counter/$total samples completed"
+    echo "--------------------------------------------------"
+
+    ((counter++))
+done
+```
+
+## Menggabungkan transkrip dengan StringTie Merge
+
+Setelah menjalankan StringTie untuk setiap sampel, langkah selanjutnya adalah menggabungkan semua file GTF yang dihasilkan menjadi satu set transkrip yang konsisten menggunakan perintah `stringtie --merge`. Ini penting untuk memastikan bahwa semua sampel menggunakan set transkrip yang sama untuk analisis kuantitatif yang akurat.
+
+```bash
+# bash
+# membuat file daftar GTF untuk merge
+echo "Membuat list file GTF untuk digabungkan..."
+ls HISAT-StringTie/stringtie_output/*.gtf > HISAT-StringTie/stringtie_output/gtf_list.txt
+
+# menjalankan stringtie merge
+echo "Menggabungkan file gtf dengan stringtie..."
+stringtie --merge \
+    -p 4 \
+    -G references/GCF_022379125.1_ASM2237912v1_genomic.gff \
+    -o HISAT-StringTie/stringtie_output/merged.gtf \
+    HISAT-StringTie/stringtie_output/gtf_list.txt
+
+echo "Penggabungan selesai pada: $(date)"
+echo "File GTF yang digabungkan disimpan di: HISAT-StringTie/stringtie_output/gtf_list.gtf"
+```
+
+Parameter yang digunakan dalam `stringtie --merge`:
+
+- `--merge`: mode untuk menggabungkan multiple GTF files
+- `-p`: jumlah thread yang digunakan
+- `-G`: file anotasi referensi
+- `-o`: file output merged GTF
+- File terakhir adalah daftar file GTF yang akan digabungkan
+
+## Re-kuantifikasi dengan merged GTF
+
+Setelah mendapatkan set transkrip yang sudah digabungkan, kita perlu menjalankan `StringTie` sekali lagi untuk setiap sampel menggunakan *merged* GTF sebagai referensi. Tahap ini akan menghasilkan data kuantitatif yang konsisten untuk semua sampel. Kita akan menggunakan teknik *looping* untuk semua sampel
+
+```bash
+# bash
+# membuat direktori ballgown untuk hasil re-quantification
+mkdir -p HISAT-StringTie/stringtie_output/ballgown
+
+# daftar nama sampel
+samples=(
+  "SRR1695148" "SRR1695149" "SRR1695150" "SRR1695151"
+  "SRR1695152" "SRR1695153" "SRR1695154" "SRR1695155"
+  "SRR1695156" "SRR1695157" "SRR1695158" "SRR1695159"
+)
+
+# re-quantification untuk setiap sampel
+counter=1
+for sample in "${samples[@]}"; do
+    echo "Re-estimating for sample: $sample ($counter/$total) at: $(date)"
+    mkdir -p HISAT-StringTie/stringtie_output/ballgown/${sample}
+    
+    stringtie HISAT-StringTie/bam_data/${sample}.sorted.bam \
+        -e -B \
+        -p 4 \
+        --rf \
+        -G HISAT-StringTie/stringtie_output/merged.gtf \
+        -o HISAT-StringTie/stringtie_output/ballgown/${sample}/${sample}.gtf
+    
+    if [ $? -eq 0 ]; then
+        echo "Sample $sample re-estimation completed successfully"
+    else
+        echo "ERROR: Re-estimation failed for sample $sample"
+    fi
+    
+    ((counter++))
+done
+```
+
+Parameter yang digunakan dalam re-estimasi:
+
+- `-e`: hanya mengestimasi abundansi transkrip yang sudah ada di merged GTF
+- `-B`: menghasilkan file Ballgown untuk analisis downstream
+- `-G`: menggunakan merged GTF sebagai referensi
+
+## Preparasi data untuk analisis downstream dengan prepDE.py
+
+Tahap terakhir adalah menyiapkan data dalam format count matrix untuk analisis ekspresi diferensial menggunakan script `prepDE.py` dari `StringTie`.
+
+```bash
+# bash
+# download prepDE.py jika belum ada
+if [ ! -f "prepDE.py" ]; then
+    echo "Menunduh prepDE.py..."
+    wget https://ccb.jhu.edu/software/stringtie/dl/prepDE.py
+    chmod +x prepDE.py
+fi
+
+# membuat file sample list untuk prepDE.py
+echo "Membuat list sampel untuk prepDE.py..."
+echo -e "sample_id\tpath" > HISAT-StringTie/sample_list.txt
+
+for sample in "${samples[@]}"; do
+    echo -e "${sample}\tHISAT-StringTie/stringtie_output/ballgown/${sample}/${sample}.gtf" >> HISAT-StringTie/sample_list.txt
+done
+
+# menjalankan prepDE.py
+echo "Menjalankan prepDE.py untuk mengekstrak count matrix..."
+python prepDE.py -i HISAT-StringTie/sample_list.txt \
+    -g HISAT-StringTie/gene_count_matrix.csv \
+    -t HISAT-StringTie/transcript_count_matrix.csv
+
+echo "Hasil:"
+echo "- Gene count matrix: HISAT-StringTie/gene_count_matrix.csv"
+echo "- Transcript count matrix: HISAT-StringTie/transcript_count_matrix.csv"
+echo "Selesai pada: $(date)"
+```
+
+Kode di atas adalah kode dasar untuk memperoleh data siap analisis *differential expression*. Tapi sering kali kita akan menjumpai ketidaksesuaian antara file GTF hasil `StringTie` dan file count data (`t_data.ctab`) yang dihasilkan oleh parameter `-B` (Ballgown). Masalah ini dapat menyebabkan hilangnya beberapa transkrip dalam analisis downstream.
+
+Untuk mengtasi ini, kita perlu:
+
+1.  Memvalidasi konsistensi data antara file GTF dan file Ballgown: Gunakan `grep` dan `comm` untuk membandingkan transcript IDs antara file GTF dan `t_data.ctab`
+2.  Jika ditemukan ketidaksesuaian, kita dapat memperbaiki file GTF dengan menambahkan transkrip yang hilang: Gunakan `cut`, `echo -e`, dan redirection (`>>`) untuk mengekstrak koordinat dari `t_data.ctab` dan menambahkan entry baru ke file GTF.
+3.  Regenerasi count matrix dengan data yang sudah diperbaiki: Ulangi `prepDE.py` untuk menghasilkan count matrix yang lengkap dan konsisten.
+
+
 # Analisis korelasi antar sampel
 
 # Analisis perbedaan ekspresi

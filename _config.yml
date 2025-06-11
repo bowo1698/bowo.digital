@@ -9,3 +9,6 @@ aux_links:
   "Bioinformatic Notes":
     - "https://www.bowo.digital"
 heading_anchors: true
+kramdown:
+  auto_ids: true
+  toc_levels: 1..6

@@ -3,7 +3,7 @@ title: "RNA-Seq workflow"
 layout: default
 parent: Workflows
 nav_order: 1
-has_toc: True
+has_toc: true
 ---
 
 <p style="text-align: right; font-size: 0.9rem;">

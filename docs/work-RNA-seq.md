@@ -588,7 +588,7 @@ echo "Selesai pada: $(date)"
 
 Kode di atas adalah kode dasar untuk memperoleh data siap analisis *differential expression*. Tapi sering kali kita akan menjumpai ketidaksesuaian antara file GTF hasil `StringTie` dan file count data (`t_data.ctab`) yang dihasilkan oleh parameter `-B` (Ballgown). Masalah ini dapat menyebabkan hilangnya beberapa transkrip dalam analisis downstream.
 
-Untuk mengtasi ini, kita perlu:
+Secara umum, untuk mengtasi ini kita perlu:
 
 1.  Memvalidasi konsistensi data antara file GTF dan file Ballgown: Gunakan `grep` dan `comm` untuk membandingkan transcript IDs antara file GTF dan `t_data.ctab`
 2.  Jika ditemukan ketidaksesuaian, kita dapat memperbaiki file GTF dengan menambahkan transkrip yang hilang: Gunakan `cut`, `echo -e`, dan redirection (`>>`) untuk mengekstrak koordinat dari `t_data.ctab` dan menambahkan entry baru ke file GTF.
